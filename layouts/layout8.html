@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>Faktura</title>
+<style>
+  @page { size: A4; margin: 16mm; }
+  body { font-family: "Arial", sans-serif; font-size: 11pt; }
+  .tiles { display: grid; grid-template-columns: 1fr 1fr; gap: 6mm; margin-bottom: 6mm; }
+  .tile { border: 1px solid #000; padding: 4mm; }
+  .tile .headline { font-weight: bold; font-size: 12pt; margin-bottom: 2mm; }
+  table { width: 100%; border-collapse: collapse; }
+  th, td { border: 1px solid #000; padding: 3mm; }
+  th { background: #ededed; }
+  .right { text-align: right; }
+  .final { border-top: 2px solid #000; margin-top: 6mm; padding-top: 4mm; width: 60%; margin-left: auto; }
+</style>
+</head>
+<body>
+  <div class="tiles">
+    <div class="tile">
+      <div class="headline">Dane faktury</div>
+      <div>Nr: <span id="invoice_number">{{ invoice_number }}</span></div>
+      <div>Wystawiono: <span id="issue_date">{{ issue_date }}</span></div>
+      <div>Sprzedaż: <span id="sale_date">{{ sale_date }}</span></div>
+      <div>Waluta: <span id="currency">{{ currency }}</span></div>
+      <div>Termin płatności: <span id="payment_due">{{ payment_due }}</span></div>
+      <div>Sposób zapłaty: <span id="payment_method">{{ payment_method }}</span></div>
+    </div>
+    <div class="tile">
+      <div class="headline">Kontrahenci</div>
+      <div class="label">Sprzedawca</div>
+      <div id="seller_name">{{ seller_name }}</div>
+      <div id="seller_address">{{ seller_address }}</div>
+      <div>NIP: <span id="seller_nip">{{ seller_nip }}</span></div>
+      <br>
+      <div class="label">Nabywca</div>
+      <div id="buyer_name">{{ buyer_name }}</div>
+      <div id="buyer_address">{{ buyer_address }}</div>
+      <div>NIP: <span id="buyer_nip">{{ buyer_nip }}</span></div>
+    </div>
+  </div>
+
+  <table id="items">
+    <thead>
+      <tr>
+        <th>Lp.</th><th>Opis</th><th>Ilość</th><th>J.m.</th><th>Cena netto</th><th>VAT</th><th>Netto</th><th>Brutto</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for item in items %}
+        <tr>
+            <td>{{ loop.index }}</td>
+            <td>{{ item.name }}</td>
+            <td>{{ item.qty }}</td>
+            <td>{{ item.unit }}</td>
+            <td>{{ item.price_net }}</td>
+            <td>{{ item.vat }}</td>
+            <td>{{ item.net }}</td>
+            <td>{{ item.gross }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+  </table>
+
+  <div class="final">
+    <table style="width:100%;">
+      <tr><td><b>Netto</b></td><td class="right"><span id="total_net">{{ total_net }}</span></td></tr>
+      <tr><td><b>VAT</b></td><td class="right"><span id="total_vat">{{ total_vat }}</span></td></tr>
+      <tr><td><b>Brutto</b></td><td class="right"><span id="total_gross">{{ total_gross }}</span></td></tr>
+    </table>
+  </div>
+</body>
+</html>

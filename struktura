@@ -1,0 +1,25 @@
+INZ/
+│
+├── .venv/                # wirtualne środowisko
+├── data/                 # dane wejściowe (contractors.json, items.json)
+├── layouts/              # szablony HTML faktur
+├── out/
+│   ├── pdf/              # wygenerowane faktury PDF
+│   └── png/              # wygenerowane obrazy faktur
+│
+├── app/                  # główny kod mikroserwisu OCR
+│   ├── main.py           # FastAPI – endpointy REST
+│   ├── ocr/              # adaptery OCR
+│   │   ├── easyocr_adapter.py
+│   │   ├── pytesseract_adapter.py
+│   │   └── azure_adapter.py
+│   ├── parsers/          # parsery tekstu faktur
+│   │   └── invoice_parser.py
+│   ├── db.py             # konfiguracja bazy danych
+│   └── models.py         # definicje tabel SQLAlchemy
+│
+├── scripts/              # dodatkowe skrypty
+│   ├── client_submit.py  # wysyłanie obrazów do API
+│   └── benchmark.py      # analiza wyników OCR
+│
+└── generator.py          # generator faktur (PDF + PNG)
