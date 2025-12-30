@@ -91,12 +91,13 @@ def render_invoice(template_name, payload, idx):
     images = convert_from_path(
         str(pdf_path),
         dpi=300,
-        poppler_path=r"C:\Program Files\poppler-25.07.0\Library\bin"
+        poppler_path=r"C:\Program Files\poppler-25.12.0\Library\bin"
     )
     for page_num, img in enumerate(images, start=1):
-        png_path = png_dir / f"{pdf_path.stem}_p{page_num}.png"
+        png_path = png_dir / f"{pdf_path.stem}.png"
         img.save(png_path, "PNG")
         print("Wygenerowano PNG:", png_path)
+
 
 for template in templates_dir.glob("*.html"):
     for i in range(1):  # zmień na 13

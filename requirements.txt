@@ -1,0 +1,15 @@
+fastapi
+uvicorn
+jinja2
+pdfkit
+pdf2image
+pytesseract
+easyocr
+opencv-python
+numpy
+Pillow
+azure-ai-formrecognizer
+torch
+torchvision
+torchaudio
+python-multipart

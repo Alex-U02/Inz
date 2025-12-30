@@ -7,73 +7,87 @@
   @page { size: A4; margin: 16mm; }
   body { font-family: "Times New Roman", Georgia, serif; font-size: 11pt; color: #111; }
   header { border-bottom: 2px solid #000; padding-bottom: 4mm; margin-bottom: 6mm; }
-  .title { font-size: 18pt; font-weight: bold; letter-spacing: 0.5pt; }
+  .title { font-size: 18pt; font-weight: bold; letter-spacing: 0.6pt; }
+  .meta { margin-top: 2mm; }
   .meta span { margin-right: 10mm; }
-  .section { margin-bottom: 6mm; }
-  .panel { border: 1.5px solid #000; padding: 4mm; }
-  .panel .label { font-weight: bold; text-transform: uppercase; font-size: 10pt; }
+  .block { border: 1px solid #000; padding: 4mm; margin-bottom: 6mm; }
+  .block-title { font-weight: bold; text-transform: uppercase; font-size: 10pt; margin-bottom: 2mm; }
   table { width: 100%; border-collapse: collapse; }
-  th, td { border: 1px solid #000; padding: 2.8mm; }
+  th, td { border: 1px solid #000; padding: 3mm; }
   th { background: #eaeaea; }
-  .totals { width: 50%; margin-left: auto; margin-top: 6mm; }
-  .totals td { padding: 2mm; }
   .right { text-align: right; }
+  .totals { width: 50%; margin-left: auto; margin-top: 6mm; border: 1px solid #000; }
+  .totals td { padding: 3mm; }
+  .footer { margin-top: 8mm; font-size: 10pt; }
 </style>
 </head>
 <body>
   <header>
-    <div class="title">Faktura</div>
+    <div class="title">Faktura VAT</div>
     <div class="meta">
-      <span><b>Nr:</b> <span id="invoice_number">{{ invoice_number }}</span></span>
-      <span><b>Wystawiono:</b> <span id="issue_date">{{ issue_date }}</span></span>
-      <span><b>Sprzedaż:</b> <span id="sale_date">{{ sale_date }}</span></span>
-      <span><b>Waluta:</b> <span id="currency">{{ currency }}</span></span>
+      <span><b>Nr:</b> {{ invoice_number }}</span>
+      <span><b>Wystawiono:</b> {{ issue_date }}</span>
+      <span><b>Sprzedaż:</b> {{ sale_date }}</span>
+      <span><b>Waluta:</b> {{ currency }}</span>
     </div>
   </header>
 
-  <div class="section panel">
-    <div class="label">Sprzedawca</div>
-    <div id="seller_name">{{ seller_name }}</div>
-    <div id="seller_address">{{ seller_address }}</div>
-    <div>NIP: <span id="seller_nip">{{ seller_nip }}</span></div>
-    <div>IBAN: <span id="seller_account">{{ seller_account }}</span></div>
+  <div class="block">
+    <div class="block-title">Sprzedawca</div>
+    <div>{{ seller_name }}</div>
+    <div>{{ seller_address }}</div>
+    <div>NIP: {{ seller_nip }}</div>
+    <div>REGON: {{ seller_regon }}</div>
+    <div>IBAN: {{ seller_account }}</div>
   </div>
 
-  <div class="section panel">
-    <div class="label">Nabywca</div>
-    <div id="buyer_name">{{ buyer_name }}</div>
-    <div id="buyer_address">{{ buyer_address }}</div>
-    <div>NIP: <span id="buyer_nip">{{ buyer_nip }}</span></div>
+  <div class="block">
+    <div class="block-title">Nabywca</div>
+    <div>{{ buyer_name }}</div>
+    <div>{{ buyer_address }}</div>
+    <div>NIP: {{ buyer_nip }}</div>
+    <div>Numer zamówienia: {{ order_number }}</div>
+    <div>Termin płatności: {{ payment_due }}</div>
   </div>
 
-  <table id="items">
+  <table>
     <thead>
       <tr>
-        <th>Lp.</th><th>Nazwa towaru/usługi</th><th>Ilość</th><th>J.m.</th><th>Cena netto</th><th>VAT %</th><th>Wartość netto</th><th>Brutto</th>
+        <th>Lp.</th>
+        <th>Nazwa towaru/usługi</th>
+        <th>Ilość</th>
+        <th>J.m.</th>
+        <th>Cena netto</th>
+        <th>Stawka VAT</th>
+        <th>Wartość netto</th>
+        <th>Wartość brutto</th>
       </tr>
     </thead>
     <tbody>
-        {% for item in items %}
-        <tr>
-            <td>{{ loop.index }}</td>
-            <td>{{ item.name }}</td>
-            <td>{{ item.qty }}</td>
-            <td>{{ item.unit }}</td>
-            <td>{{ item.price_net }}</td>
-            <td>{{ item.vat }}</td>
-            <td>{{ item.net }}</td>
-            <td>{{ item.gross }}</td>
-        </tr>
-        {% endfor %}
+      {% for item in items %}
+      <tr>
+        <td>{{ loop.index }}</td>
+        <td>{{ item.name }}</td>
+        <td class="right">{{ item.qty }}</td>
+        <td>{{ item.unit }}</td>
+        <td class="right">{{ item.price_net }}</td>
+        <td class="right">{{ item.vat }}</td>
+        <td class="right">{{ item.net }}</td>
+        <td class="right">{{ item.gross }}</td>
+      </tr>
+      {% endfor %}
     </tbody>
   </table>
 
   <table class="totals">
-    <tr><td><b>Netto</b></td><td class="right"><span id="total_net">{{ total_net }}</span></td></tr>
-    <tr><td><b>VAT</b></td><td class="right"><span id="total_vat">{{ total_vat }}</span></td></tr>
-    <tr><td><b>Brutto</b></td><td class="right"><span id="total_gross">{{ total_gross }}</span></td></tr>
+    <tr><td><b>Netto</b></td><td class="right">{{ total_net }}</td></tr>
+    <tr><td><b>VAT</b></td><td class="right">{{ total_vat }}</td></tr>
+    <tr><td><b>Brutto</b></td><td class="right">{{ total_gross }}</td></tr>
   </table>
 
-  <div>Termin płatności: <span id="payment_due">{{ payment_due }}</span> &nbsp;&nbsp; Sposób zapłaty: <span id="payment_method">{{ payment_method }}</span></div>
+  <div class="footer">
+    <div>Forma zapłaty: {{ payment_method }}</div>
+    <div>Uwagi: {{ notes }}</div>
+  </div>
 </body>
 </html>

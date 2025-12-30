@@ -5,71 +5,80 @@
 <title>Faktura sprzedaży</title>
 <style>
   @page { size: A4; margin: 14mm; }
-  body { font-family: Calibri, "Segoe UI", sans-serif; font-size: 10.5pt; color: #000; }
+  body { font-family: Calibri, "Segoe UI", sans-serif; font-size: 10.5pt; color: #222; }
+  .top-summary { border: 1px solid #000; padding: 4mm; margin-bottom: 6mm; background:#f7f7fb; }
+  .top-summary span.label { font-weight: bold; }
   .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5mm; margin-bottom: 6mm; }
-  .card { border: 1px solid #000; padding: 4mm; }
-  .card .label { font-weight: bold; }
-  .top-summary { border: 1px solid #000; padding: 4mm; margin-bottom: 6mm; }
+  .card { border: 1px solid #000; padding: 4mm; background:#fff; }
+  .card .label { font-weight: bold; margin-bottom: 1mm; }
   table { width: 100%; border-collapse: collapse; }
   th, td { border: 1px solid #000; padding: 2.5mm; }
-  th { background: #f7f7f7; }
+  th { background: #f2f2f2; }
   .right { text-align: right; }
+  .totals { margin-top: 6mm; width: 50%; margin-left:auto; border:1px solid #000; }
+  .totals td { padding: 3mm; }
 </style>
 </head>
 <body>
   <div class="top-summary">
-    <span class="label">Faktura nr:</span> <span id="invoice_number">{{ invoice_number }}</span> &nbsp;&nbsp;
-    <span class="label">Wystawienie:</span> <span id="issue_date">{{ issue_date }}</span> &nbsp;&nbsp;
-    <span class="label">Sprzedaż:</span> <span id="sale_date">{{ sale_date }}</span> &nbsp;&nbsp;
-    <span class="label">Waluta:</span> <span id="currency">{{ currency }}</span>
+    <span class="label">Faktura nr:</span> {{ invoice_number }} &nbsp;&nbsp;
+    <span class="label">Wystawienie:</span> {{ issue_date }} &nbsp;&nbsp;
+    <span class="label">Sprzedaż:</span> {{ sale_date }} &nbsp;&nbsp;
+    <span class="label">Waluta:</span> {{ currency }}
   </div>
 
   <div class="grid">
     <div class="card">
       <div class="label">Sprzedawca</div>
-      <div id="seller_name">{{ seller_name }}</div>
-      <div id="seller_address">{{ seller_address }}</div>
-      <div>NIP: <span id="seller_nip">{{ seller_nip }}</span></div>
-      <div>Konto: <span id="seller_account">{{ seller_account }}</span></div>
+      <div>{{ seller_name }}</div>
+      <div>{{ seller_address }}</div>
+      <div>NIP: {{ seller_nip }}</div>
+      <div>REGON: {{ seller_regon }}</div>
+      <div>Konto: {{ seller_account }}</div>
     </div>
     <div class="card">
       <div class="label">Nabywca</div>
-      <div id="buyer_name">{{ buyer_name }}</div>
-      <div id="buyer_address">{{ buyer_address }}</div>
-      <div>NIP: <span id="buyer_nip">{{ buyer_nip }}</span></div>
-      <div>Zamówienie: <span id="order_number">{{ order_number }}</span></div>
+      <div>{{ buyer_name }}</div>
+      <div>{{ buyer_address }}</div>
+      <div>NIP: {{ buyer_nip }}</div>
+      <div>Zamówienie: {{ order_number }}</div>
+      <div>Termin płatności: {{ payment_due }}</div>
     </div>
   </div>
 
-  <table id="items">
+  <table>
     <thead>
       <tr>
-        <th>Pozycja</th><th>Ilość</th><th>J.m.</th><th>Cena netto</th><th>VAT</th><th>Netto</th><th>Brutto</th>
+        <th>Pozycja</th>
+        <th>Ilość</th>
+        <th>J.m.</th>
+        <th>Cena netto</th>
+        <th>VAT</th>
+        <th>Netto</th>
+        <th>Brutto</th>
       </tr>
     </thead>
     <tbody>
-        {% for item in items %}
-        <tr>
-            <td>{{ item.name }}</td>
-            <td>{{ item.qty }}</td>
-            <td>{{ item.unit }}</td>
-            <td>{{ item.price_net }}</td>
-            <td>{{ item.vat }}</td>
-            <td>{{ item.net }}</td>
-            <td>{{ item.gross }}</td>
-        </tr>
-        {% endfor %}
+      {% for item in items %}
+      <tr>
+        <td>{{ item.name }}</td>
+        <td class="right">{{ item.qty }}</td>
+        <td>{{ item.unit }}</td>
+        <td class="right">{{ item.price_net }}</td>
+        <td class="right">{{ item.vat }}</td>
+        <td class="right">{{ item.net }}</td>
+        <td class="right">{{ item.gross }}</td>
+      </tr>
+      {% endfor %}
     </tbody>
   </table>
 
-  <div style="margin-top:6mm; width:55%; margin-left:auto;">
-    <table style="width:100%;">
-      <tr><td><b>Suma netto</b></td><td class="right"><span id="total_net">{{ total_net }}</span></td></tr>
-      <tr><td><b>VAT</b></td><td class="right"><span id="total_vat">{{ total_vat }}</span></td></tr>
-      <tr><td><b>Suma brutto</b></td><td class="right"><span id="total_gross">{{ total_gross }}</span></td></tr>
-    </table>
-  </div>
+  <table class="totals">
+    <tr><td><b>Suma netto</b></td><td class="right">{{ total_net }}</td></tr>
+    <tr><td><b>Suma VAT</b></td><td class="right">{{ total_vat }}</td></tr>
+    <tr><td><b>Suma brutto</b></td><td class="right">{{ total_gross }}</td></tr>
+  </table>
 
-  <div>Termin płatności: <span id="payment_due">{{ payment_due }}</span> &nbsp; Sposób zapłaty: <span id="payment_method">{{ payment_method }}</span></div>
+  <div style="margin-top:6mm;">Sposób zapłaty: {{ payment_method }} &nbsp;&nbsp; Uwagi: {{ notes }}</div>
 </body>
 </html>

@@ -5,7 +5,8 @@ INZ/
 ├── layouts/              # szablony HTML faktur
 ├── out/
 │   ├── pdf/              # wygenerowane faktury PDF
-│   └── png/              # wygenerowane obrazy faktur
+│   ├── png/              # wygenerowane obrazy faktur  
+│   └── results/          # wyniki testów OCR
 │
 ├── app/                  # główny kod mikroserwisu OCR
 │   ├── main.py           # FastAPI – endpointy REST
@@ -20,6 +21,8 @@ INZ/
 │
 ├── scripts/              # dodatkowe skrypty
 │   ├── client_submit.py  # wysyłanie obrazów do API
+│   ├── batch_test.py     # testy wsadowe
 │   └── benchmark.py      # analiza wyników OCR
 │
-└── generator.py          # generator faktur (PDF + PNG)
+├── generator.py          # generator faktur (PDF + PNG)
+└── requirements.txt      # zależności projektu

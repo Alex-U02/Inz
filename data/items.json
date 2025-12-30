@@ -15,7 +15,7 @@
   { "name": "Naprawa sprzętu AGD", "unit": "usługa", "price_net": 300, "vat": 8 },
   { "name": "Projekt graficzny logo", "unit": "projekt", "price_net": 1200, "vat": 23 },
   { "name": "Kampania reklamowa Google Ads", "unit": "pakiet", "price_net": 2500, "vat": 23 },
-  { "name": "Usługa sprzątania biura", "unit": "m²", "price_net": 5, "vat": 8 },
+  { "name": "Usługa sprzątania biura", "unit": "m2", "price_net": 5, "vat": 8 },
   { "name": "Kawa ziarnista 1kg", "unit": "op.", "price_net": 80, "vat": 23 },
   { "name": "Woda mineralna 1,5l", "unit": "szt.", "price_net": 2.5, "vat": 23 },
   { "name": "Papier A4 – ryza", "unit": "ryza", "price_net": 18, "vat": 23 },

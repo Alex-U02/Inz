@@ -5,81 +5,104 @@
 <title>Faktura VAT</title>
 <style>
   @page { size: A4; margin: 18mm; }
-  body { font-family: Arial, Helvetica, sans-serif; font-size: 11pt; color: #000; }
-  h1 { font-size: 16pt; margin: 0 0 8mm; }
-  .row { display: flex; justify-content: space-between; margin-bottom: 6mm; }
-  .box { width: 48%; border: 1px solid #000; padding: 4mm; }
+  body { font-family: Arial, Helvetica, sans-serif; font-size: 11pt; color: #222; }
+  h1 { font-size: 18pt; margin: 0 0 8mm; letter-spacing: 0.5pt; }
+  .meta { margin-bottom: 8mm; }
+  .meta-row { margin-bottom: 2mm; }
   .label { font-weight: bold; }
-  .meta { margin-bottom: 4mm; }
-  table { width: 100%; border-collapse: collapse; }
-  th, td { border: 1px solid #000; padding: 3mm; text-align: left; }
-  th { background: #f0f0f0; }
+  .flex { display: flex; gap: 10mm; }
+  .card { flex: 1; border: 1px solid #ccc; padding: 4mm 5mm; }
+  .card-title { font-weight: bold; margin-bottom: 2mm; text-transform: uppercase; font-size: 9pt; color: #444; }
+  table { width: 100%; border-collapse: collapse; margin-top: 6mm; }
+  th, td { padding: 3mm; border-bottom: 1px solid #ddd; font-size: 10.5pt; }
+  th { background: #f5f5f5; text-align: left; }
   .right { text-align: right; }
-  .summary { margin-top: 6mm; width: 60%; margin-left: auto; }
-  .summary table { width: 100%; }
-  footer { margin-top: 10mm; font-size: 10pt; }
+  .summary { margin-top: 8mm; width: 45%; margin-left: auto; }
+  .summary-row { display: flex; justify-content: space-between; padding: 2mm 0; }
+  .summary-row .label { font-weight: bold; }
+  footer { margin-top: 10mm; font-size: 9.5pt; color: #444; }
 </style>
 </head>
 <body>
   <h1>Faktura VAT</h1>
+
   <div class="meta">
-    <span class="label">Nr faktury:</span> <span id="invoice_number">{{ invoice_number }}</span><br>
-    <span class="label">Data wystawienia:</span> <span id="issue_date">{{ issue_date }}</span> &nbsp;&nbsp;
-    <span class="label">Data sprzedaży:</span> <span id="sale_date">{{ sale_date }}</span> &nbsp;&nbsp;
-    <span class="label">Waluta:</span> <span id="currency">{{ currency }}</span>
-  </div>
-
-  <div class="row">
-    <div class="box">
-      <div class="label">Sprzedawca</div>
-      <div id="seller_name">{{ seller_name }}</div>
-      <div id="seller_address">{{ seller_address }}</div>
-      <div>NIP: <span id="seller_nip">{{ seller_nip }}</span></div>
-      <div>REGON: <span id="seller_regon">{{ seller_regon }}</span></div>
-      <div>Numer rachunku: <span id="seller_account">{{ seller_account }}</span></div>
+    <div class="meta-row">
+      <span class="label">Nr faktury:</span> {{ invoice_number }}
     </div>
-    <div class="box">
-      <div class="label">Nabywca</div>
-      <div id="buyer_name">{{ buyer_name }}</div>
-      <div id="buyer_address">{{ buyer_address }}</div>
-      <div>NIP: <span id="buyer_nip">{{ buyer_nip }}</span></div>
-      <div>Numer zamówienia: <span id="order_number">{{ order_number }}</span></div>
-      <div>Termin płatności: <span id="payment_due">{{ payment_due }}</span></div>
+    <div class="meta-row">
+      <span class="label">Data wystawienia:</span> {{ issue_date }} &nbsp;&nbsp;
+      <span class="label">Data sprzedaży:</span> {{ sale_date }} &nbsp;&nbsp;
+      <span class="label">Waluta:</span> {{ currency }}
     </div>
   </div>
 
-  <table id="items">
+  <div class="flex">
+    <div class="card">
+      <div class="card-title">Sprzedawca</div>
+      <div>{{ seller_name }}</div>
+      <div>{{ seller_address }}</div>
+      <div>NIP: {{ seller_nip }}</div>
+      <div>REGON: {{ seller_regon }}</div>
+      <div>Konto: {{ seller_account }}</div>
+    </div>
+    <div class="card">
+      <div class="card-title">Nabywca</div>
+      <div>{{ buyer_name }}</div>
+      <div>{{ buyer_address }}</div>
+      <div>NIP: {{ buyer_nip }}</div>
+      <div>Numer zamówienia: {{ order_number }}</div>
+      <div>Termin płatności: {{ payment_due }}</div>
+    </div>
+  </div>
+
+  <table>
     <thead>
       <tr>
-        <th>Pozycja</th><th>Ilość</th><th>J.m.</th><th>Cena netto</th><th>Stawka VAT</th><th>Wartość netto</th><th>Wartość brutto</th>
+        <th>Lp.</th>
+        <th>Pozycja</th>
+        <th>Ilość</th>
+        <th>J.m.</th>
+        <th>Cena netto</th>
+        <th>VAT</th>
+        <th>Netto</th>
+        <th>Brutto</th>
       </tr>
     </thead>
     <tbody>
-        {% for item in items %}
-        <tr>
-            <td>{{ item.name }}</td>
-            <td>{{ item.qty }}</td>
-            <td>{{ item.unit }}</td>
-            <td>{{ item.price_net }}</td>
-            <td>{{ item.vat }}</td>
-            <td>{{ item.net }}</td>
-            <td>{{ item.gross }}</td>
-        </tr>
-        {% endfor %}
+      {% for item in items %}
+      <tr>
+        <td>{{ loop.index }}</td>
+        <td>{{ item.name }}</td>
+        <td>{{ item.qty }}</td>
+        <td>{{ item.unit }}</td>
+        <td class="right">{{ item.price_net }}</td>
+        <td class="right">{{ item.vat }}</td>
+        <td class="right">{{ item.net }}</td>
+        <td class="right">{{ item.gross }}</td>
+      </tr>
+      {% endfor %}
     </tbody>
   </table>
 
   <div class="summary">
-    <table>
-      <tr><td class="label">Suma netto</td><td class="right"><span id="total_net">{{ total_net }}</span></td></tr>
-      <tr><td class="label">Suma VAT</td><td class="right"><span id="total_vat">{{ total_vat }}</span></td></tr>
-      <tr><td class="label">Suma brutto</td><td class="right"><span id="total_gross">{{ total_gross }}</span></td></tr>
-    </table>
+    <div class="summary-row">
+      <span class="label">Suma netto</span>
+      <span>{{ total_net }}</span>
+    </div>
+    <div class="summary-row">
+      <span class="label">Suma VAT</span>
+      <span>{{ total_vat }}</span>
+    </div>
+    <div class="summary-row">
+      <span class="label">Suma brutto</span>
+      <span>{{ total_gross }}</span>
+    </div>
   </div>
 
   <footer>
-    <div>Sposób zapłaty: <span id="payment_method">{{ payment_method }}</span></div>
-    <div>Uwagi: <span id="notes">{{ notes }}</span></div>
+    <div>Sposób zapłaty: {{ payment_method }}</div>
+    <div>Uwagi: {{ notes }}</div>
   </footer>
 </body>
 </html>

@@ -1,0 +1,725 @@
+{
+  "easyocr": {
+    "layout1_0.png": {
+      "engine": "easyocr",
+      "duration_ms": 13404,
+      "parsed": {
+        "invoice_number": "FVI8356",
+        "issue_date": "2025-11-09",
+        "sale_date": "2025-11-08",
+        "payment_due": "2025-11-30",
+        "seller_name": "Budex SA",
+        "buyer_name": null,
+        "seller_nip": "8879561832",
+        "buyer_nip": "8658761848",
+        "regon": "854626702",
+        "order_number": "ORD-954",
+        "seller_account": "PL39479693546882838148379710",
+        "total_net": "20137.2",
+        "total_vat": "4264.056",
+        "total_gross": "24401.256",
+        "items": [
+          {
+            "name": "Pozycja llość Jm",
+            "qty": null,
+            "unit": null,
+            "price_net": null,
+            "vat": null,
+            "net": null,
+            "gross": null
+          }
+        ]
+      },
+      "raw_text": "Faktura VAT\nNr faktury: FVI8356\nData wystawienia: 2025-11-09\nData sprzedaży: 2025-11-08\nWaluta: PLN\nSPRZEDAWCA\nBudex SA\nul. Lubelska 44, 15-001 Białystok\nNIP: 8879561832\nREGON: 854626702\nKonto: PL39479693546882838148379710\nNABYCA\nMediCare Polska\nul. Długa 45, 00-950 Warszawa\nNIP: 8658761848\nNumer zamówienia: ORD-954\nTermin płatności: 2025-11-30\nLp.\nPozycja\nllość\nJm\nCena netto\nVAT\nNetto\nBrutto\nRouter TP-Link Archer\nszt_\n350\n23\n2450\n3013.5\n2\nProjekt graficzny logo\n10\nprojekt\n1200\n23\n12000\n14760.0\n3\nPaliwo ON\n6\nlitr\n6.2\n23\n37.2\n45.756\nKonsultacja prawna\n3\n400\n23\n1200\n1476.0\nBilet lotniczy krajowy\nszt_\n350\n8\n2450\n2646.0\nKonsultacja księgowa\n10\ngodz\n200\n23\n2000\n2460.0\nSuma netto 20137.2\nSuma VAT 4264.056\nSuma brutto 24401.256\nSposób zapłaty: Przelew\nUwagi: Dziękujemy za współpracę\ngodz"
+    },
+    "layout2_0.png": {
+      "engine": "easyocr",
+      "duration_ms": 12852,
+      "parsed": {
+        "invoice_number": "Nr",
+        "issue_date": "2025-11-09",
+        "sale_date": "2025-11-08",
+        "payment_due": "2025-11-30",
+        "seller_name": "SoftDev Solutions",
+        "buyer_name": "ArchDesign Studio",
+        "seller_nip": "8825224389",
+        "buyer_nip": "8270343156",
+        "regon": "924433230",
+        "order_number": "ORD-539",
+        "seller_account": "PL67462548015845544745357431",
+        "total_net": "16512.5",
+        "total_vat": "3796.0",
+        "total_gross": "20308.5",
+        "items": [
+          {
+            "name": "Usługa godz",
+            "qty": null,
+            "unit": null,
+            "price_net": null,
+            "vat": null,
+            "net": null,
+            "gross": null
+          }
+        ]
+      },
+      "raw_text": "Faktura VAT\nNr: FV/3861\nWystawiono: 2025-11-09\nSprzedaż: 2025-11-08\nWaluta: PLN\nSPRZEDAWCA\nSoftDev Solutions\nul Krótka 3, 45-001 Opole\nNIP: 8825224389\nREGON: 924433230\nIBAN: PL67462548015845544745357431\nNABYWCA\nArchDesign Studio\nuL Warszawska 55,35-001 Rzeszów\nNIP: 8270343156\nNumer zamówienia: ORD-539\nTermin płatności: 2025-11-30\nNazwa towarulusługi\nIlość\nJm\nCena netto\nStawka VAT\nWartość netto\nWartość brutto\nUsługa transportowa\n5\nkm\n2.5\n8\n12.5\n13.5\n2\nProjekt architektoniczny\n3\nprojekt\n5000\n23\n15000\n18450.0\n3\nserwisowa IT\n10\n150\n23\n1500\n1845.0\nNetto\n16512.5\nVAT\n3796.0\nBrutto\n20308.5\nForma zapłaty: Przelew\nUwagi: Dziękujemy za współpracę\nLp.\nUsługa\ngodz"
+    },
+    "layout3_0.png": {
+      "engine": "easyocr",
+      "duration_ms": 12501,
+      "parsed": {
+        "invoice_number": "FV/3337",
+        "issue_date": "2025-11-09",
+        "sale_date": "2025-11-08",
+        "payment_due": "2025-11-30",
+        "seller_name": "Farmacia Zdrowie",
+        "buyer_name": "TechPol Sp. z 0.0",
+        "seller_nip": "1128284431",
+        "buyer_nip": "5477440872",
+        "regon": "295348571",
+        "order_number": "ORD-725",
+        "seller_account": "PL93170002667113797412183394",
+        "total_net": "6501.0",
+        "total_vat": "1492.23",
+        "total_gross": "7993.23",
+        "items": [
+          {
+            "name": "Ilość Jm",
+            "qty": null,
+            "unit": null,
+            "price_net": null,
+            "vat": null,
+            "net": null,
+            "gross": null
+          }
+        ]
+      },
+      "raw_text": "Faktura nr: FV/3337\nWystawienie: 2025-11-09\nSprzedaż: 2025-11-08\nWaluta: PLN\nSprzedawca\nFarmacia Zdrowie\nul. Mickiewicza 12, 30-001 Kraków\nNIP: 1128284431\nREGON: 295348571\nKonto: PL93170002667113797412183394\nNabywca\nTechPol Sp. z 0.0\nul. Lubelska 44, 15-001 Białystok\nNIP: 5477440872\nZamówienie: ORD-725\nTermin płatności: 2025-11-30\nPozycja\nIlość\nJm\nCena netto\nVAT\nNetto\nBrutto\nProjekt architektoniczny\n1\nprojekt\n5000\n23\n5000\n6150.0\nsprzątania biura\nm2\n5\n8\n20\n21.6\nPaliwo ON\n5\nlitr\n6.2\n23\n31.0\n38.13\nUsługa serwisowa IT\n8\n150\n23\n1200\n1476.0\nDomena .pl = roczna\n5\nszt\n50\n23\n250\n307.5\nSuma netto\n6501.0\nSuma VAT\n1492.23\nSuma brutto\n7993.23\nSposób zapłaty: Przelew\nUwagi: Dziękujemy za współpracę\nUsługa\ngodz"
+    },
+    "layout4_0.png": {
+      "engine": "easyocr",
+      "duration_ms": 12887,
+      "parsed": {
+        "invoice_number": "FVI1619",
+        "issue_date": "2025-11-09",
+        "sale_date": "2025-11-08",
+        "payment_due": "2025-11-30",
+        "seller_name": "ArchDesign Studio",
+        "buyer_name": "Księgowość Plus",
+        "seller_nip": "4331623698",
+        "buyer_nip": "9798115951",
+        "regon": "375292829",
+        "order_number": "ORD-837",
+        "seller_account": "PL23393634604256703208464226",
+        "total_net": null,
+        "total_vat": null,
+        "total_gross": "31467.2",
+        "items": [
+          {
+            "name": "Opis pozycji Ilość Jm",
+            "qty": null,
+            "unit": null,
+            "price_net": null,
+            "vat": null,
+            "net": null,
+            "gross": null
+          }
+        ]
+      },
+      "raw_text": "Dane faktury\nNr: FVI1619\nData wystawienia: 2025-11-09\nData sprzedaży: 2025-11-08\nWaluta: PLN\nTermin płatności: 2025-11-30\nSposób zapłaty: Przelew\nSprzedawca\nArchDesign Studio\nul. Świdnicka 22, 50-001 Wrocław\nNIP: 4331623698\nREGON: 375292829\nKonto: PL23393634604256703208464226\nNabyca\nKsięgowość Plus\nul. Krótka 3, 45-001 Opole\nNIP: 9798115951\nZamówienie: ORD-837\nLp.\nOpis pozycji\nIlość\nJm\nCena netto\nVAT %\nWartość netto\nWartość brutto\nBilet lotniczy krajowy\n3\nszt.\n350\n8\n1050\n1134.0\n2\nPapier A4\n\nryza\n10\nryza\n18\n23\n180\n221.4\n3\nTelefon Samsung Galaxy A52\n8\nszt.\n1800\n23\n14400\n17712.0\nProjekt graficzny logo\n9\nprojekt\n1200\n23\n10800\n13284.0\n5\nSzkolenie online Python\n2\nosoba\n900\n23\n1800\n2214.0\nPaliwo ON\nlitr\n6.2\n23\n37.2\n45.756\nLaptop Dell Inspiron 15\n3200\n23\n3200\n3936.0\nNetto\nVAT\nBrutto\n31467.2\n7079.956\n38547.156\nUwagi: Dziękujemy za współpracę\nszt"
+    },
+    "layout5_0.png": {
+      "engine": "easyocr",
+      "duration_ms": 11493,
+      "parsed": {
+        "invoice_number": "FV/6783",
+        "issue_date": "2025-11-09",
+        "sale_date": "2025-11-08",
+        "payment_due": "2025-11-30",
+        "seller_name": "AutoSerwis Kowalski",
+        "buyer_name": "EventPro Organizacja Imprez",
+        "seller_nip": "6648029894",
+        "buyer_nip": "9494623248",
+        "regon": "960861014",
+        "order_number": "ORD-574",
+        "seller_account": "PL90432936986774999721431115",
+        "total_net": "5000",
+        "total_vat": "1150.0",
+        "total_gross": "1",
+        "items": [
+          {
+            "name": "Nazwa Ilość Jm.",
+            "qty": null,
+            "unit": null,
+            "price_net": null,
+            "vat": null,
+            "net": null,
+            "gross": null
+          }
+        ]
+      },
+      "raw_text": "FAKTURA\nNumer: FV/6783\nWystawiono: 2025-11-09\nSprzedaż: 2025-11-08\nWaluta:\nPLN\nTermin płatności: 2025-11-30\nSposób zapłaty: Przelew\nSPRZEDAWCA\nAutoSerwis Kowalski\nul.  Kościuszki 10, 20-001 Lublin\nNIP: 6648029894\nREGON: 960861014\nKonto: PL90432936986774999721431115\nNABYWCA\nEventPro Organizacja Imprez\nul. Długa 45, 00-950 Warszawa\nNIP: 9494623248\nZamówienie\nORD-574\nLp.\nNazwa\nIlość\nJm.\nCena netto\nVAT %\nNetto\nBrutto\n1\nProjekt architektoniczny\n1\nprojekt\n5000\n23\n5000\n6150.0\nNetto: 5000\nVAT: 1150.0\nBrutto: 6150.0\nUwagi: Dziękujemy za współpracę"
+    },
+    "layout6_0.png": {
+      "engine": "easyocr",
+      "duration_ms": 12790,
+      "parsed": {
+        "invoice_number": "Nr",
+        "issue_date": "2025-11-09",
+        "sale_date": "2025-11-08",
+        "payment_due": "2025-11-30",
+        "seller_name": "EventPro Organizacja Imprez",
+        "buyer_name": "Sklep RTV AGD",
+        "seller_nip": "3189177666",
+        "buyer_nip": "3340205875",
+        "regon": "591853528",
+        "order_number": "ORD-266",
+        "seller_account": "PL44018330355450484378068573",
+        "total_net": "29158",
+        "total_vat": "6706.34",
+        "total_gross": "35864.34",
+        "items": [
+          {
+            "name": "Pozycja llość J.m.",
+            "qty": null,
+            "unit": null,
+            "price_net": null,
+            "vat": null,
+            "net": null,
+            "gross": null
+          }
+        ]
+      },
+      "raw_text": "Faktura VAT\nNr: FVI3077\nWystawiono: 2025-11-09\nSprzedaż: 2025-11-08\nWaluta: PLN\nSprzedawca\nEventPro Organizacja Imprez\nul. Świdnicka 22, 50-001 Wrocław\nNIP: 3189177666\nREGON: 591853528\nKonto: PL44018330355450484378068573\nNabywca\nSklep RTV AGD\nul. Świdnicka 22, 50-001 Wrocław\nNIP: 3340205875\nZamówienie: ORD-266\nTermin płatności: 2025-11-30\nLp.\nPozycja\nllość\nJ.m.\nCena netto\nVAT\nNetto\nBrutto\nPapier A4\n~\nryza\n6\nryza\n18\n23\n108\n132.84\n2\nKampania reklamowa Google Ads\n10\npakiet\n2500\n23\n25000\n30750.0\n3\nMateriały biurowe\nzestaw\n5\nzest.\n120\n23\n600\n738.0\n4\nUsługa doradcza biznesowa\n5\ngodz\n300\n23\n1500\n1845.0\n5\nPakiet Office 365\n3\nlicencja\n450\n23\n1350\n1660.5\n6\nHosting WWW\nroczny\npakiet\n600\n23\n600\n738.0\nNetto\n29158\nVAT\n6706.34\nBrutto\n35864.34\nSposób zapłaty: Przelew\nUwagi: Dziękujemy za współpracę"
+    },
+    "layout7_0.png": {
+      "engine": "easyocr",
+      "duration_ms": 11859,
+      "parsed": {
+        "invoice_number": "FV/7536",
+        "issue_date": "2025-11-09",
+        "sale_date": "2025-11-08",
+        "payment_due": "2025-11-30",
+        "seller_name": "MotoParts",
+        "buyer_name": "Budex",
+        "seller_nip": "0059479693",
+        "buyer_nip": "1479357006",
+        "regon": "870386724",
+        "order_number": "ORD",
+        "seller_account": null,
+        "total_net": "1200",
+        "total_vat": "276.0",
+        "total_gross": "1476.0",
+        "items": [
+          {
+            "name": "Ilość J.m Cena",
+            "qty": null,
+            "unit": null,
+            "price_net": null,
+            "vat": null,
+            "net": null,
+            "gross": null
+          }
+        ]
+      },
+      "raw_text": "Faktura\nnr\nFV/7536 Wystawienie:\n2025-11-09\nSprzedaż\n2025-11-08\nWaluta:\nPLN\nSprzedawca\nMotoParts\nul\nGłówna\n7 ,\n61-001\nPoznań\nNIP:\n0059479693\nREGON :\n870386724\nKonto:\nP180327881070796263866432026\nNabywca\nBudex\nSA\nul_\nMickiewicza\n12 ,\n30-001\nKraków\nNIP:\n1479357006\nZamówienie:\nORD - 798\nTermin płatności:\n2025-11-30\nPłatność:\nPrzelew\nNr\nPozycja\nIlość\nJ.m\nCena\nnetto\nVAI\nNetto\nBrutto\n1\nKonsultacja księgowa\ngodz _\n200\n23\n1200\n1476\n0\nSuma\nnetto\n1200\nSuma\nVAT\n276.0\nSuma\nbrutto\n1476.0\nUwagi:\nDziękuje\nza\nwspółpracę\nemy"
+    },
+    "layout8_0.png": {
+      "engine": "easyocr",
+      "duration_ms": 11379,
+      "parsed": {
+        "invoice_number": "FVI7156",
+        "issue_date": "2025-11-09",
+        "sale_date": "2025-11-08",
+        "payment_due": "2025-11-30",
+        "seller_name": "EduFuture Akademia",
+        "buyer_name": "Farmacia Zdrowie",
+        "seller_nip": "3755644327",
+        "buyer_nip": "2926125660",
+        "regon": "560243829",
+        "order_number": "ORD-987",
+        "seller_account": null,
+        "total_net": "1800",
+        "total_vat": "144.0",
+        "total_gross": "1944.0",
+        "items": [
+          {
+            "name": "Opis Ilość Jm",
+            "qty": null,
+            "unit": null,
+            "price_net": null,
+            "vat": null,
+            "net": null,
+            "gross": null
+          }
+        ]
+      },
+      "raw_text": "Dane faktury\nNumer: FVI7156\nData wystawienia: 2025-11-09\nData sprzedaży: 2025-11-08\nWaluta: PLN\nTermin płatności: 2025-11-30\nSposób zapłaty: Przelew\nKontrahenci\nSprzedawca\nEduFuture Akademia\nul. Mickiewicza 12, 30-001 Kraków\nNIP: 3755644327\nREGON: 560243829\nNabyca\nFarmacia Zdrowie\nul. Leśna 8, 87-100 Toruń\nNIP: 2926125660\nZamówienie: ORD-987\nLp.\nOpis\nIlość\nJm\nCena netto\nVAT\nNetto\nBrutto\nSerwis samochodu\n~\nprzegląd\n3\nusługa\n600\n8\n1800\n1944.0\nNetto\n1800\nVAT\n144.0\nBrutto\n1944.0\nUwagi: Dziękujemy za współpracę"
+    }
+  },
+  "pytesseract": {
+    "layout1_0.png": {
+      "engine": "pytesseract",
+      "duration_ms": 1492,
+      "parsed": {
+        "invoice_number": "FV/8356",
+        "issue_date": "2025-11-09",
+        "sale_date": "2025-11-08",
+        "payment_due": "2025-11-30",
+        "seller_name": "Budex SA",
+        "buyer_name": "MediCare Polska",
+        "seller_nip": "8879561832",
+        "buyer_nip": "8658761848",
+        "regon": "854626702",
+        "order_number": "ORD-954",
+        "seller_account": "PL39479693546882838148379710",
+        "total_net": "20137.2",
+        "total_vat": "4264.056",
+        "total_gross": "24401.256",
+        "items": [
+          {
+            "name": "Router TP-Link Archer",
+            "qty": "1",
+            "unit": null,
+            "price_net": null,
+            "vat": null,
+            "net": null,
+            "gross": null
+          },
+          {
+            "name": "Projekt graficzny logo",
+            "qty": "2",
+            "unit": null,
+            "price_net": null,
+            "vat": null,
+            "net": null,
+            "gross": null
+          },
+          {
+            "name": "Paliwo ON",
+            "qty": "3",
+            "unit": null,
+            "price_net": null,
+            "vat": null,
+            "net": null,
+            "gross": null
+          },
+          {
+            "name": "Konsultacja prawna",
+            "qty": "4",
+            "unit": null,
+            "price_net": null,
+            "vat": null,
+            "net": null,
+            "gross": null
+          },
+          {
+            "name": "Bilet lotniczy krajowy",
+            "qty": "5",
+            "unit": null,
+            "price_net": null,
+            "vat": null,
+            "net": null,
+            "gross": null
+          },
+          {
+            "name": "Konsultacja księgowa Sposób zapłaty: Przelew Uwagi: Dziękujemy za współpracę Ilość",
+            "qty": "6",
+            "unit": null,
+            "price_net": null,
+            "vat": null,
+            "net": null,
+            "gross": null
+          },
+          {
+            "name": "J.m. szt. projekt litr godz. szt. godz.",
+            "qty": null,
+            "unit": null,
+            "price_net": null,
+            "vat": null,
+            "net": null,
+            "gross": null
+          }
+        ]
+      },
+      "raw_text": "Faktura VAT\n\nNr faktury: FV/8356\n\nData wystawienia: 2025-11-09 Data sprzedaży: 2025-11-08 Waluta: PLN\n\nSPRZEDAWCA\n\nBudex SA\n\nul. Lubelska 44, 15-001 Białystok\n\nNIP: 8879561832\n\nREGON: 854626702\n\nKonto: PL39479693546882838148379710\n\nNABYWCA\n\nMediCare Polska\n\nul. Długa 45, 00-950 Warszawa\nNIP: 8658761848\n\nNumer zamówienia: ORD-954\nTermin płatności: 2025-11-30\n\nLp. Pozycja\n\n1 Router TP-Link Archer\n2 Projekt graficzny logo\n3 Paliwo ON\n\n4 Konsultacja prawna\n\n5 Bilet lotniczy krajowy\n\n6 Konsultacja księgowa\n\nSposób zapłaty: Przelew\nUwagi: Dziękujemy za współpracę\n\nIlość\n\n10\n\n10\n\nJ.m.\nszt.\nprojekt\nlitr\ngodz.\nszt.\n\ngodz.\n\nCena netto VAT\n\n350\n\n1200\n\n6.2\n\n400\n\n350\n\n200\n\nSuma netto 20137.2\nSuma VAT 4264.056\nSuma brutto 24401.256\n\n23\n\n23\n\n23\n\n23\n\n23\n\nNetto\n\n2450\n\n12000\n\n37.2\n\n1200\n\n2450\n\n2000\n\nBrutto\n\n3013.5\n\n14760.0\n\n45.756\n\n1476.0\n\n2646.0\n\n2460.0\n"
+    },
+    "layout2_0.png": {
+      "engine": "pytesseract",
+      "duration_ms": 1225,
+      "parsed": {
+        "invoice_number": "Nr",
+        "issue_date": "2025-11-09",
+        "sale_date": "2025-11-08",
+        "payment_due": "2025-11-30",
+        "seller_name": "SoftDev Solutions",
+        "buyer_name": "ArchDesign Studio",
+        "seller_nip": "8825224389",
+        "buyer_nip": "8270343156",
+        "regon": "924433230",
+        "order_number": "ORD-539",
+        "seller_account": "PL67462548015845544745357431",
+        "total_net": "16512.5",
+        "total_vat": "3796.0",
+        "total_gross": "1",
+        "items": [
+          {
+            "name": "Usługa transportowa",
+            "qty": "1",
+            "unit": null,
+            "price_net": "2.5",
+            "vat": "12.5",
+            "net": "13.5",
+            "gross": null
+          },
+          {
+            "name": "Projekt architektoniczny",
+            "qty": "2",
+            "unit": null,
+            "price_net": "18450.0",
+            "vat": null,
+            "net": null,
+            "gross": null
+          },
+          {
+            "name": "Usługa serwisowa IT",
+            "qty": "3",
+            "unit": null,
+            "price_net": "1845.0",
+            "vat": null,
+            "net": null,
+            "gross": null
+          }
+        ]
+      },
+      "raw_text": "Faktura VAT\n\nNr: FV/3861 Wystawiono: 2025-11-09\n\nSprzedaż: 2025-11-08 Waluta: PLN\n\nSPRZEDAWCA\n\nSoftDev Solutions\n\nul. Krótka 3, 45-001 Opole\nNIP: 8825224389\nREGON: 924433230\n\nIBAN: PL67462548015845544745357431\n\nNABYWCA\nArchDesign Studio\n\nNIP: 8270343156\nNumer zamówienia: ORD-539\nTermin płatności: 2025-11-30\n\nul. Warszawska 55, 35-001 Rzeszów\n\nForma zapłaty: Przelew\nUwagi: Dziękujemy za współpracę\n\nLp. Nazwa towaru/usługi Cena netto Stawka VAT Wartość netto Wartość brutto\n\n1 Usługa transportowa 2.5 12.5 13.5\n\n2 Projekt architektoniczny 18450.0\n\n3 Usługa serwisowa IT 1845.0\nNetto 16512.5\nVAT 3796.0\nBrutto 20308.5\n\n"
+    },
+    "layout3_0.png": {
+      "engine": "pytesseract",
+      "duration_ms": 1313,
+      "parsed": {
+        "invoice_number": "FV/3337",
+        "issue_date": "2025-11-09",
+        "sale_date": "2025-11-08",
+        "payment_due": "2025-11-30",
+        "seller_name": "Farmacia Zdrowie",
+        "buyer_name": "TechPol Sp. z o.o.",
+        "seller_nip": "1128284431",
+        "buyer_nip": "5477440872",
+        "regon": "295348571",
+        "order_number": "ORD-725",
+        "seller_account": "PL93170002667113797412183394",
+        "total_net": null,
+        "total_vat": "1492.23",
+        "total_gross": null,
+        "items": [
+          {
+            "name": "Projekt architektoniczny projekt",
+            "qty": "5000",
+            "unit": null,
+            "price_net": "23",
+            "vat": "5000",
+            "net": "6150.0",
+            "gross": null
+          },
+          {
+            "name": "Usługa sprzątania biura m",
+            "qty": "2",
+            "unit": null,
+            "price_net": "5",
+            "vat": "8",
+            "net": "20",
+            "gross": "21.6"
+          },
+          {
+            "name": "Paliwo ON litr",
+            "qty": "6.2",
+            "unit": null,
+            "price_net": "23",
+            "vat": "31.0",
+            "net": "38.13",
+            "gross": null
+          },
+          {
+            "name": "Usługa serwisowa IT godz.",
+            "qty": "150",
+            "unit": null,
+            "price_net": "23",
+            "vat": "1200",
+            "net": "1476.0",
+            "gross": null
+          },
+          {
+            "name": "Domena .pl — roczna szt.",
+            "qty": "50",
+            "unit": null,
+            "price_net": "23",
+            "vat": "250",
+            "net": "307.5",
+            "gross": "6501.0"
+          }
+        ]
+      },
+      "raw_text": "Faktura nr: FV/3337 Wystawienie: 2025-11-09 Sprzedaż: 2025-11-08 Waluta: PLN\n\nSprzedawca\n\nFarmacia Zdrowie\n\nul. Mickiewicza 12, 30-001 Kraków\n\nNIP: 1128284431\n\nREGON: 295348571\n\nKonto: PL93170002667113797412183394\n\nNabywca\n\nTechPol Sp. z o.o.\n\nul. Lubelska 44, 15-001 Białystok\nNIP: 5477440872\n\nZamówienie: ORD-725\n\nTermin płatności: 2025-11-30\n\nPozycja Ilość J.m. Cena netto VAT Netto Brutto\nProjekt architektoniczny projekt 5000 23 5000 6150.0\nUsługa sprzątania biura m2 5 8 20 21.6\nPaliwo ON litr 6.2 23 31.0 38.13\nUsługa serwisowa IT godz. 150 23 1200 1476.0\nDomena .pl — roczna szt. 50 23 250 307.5\n6501.0\nSuma VAT 1492.23\n7993.23\n\nSposób zapłaty: Przelew Uwagi: Dziękujemy za współpracę\n\n"
+    },
+    "layout4_0.png": {
+      "engine": "pytesseract",
+      "duration_ms": 1414,
+      "parsed": {
+        "invoice_number": "FW1619",
+        "issue_date": "2025-11-09",
+        "sale_date": "2025-11-08",
+        "payment_due": "2025-11-30",
+        "seller_name": "ArchDesign Studio",
+        "buyer_name": "Księgowość Plus",
+        "seller_nip": "4331623698",
+        "buyer_nip": "9798115951",
+        "regon": "375292829",
+        "order_number": "ORD-837",
+        "seller_account": "PL23393634604256703208464226",
+        "total_net": null,
+        "total_vat": "7079.956",
+        "total_gross": "1134.0",
+        "items": [
+          {
+            "name": "Bilet lotniczy krajowy",
+            "qty": "1",
+            "unit": null,
+            "price_net": null,
+            "vat": null,
+            "net": null,
+            "gross": null
+          },
+          {
+            "name": "Papier M — ryza",
+            "qty": "2",
+            "unit": null,
+            "price_net": null,
+            "vat": null,
+            "net": null,
+            "gross": null
+          },
+          {
+            "name": "Telefon Samsung Galaxy A",
+            "qty": "3",
+            "unit": null,
+            "price_net": "52",
+            "vat": null,
+            "net": null,
+            "gross": null
+          },
+          {
+            "name": "Projekt graficzny logo",
+            "qty": "4",
+            "unit": null,
+            "price_net": null,
+            "vat": null,
+            "net": null,
+            "gross": null
+          },
+          {
+            "name": "Szkolenie online Python",
+            "qty": "5",
+            "unit": null,
+            "price_net": null,
+            "vat": null,
+            "net": null,
+            "gross": null
+          },
+          {
+            "name": "Paliwo ON",
+            "qty": "6",
+            "unit": null,
+            "price_net": null,
+            "vat": null,
+            "net": null,
+            "gross": null
+          },
+          {
+            "name": "Laptop Dell Inspiron Uwagi: Dziękujemy za współpracę Jm",
+            "qty": "7",
+            "unit": null,
+            "price_net": "15",
+            "vat": null,
+            "net": null,
+            "gross": null
+          }
+        ]
+      },
+      "raw_text": "Dane faktury\n\nNr: FW1619\n\nData wystawienia: 2025-11-09\nData sprzedaży: 2025-11-08\nWaluta: PLN\n\nTermin płatności: 2025-11-30\nSposób zapłaty: Przelew\n\nSprzedawca\n\nArchDesign Studio\n\nul. Świdnicka 22, 50-001 Wrocław\n\nNIP: 4331623698\n\nREGON: 375292829\n\nKonto: PL23393634604256703208464226\n\nNabywca\n\nKsięgowość Plus\n\nul. Krótka 3, 45-001 Opole\nNIP: 9798115951\nZamówienie: ORD-837\n\nLp. Opis pozycji\n\n1 Bilet lotniczy krajowy\n\n2 Papier M — ryza\n\n3 Telefon Samsung Galaxy A52\n4 Projekt graficzny logo\n\n5 Szkolenie online Python\n\n6 Paliwo ON\n\n7 Laptop Dell Inspiron 15\n\nUwagi: Dziękujemy za współpracę\n\nJm\n\nCena netto\n\nWartość brutto\n\n1134.0\n\n221.4\n\n17712.0\n\n13284.0\n\n2214.0\n\n45.756\n\n3936.0\n\n31467.2\n\nVAT\n\n7079.956\n\nBrutto\n\n38547.156\n\n"
+    },
+    "layout5_0.png": {
+      "engine": "pytesseract",
+      "duration_ms": 1184,
+      "parsed": {
+        "invoice_number": "FV/6783",
+        "issue_date": "2025-11-09",
+        "sale_date": "2025-11-08",
+        "payment_due": "2025-11-30",
+        "seller_name": "AutoSerwis Kowalski",
+        "buyer_name": "EventPro Organizacja Imprez",
+        "seller_nip": "6648029894",
+        "buyer_nip": "9494623248",
+        "regon": "960861014",
+        "order_number": "ORD-574",
+        "seller_account": "PL90432936986774999721431115",
+        "total_net": "5000",
+        "total_vat": "1150.0",
+        "total_gross": "1",
+        "items": [
+          {
+            "name": "Projekt architektoniczny",
+            "qty": "1",
+            "unit": null,
+            "price_net": "5000",
+            "vat": "6150.0",
+            "net": null,
+            "gross": null
+          }
+        ]
+      },
+      "raw_text": "FAKTURA\n\nNumer: FV/6783\nWystawiono: 2025-11-09\nSprzedaż: 2025-11-08\nWaluta: PLN\n\nTermin płatności: 2025-11-30\nSposób zapłaty: Przelew\n\nSPRZEDAWCA\n\nAutoSerwis Kowalski\n\nul. Kościuszki 10, 20-001 Lublin\n\nNIP: 6648029894\n\nREGON: 960861014\n\nKonto: PL90432936986774999721431115\n\nNABYWCA\n\nEventPro Organizacja Imprez\nul. Długa 45, 00-950 Warszawa\nNIP: 9494623248\n\nZamówienie: ORD-574\n\nLp. Nazwa .m. Cena netto Brutto\n\n1 Projekt architektoniczny 5000 6150.0\n\nNetto: 5000\nVAT: 1150.0\nBrutto: 6150.0\n\nUwagi: Dziękujemy za współpracę\n\n"
+    },
+    "layout6_0.png": {
+      "engine": "pytesseract",
+      "duration_ms": 1452,
+      "parsed": {
+        "invoice_number": "Nr",
+        "issue_date": "2025-11-09",
+        "sale_date": "2025-11-08",
+        "payment_due": "2025-11-30",
+        "seller_name": "EventPro Organizacja Imprez",
+        "buyer_name": "Sklep RTV AGD",
+        "seller_nip": "3189177666",
+        "buyer_nip": "3340205875",
+        "regon": "591853528",
+        "order_number": "ORD-266",
+        "seller_account": "PL44018330355450484378068573",
+        "total_net": "29158",
+        "total_vat": null,
+        "total_gross": "1",
+        "items": [
+          {
+            "name": "Papier AM - ryza | ryza",
+            "qty": "1",
+            "unit": null,
+            "price_net": "6",
+            "vat": "18",
+            "net": "23",
+            "gross": "108"
+          },
+          {
+            "name": "Kampania reklamowa Google Ads | pakiet",
+            "qty": "2",
+            "unit": null,
+            "price_net": "10",
+            "vat": "2500",
+            "net": "23",
+            "gross": "25000"
+          },
+          {
+            "name": "Materiały biurowe — zestaw | zest.",
+            "qty": "3",
+            "unit": null,
+            "price_net": "5",
+            "vat": "120",
+            "net": "23",
+            "gross": "600"
+          },
+          {
+            "name": "Usługa doradcza biznesowa | godz.",
+            "qty": "4",
+            "unit": null,
+            "price_net": "5",
+            "vat": "300",
+            "net": "23",
+            "gross": "1500"
+          },
+          {
+            "name": "Pakiet Office | licencja",
+            "qty": "5",
+            "unit": null,
+            "price_net": "365",
+            "vat": "3",
+            "net": "450",
+            "gross": "23"
+          },
+          {
+            "name": "Hosting WWW - roczny | pakiet",
+            "qty": "6",
+            "unit": null,
+            "price_net": "1",
+            "vat": "600",
+            "net": "23",
+            "gross": "600"
+          }
+        ]
+      },
+      "raw_text": "Faktura VAT\n\nNr: FV/3077\nWystawiono: 2025-11-09\nSprzedaż: 2025-11-08\n\nWaluta: PLN\nSprzedawca\nEventPro Organizacja Imprez\nul. Swidnicka 22, 50-001 Wrocław\nNIP: 3189177666\nREGON: 591853528\nKonto: PL44018330355450484378068573\nNabywca\nSklep RTV AGD\nul. Swidnicka 22, 50-001 Wrocław\nNIP: 3340205875\nZamówienie: ORD-266\nTermin płatności: 2025-11-30\nLp. Pozycja Ilość J.m. Cena netto VAT Netto Brutto\n1 Papier AM - ryza 6 | ryza 18 23 108 132.84\n2 Kampania reklamowa Google Ads 10 | pakiet 2500 23 25000 30750.0\n3 Materiały biurowe — zestaw 5 | zest. 120 23 600 738.0\n4 Usługa doradcza biznesowa 5 | godz. 300 23 1500 1845.0\n5 Pakiet Office 365 3 | licencja 450 23 1350 1660.5\n6 Hosting WWW - roczny 1 | pakiet 600 23 600 738.0\nNetto 29158\n6706.34\n35864.34\n\nSposób zapłaty: Przelew\nUwagi: Dziękujemy za współpracę\n\n"
+    },
+    "layout7_0.png": {
+      "engine": "pytesseract",
+      "duration_ms": 1189,
+      "parsed": {
+        "invoice_number": "FV/7536",
+        "issue_date": "2025-11-09",
+        "sale_date": "2025-11-08",
+        "payment_due": "2025-11-30",
+        "seller_name": "MotoParts",
+        "buyer_name": "Budex SA",
+        "seller_nip": "0059479693",
+        "buyer_nip": "1479357006",
+        "regon": "870386724",
+        "order_number": "ORD-798",
+        "seller_account": "PL80327881070796263866432026",
+        "total_net": null,
+        "total_vat": "276.0",
+        "total_gross": "1476.0",
+        "items": [
+          {
+            "name": "Konsultacja księgowa",
+            "qty": "1",
+            "unit": null,
+            "price_net": "200",
+            "vat": "1476.0",
+            "net": null,
+            "gross": null
+          }
+        ]
+      },
+      "raw_text": "Faktura nr: FV/7536 Wystawienie: 2025-11-09 Sprzedaż: 2025-11-08 Waluta: PLN\n\nSprzedawca\n\nMotoParts\n\nul. Główna 7, 61-001 Poznań\n\nNIP: 0059479693 | REGON: 870386724\nKonto: PL80327881070796263866432026\n\nNabywca\n\nBudex SA\n\nul. Mickiewicza 12, 30-001 Kraków\n\nNIP: 1479357006 | Zamówienie: ORD-798\n\nTermin płatności: 2025-11-30 | Płatność: Przelew\n\nNr Pozycja Cena netto Brutto\n\n1 Konsultacja księgowa 200 1476.0\nSuma VAT 276.0\nSuma brutto 1476.0\n\nUwagi: Dziękujemy za współpracę\n\n"
+    },
+    "layout8_0.png": {
+      "engine": "pytesseract",
+      "duration_ms": 1162,
+      "parsed": {
+        "invoice_number": "FV/7156",
+        "issue_date": "2025-11-09",
+        "sale_date": "2025-11-08",
+        "payment_due": "2025-11-30",
+        "seller_name": "EduFuture Akademia",
+        "buyer_name": "Farmacia Zdrowie",
+        "seller_nip": "3755644327",
+        "buyer_nip": "2926125660",
+        "regon": "560243829",
+        "order_number": "ORD-987",
+        "seller_account": null,
+        "total_net": "1800",
+        "total_vat": "144.0",
+        "total_gross": "1",
+        "items": [
+          {
+            "name": "Serwis samochodu - przegląd | usługa",
+            "qty": "1",
+            "unit": null,
+            "price_net": "3",
+            "vat": "600",
+            "net": "8",
+            "gross": "1800"
+          }
+        ]
+      },
+      "raw_text": "Dane faktury\n\nNumer: FV/7156\n\nData wystawienia: 2025-11-09\nData sprzedaży: 2025-11-08\nWaluta: PLN\n\nTermin płatności: 2025-11-30\nSposób zapłaty: Przelew\n\nKontrahenci\n\nSprzedawca\n\nEduFuture Akademia\n\nul. Mckiewicza 12, 30-001 Kraków\n\nNIP: 3755644327 | REGON: 560243829\n\nNabywca\n\nFarmacia Zdrowie\n\nul. Leśna 8, 87-100 Toruń\nNIP: 2926125660\nZamówienie: ORD-987\n\nLp. Opis Ilość J.m Cena netto VAT Netto Brutto\n1 Serwis samochodu - przegląd 3 | usługa 600 8 1800 1944.0\nNetto 1800\nVAT 144.0\nBrutto 1944.0\n\nUwagi: Dziękujemy za współpracę\n"
+    }
+  }
+}
