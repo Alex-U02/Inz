@@ -13,7 +13,7 @@
   .block { border: 1px solid #000; padding: 4mm; margin-bottom: 6mm; }
   .block-title { font-weight: bold; text-transform: uppercase; font-size: 10pt; margin-bottom: 2mm; }
   table { width: 100%; border-collapse: collapse; }
-  th, td { border: 1px solid #000; padding: 3mm; }
+  th, td { border: 1px solid #000; padding: 3mm; text-align: center; }
   th { background: #eaeaea; }
   .right { text-align: right; }
   .totals { width: 50%; margin-left: auto; margin-top: 6mm; border: 1px solid #000; }
@@ -68,12 +68,12 @@
       <tr>
         <td>{{ loop.index }}</td>
         <td>{{ item.name }}</td>
-        <td class="right">{{ item.qty }}</td>
+        <td>{{ item.qty }}</td>
         <td>{{ item.unit }}</td>
-        <td class="right">{{ item.price_net }}</td>
-        <td class="right">{{ item.vat }}</td>
-        <td class="right">{{ item.net }}</td>
-        <td class="right">{{ item.gross }}</td>
+        <td>{{ item.price_net }}</td>
+        <td>{{ item.vat }}</td>
+        <td>{{ item.net }}</td>
+        <td>{{ item.gross }}</td>
       </tr>
       {% endfor %}
     </tbody>

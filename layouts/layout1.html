@@ -14,9 +14,7 @@
   .card { flex: 1; border: 1px solid #ccc; padding: 4mm 5mm; }
   .card-title { font-weight: bold; margin-bottom: 2mm; text-transform: uppercase; font-size: 9pt; color: #444; }
   table { width: 100%; border-collapse: collapse; margin-top: 6mm; }
-  th, td { padding: 3mm; border-bottom: 1px solid #ddd; font-size: 10.5pt; }
-  th { background: #f5f5f5; text-align: left; }
-  .right { text-align: right; }
+  th, td { padding: 3mm; border-bottom: 1px solid #ddd; font-size: 10.5pt; text-align: center; vertical-align: middle; }
   .summary { margin-top: 8mm; width: 45%; margin-left: auto; }
   .summary-row { display: flex; justify-content: space-between; padding: 2mm 0; }
   .summary-row .label { font-weight: bold; }
@@ -76,10 +74,10 @@
         <td>{{ item.name }}</td>
         <td>{{ item.qty }}</td>
         <td>{{ item.unit }}</td>
-        <td class="right">{{ item.price_net }}</td>
-        <td class="right">{{ item.vat }}</td>
-        <td class="right">{{ item.net }}</td>
-        <td class="right">{{ item.gross }}</td>
+        <td>{{ item.price_net }}</td>
+        <td>{{ item.vat }}</td>
+        <td>{{ item.net }}</td>
+        <td>{{ item.gross }}</td>
       </tr>
       {% endfor %}
     </tbody>
