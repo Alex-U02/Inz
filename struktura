@@ -14,10 +14,17 @@ INZ/
 │   │   ├── easyocr_adapter.py
 │   │   ├── pytesseract_adapter.py
 │   │   └── azure_adapter.py
-│   ├── parsers/          # parsery tekstu faktur
-│   │   └── invoice_parser.py
-│   ├── db.py             # konfiguracja bazy danych
-│   └── models.py         # definicje tabel SQLAlchemy
+│   ├── parsers/         
+│   │   ├── table_parser.py # parser tabel
+│   │   ├── text_parser.py # parser tekstu
+│   │   └── invoice_parser.py # parsery tekstu faktur
+│   └── db/
+│       ├── database.py          # konfiguracja SQLAlchemy
+│       ├── models.py            # WSZYSTKIE modele (GT + OCR)
+│       ├── crud_ground_truth.py # CRUD dla generatora
+│       ├── crud_ocr.py          # CRUD dla OCR
+│       ├── compare.py           # porównania OCR vs GT
+│       └── init_db.py           # automatyczne tworzenie tabel
 │
 ├── scripts/              # dodatkowe skrypty
 │   ├── client_submit.py  # wysyłanie obrazów do API
@@ -25,4 +32,5 @@ INZ/
 │   └── benchmark.py      # analiza wyników OCR
 │
 ├── generator.py          # generator faktur (PDF + PNG)
-└── requirements.txt      # zależności projektu
+├── requirements.txt      # zależności projektu
+└── invoices.db           # baza danych SQLite

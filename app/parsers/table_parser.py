@@ -4,48 +4,39 @@ from collections import defaultdict
 
 NUMBER = re.compile(r"\d+(?:[.,]\d+)?")
 
-SUMMARY_WORDS = {"suma", "netto", "vat", "brutto", "razem", "uwagi", "forma zapłaty", "sposób zapłaty"}
-
+SUMMARY_WORDS = {
+    "suma", "netto", "vat", "brutto", "razem",
+    "uwagi", "forma zapłaty", "sposób zapłaty"
+}
 
 def is_number(t: str) -> bool:
     return bool(NUMBER.fullmatch(t.replace(",", ".")))
-
 
 def norm_num(t: Optional[str]) -> Optional[str]:
     if t is None:
         return None
     return t.replace(",", ".").strip()
 
-
 def is_summary_text(t: str) -> bool:
     tl = t.lower()
     return any(w in tl for w in SUMMARY_WORDS)
 
 
-# -----------------------
-# BLOKOWE WIERSZE (Y-CENTERS)
-# -----------------------
+# ============================================================
+# BLOKOWE WIERSZE
+# ============================================================
 
-def group_rows(words: List[Dict], row_tolerance: float = 16.0) -> List[List[Dict]]:
-    """
-    Blokowe grupowanie wierszy:
-    - używa środka pionowego słowa: y_center = y + h/2
-    - przypisuje słowo do najbliższego istniejącego wiersza, jeśli dystans w Y <= row_tolerance
-    - w przeciwnym razie tworzy nowy wiersz
-    """
+def group_rows(words: List[Dict], row_tolerance: float = 14.0) -> List[List[Dict]]:
     if not words:
         return []
 
     words_sorted = sorted(words, key=lambda w: (w.get("y", 0.0), w.get("x", 0.0)))
 
-    row_centers: List[float] = []
-    rows: List[List[Dict]] = []
+    row_centers = []
+    rows = []
 
     for w in words_sorted:
-        y = w.get("y", 0.0)
-        h = w.get("h", 0.0)
-        y_center = y + h / 2.0
-
+        y_center = w["y"] + w["h"] / 2
         best_idx = None
         best_dist = None
 
@@ -60,73 +51,49 @@ def group_rows(words: List[Dict], row_tolerance: float = 16.0) -> List[List[Dict
             rows.append([w])
         else:
             rows[best_idx].append(w)
-            row_centers[best_idx] = (row_centers[best_idx] + y_center) / 2.0
+            row_centers[best_idx] = (row_centers[best_idx] + y_center) / 2
 
-    # sortujemy słowa w wierszach po X
     for r in rows:
-        r.sort(key=lambda ww: ww.get("x", 0.0))
+        r.sort(key=lambda ww: ww["x"])
 
-    # sortujemy wiersze po ich Y-center
     rows_with_centers = []
     for r in rows:
-        ys = [ww.get("y", 0.0) + ww.get("h", 0.0) / 2.0 for ww in r]
-        center = sum(ys) / len(ys) if ys else 0.0
-        rows_with_centers.append((center, r))
-    rows_with_centers.sort(key=lambda t: t[0])
+        centers = [w["y"] + w["h"] / 2 for w in r]
+        rows_with_centers.append((sum(centers) / len(centers), r))
 
+    rows_with_centers.sort(key=lambda t: t[0])
     return [r for _, r in rows_with_centers]
 
 
-# -----------------------
+# ============================================================
 # WYKRYWANIE NAGŁÓWKA
-# -----------------------
+# ============================================================
 
 HEADER_KEYWORDS = {
-    "ilość", "ilosc",
-    "j.m", "j.m.", "jm",
-    "cena", "netto",
-    "brutto", "vat", "stawka",
-    "nazwa", "pozycja", "opis", "towaru", "usługi", "uslugi",
+    "ilość", "ilosc", "jm", "j.m", "j.m.",
+    "cena", "netto", "brutto", "vat", "stawka",
+    "nazwa", "pozycja", "opis", "towaru", "usługi", "uslugi"
 }
 
-
-def detect_header_candidates(rows: List[List[Dict]]) -> List[int]:
-    """
-    Zwraca indeksy wierszy, które wyglądają jak nagłówki:
-    - zawierają co najmniej 2 słowa z HEADER_KEYWORDS
-    """
-    candidates = []
+def detect_header_candidates(rows):
+    out = []
     for i, row in enumerate(rows):
-        texts = " ".join(w["text"].lower() for w in row)
-        score = sum(1 for kw in HEADER_KEYWORDS if kw in texts)
+        text = " ".join(w["text"].lower() for w in row)
+        score = sum(1 for kw in HEADER_KEYWORDS if kw in text)
         if score >= 2:
-            candidates.append(i)
-    return candidates
+            out.append(i)
+    return out
 
-
-def count_numeric_rows_below(rows: List[List[Dict]], start_idx: int, max_lookahead: int = 6) -> int:
-    """
-    Liczy, ile wierszy poniżej (w zasięgu kilku wierszy) zawiera liczby.
-    Używane do walidacji, że pod nagłówkiem faktycznie zaczyna się tabela.
-    """
+def count_numeric_rows_below(rows, start_idx, max_lookahead=6):
     count = 0
     end = min(len(rows), start_idx + 1 + max_lookahead)
     for i in range(start_idx + 1, end):
-        row = rows[i]
-        text = " ".join(w["text"] for w in row)
+        text = " ".join(w["text"] for w in rows[i])
         if any(is_number(tok) for tok in text.replace(",", ".").split()):
             count += 1
     return count
 
-
-def detect_header_row(rows: List[List[Dict]]) -> Optional[int]:
-    """
-    Wykrywa wiersz nagłówka tabeli w sposób odporny na layouty:
-    1. Szuka kandydatów po słowach kluczowych (HEADERS).
-    2. Wybiera taki, który:
-       - ma największą szerokość X,
-       - ma pod sobą co najmniej 2 wiersze z liczbami.
-    """
+def detect_header_row(rows):
     candidates = detect_header_candidates(rows)
     if not candidates:
         return None
@@ -136,17 +103,17 @@ def detect_header_row(rows: List[List[Dict]]) -> Optional[int]:
 
     for idx in candidates:
         row = rows[idx]
-        xs = [w.get("x", 0.0) for w in row]
-        ws = [w.get("w", 0.0) for w in row]
+        xs = [w["x"] for w in row]
+        ws = [w["w"] for w in row]
         if not xs:
             continue
+
         x_min = min(xs)
         x_max = max(x + w for x, w in zip(xs, ws))
         width = x_max - x_min
 
-        numeric_below = count_numeric_rows_below(rows, idx, max_lookahead=6)
-
-        score = width + numeric_below * 1000.0
+        numeric_below = count_numeric_rows_below(rows, idx)
+        score = width + numeric_below * 1000
 
         if best_score is None or score > best_score:
             best_score = score
@@ -155,16 +122,16 @@ def detect_header_row(rows: List[List[Dict]]) -> Optional[int]:
     return best_idx
 
 
-# -----------------------
-# KOLUMNY Z NAGŁÓWKA
-# -----------------------
+# ============================================================
+# KOLUMNY
+# ============================================================
 
 def classify_header_text(txt: str) -> Optional[str]:
     t = txt.lower()
 
-    if "lp" in t or "nr" in t:
+    if "lp" in t or t.strip() == "nr":
         return "lp"
-    if "nazwa" in t or "pozycja" in t or "opis" in t or "towaru" in t or "usługi" in t or "uslugi" in t:
+    if any(k in t for k in ["nazwa", "pozycja", "opis", "towaru", "usługi", "uslugi"]):
         return "name"
     if "ilo" in t:
         return "qty"
@@ -184,82 +151,54 @@ def classify_header_text(txt: str) -> Optional[str]:
     return None
 
 
-def build_column_model(header_row: List[Dict]) -> List[Dict]:
-    """
-    Buduje model kolumn na podstawie nagłówka:
-    - bierze środki X słów nagłówkowych,
-    - sortuje po X,
-    - granice między kolumnami = połowa odległości między środkami.
-    """
+def build_column_model(header_row):
     headers = []
     for w in header_row:
         col_type = classify_header_text(w["text"])
-        if col_type is None:
-            continue
-        x_center = w.get("x", 0.0) + w.get("w", 0.0) / 2.0
-        headers.append((x_center, col_type))
+        if col_type:
+            x_center = w["x"] + w["w"] / 2
+            headers.append((x_center, col_type))
 
     headers.sort(key=lambda h: h[0])
 
     columns = []
-    for i, (x_center, col_type) in enumerate(headers):
+    for i, (xc, col_type) in enumerate(headers):
         if i == 0:
-            left = x_center - 350.0
+            left = xc - 350
         else:
-            prev_center = headers[i - 1][0]
-            left = (prev_center + x_center) / 2.0
+            left = (headers[i - 1][0] + xc) / 2
 
         if i == len(headers) - 1:
-            right = x_center + 350.0
+            right = xc + 350
         else:
-            next_center = headers[i + 1][0]
-            right = (x_center + next_center) / 2.0
+            right = (xc + headers[i + 1][0]) / 2
 
-        columns.append({
-            "type": col_type,
-            "x_min": left,
-            "x_max": right,
-        })
+        columns.append({"type": col_type, "x_min": left, "x_max": right})
 
     return columns
 
 
-def assign_cells_to_columns(row: List[Dict], columns: List[Dict]) -> Dict[str, List[Dict]]:
-    cells_by_type: Dict[str, List[Dict]] = defaultdict(list)
-
+def assign_cells_to_columns(row, columns):
+    out = defaultdict(list)
     for w in row:
-        x_center = w.get("x", 0.0) + w.get("w", 0.0) / 2.0
-        assigned_type = None
+        xc = w["x"] + w["w"] / 2
         for col in columns:
-            if col["x_min"] <= x_center <= col["x_max"]:
-                assigned_type = col["type"]
+            if col["x_min"] <= xc <= col["x_max"]:
+                out[col["type"]].append(w)
                 break
-        if assigned_type is not None:
-            cells_by_type[assigned_type].append(w)
-
-    return cells_by_type
+    return out
 
 
-def join_text(cells: List[Dict]) -> str:
-    parts = [w["text"] for w in sorted(cells, key=lambda ww: ww.get("x", 0.0))]
-    return " ".join(parts).strip()
+def join_text(cells):
+    return " ".join(w["text"] for w in sorted(cells, key=lambda ww: ww["x"])).strip()
 
 
-# -----------------------
-# GŁÓWNY PARSER
-# -----------------------
+# ============================================================
+# GŁÓWNY PARSER TABELI
+# ============================================================
 
-def parse_table_fields(words: List[Dict], debug: bool = False):
-    """
-    Główny parser:
-    - blokowe grupowanie wierszy po Y,
-    - wykrywanie nagłówka odporne na layouty,
-    - budowa modelu kolumn z nagłówka,
-    - przypisanie słów do kolumn,
-    - łączenie multi-row nazw,
-    - odcięcie podsumowań.
-    """
-    rows = group_rows(words, row_tolerance=10.0)
+def parse_table_fields(words: List[Dict], debug=False):
+    rows = group_rows(words, row_tolerance=12)
 
     header_idx = detect_header_row(rows)
     if header_idx is None:
@@ -268,9 +207,8 @@ def parse_table_fields(words: List[Dict], debug: bool = False):
     header_row = rows[header_idx]
     columns = build_column_model(header_row)
 
-    items: List[Dict[str, Optional[str]]] = []
-    current_item: Optional[Dict[str, Optional[str]]] = None
-
+    items = []
+    current = None
     debug_rows = []
 
     for i in range(header_idx + 1, len(rows)):
@@ -280,69 +218,67 @@ def parse_table_fields(words: List[Dict], debug: bool = False):
         if is_summary_text(row_text):
             break
 
-        cells_by_type = assign_cells_to_columns(row, columns)
+        cells = assign_cells_to_columns(row, columns)
 
-        debug_rows.append({
-            "row_index": i,
-            "row_text": row_text,
-            "cells_by_type": {k: [c["text"] for c in v] for k, v in cells_by_type.items()}
-        })
+        name = join_text(cells.get("name", []))
+        qty = join_text(cells.get("qty", []))
+        unit = join_text(cells.get("unit", []))
+        price = join_text(cells.get("price_net", []))
+        vat = join_text(cells.get("vat", []))
+        net = join_text(cells.get("net", []))
+        gross = join_text(cells.get("gross", []))
 
-        name_text = join_text(cells_by_type.get("name", [])) if "name" in cells_by_type else ""
-        qty_text = join_text(cells_by_type.get("qty", [])) if "qty" in cells_by_type else ""
-        unit_text = join_text(cells_by_type.get("unit", [])) if "unit" in cells_by_type else ""
-        price_text = join_text(cells_by_type.get("price_net", [])) if "price_net" in cells_by_type else ""
-        vat_text = join_text(cells_by_type.get("vat", [])) if "vat" in cells_by_type else ""
-        net_text = join_text(cells_by_type.get("net", [])) if "net" in cells_by_type else ""
-        gross_text = join_text(cells_by_type.get("gross", [])) if "gross" in cells_by_type else ""
+        # ----------------------------------------------------
+        # HEURYSTYKA: jeśli unit zawiera liczbę → liczba to qty
+        # ----------------------------------------------------
+        if unit and any(ch.isdigit() for ch in unit) and not qty:
+            parts = unit.split()
+            nums = [p for p in parts if p.replace(",", ".").replace(".", "").isdigit()]
+            if nums:
+                qty = nums[0]
+                unit = " ".join(p for p in parts if p not in nums)
 
-        has_any_number = any([
-            is_number(qty_text) if qty_text else False,
-            is_number(price_text) if price_text else False,
-            is_number(net_text) if net_text else False,
-            is_number(gross_text) if gross_text else False,
-        ])
+        # ----------------------------------------------------
+        # HEURYSTYKA: jeśli net = price * qty → wylicz qty
+        # ----------------------------------------------------
+        if not qty and price and net:
+            try:
+                p = float(price.replace(",", "."))
+                n = float(net.replace(",", "."))
+                if p > 0 and n % p == 0:
+                    qty = str(int(n / p))
+            except:
+                pass
 
-        only_name = bool(name_text) and not has_any_number
+        # ----------------------------------------------------
+        # KONTYNUACJA NAZWY
+        # ----------------------------------------------------
+        has_number = any(is_number(x) for x in [qty, price, net, gross] if x)
 
-        # Kontynuacja nazwy: wiersz z samą nazwą, bez liczb
-        if only_name and current_item is not None:
-            base_name = current_item["name"] or ""
-            current_item["name"] = (base_name + " " + name_text).strip()
+        if name and not has_number and current:
+            current["name"] = (current["name"] + " " + name).strip()
             continue
 
-        # Kontynuacja pozycji: unit/vat w osobnym wierszu, bez name i bez price/net/gross
-        if current_item is not None:
-            if not name_text and not price_text and not net_text and not gross_text:
-                if unit_text:
-                    current_item["unit"] = unit_text
-                if vat_text:
-                    current_item["vat"] = vat_text
-                continue
-
-        # Wiersz zupełnie pusty / śmieciowy
-        if not has_any_number and not name_text:
+        # ----------------------------------------------------
+        # NOWA POZYCJA
+        # ----------------------------------------------------
+        if name or has_number:
+            item = {
+                "name": name or None,
+                "qty": qty or None,
+                "unit": unit or None,
+                "price_net": norm_num(price) if price else None,
+                "vat": vat or None,
+                "net": norm_num(net) if net else None,
+                "gross": norm_num(gross) if gross else None,
+            }
+            items.append(item)
+            current = item
             continue
 
-        # Nowa pozycja
-        item: Dict[str, Optional[str]] = {
-            "name": name_text.strip() if name_text else None,
-            "qty": qty_text if qty_text else None,
-            "unit": unit_text if unit_text else None,
-            "price_net": norm_num(price_text) if price_text else None,
-            "vat": vat_text.strip() if vat_text else None,
-            "net": norm_num(net_text) if net_text else None,
-            "gross": norm_num(gross_text) if gross_text else None,
-        }
-
-        items.append(item)
-        current_item = item
-
-    debug_info = {
+    return items, {
         "rows": rows,
         "header_idx": header_idx,
         "columns": columns,
-        "assigned_rows": debug_rows
+        "assigned_rows": debug_rows,
     }
-
-    return items, debug_info

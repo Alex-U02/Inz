@@ -2,289 +2,27 @@
   "easyocr": {
     "layout1_0.png": {
       "engine": "easyocr",
-      "duration_ms": 25472,
+      "duration_ms": 17781,
       "parsed": {
-        "invoice_number": "FVI1242",
-        "issue_date": "2025-11-09",
-        "sale_date": "2025-11-08",
-        "payment_due": "2025-11-30",
-        "seller_name": "Hotel Luxor",
-        "buyer_name": "SoftDev Solutions",
-        "seller_nip": "5589570552",
-        "buyer_nip": "1521940509",
-        "regon": "715462374",
-        "order_number": "ORD-432",
-        "seller_account": "PL35536658939616635817969717",
-        "total_net": "26550",
-        "total_vat": "6106.5",
-        "total_gross": "32656.5",
-        "items": [
-          {
-            "name": "Projekt graficzny logo",
-            "qty": null,
-            "unit": "8 projekt",
-            "price_net": "1200",
-            "vat": "23",
-            "net": "9600",
-            "gross": "1808.0"
-          },
-          {
-            "name": "Telefon Samsung Galaxy A52",
-            "qty": null,
-            "unit": "9 szt",
-            "price_net": "1800",
-            "vat": "23",
-            "net": "16200",
-            "gross": "19926.0"
-          },
-          {
-            "name": "Monitor LG 24\"",
-            "qty": null,
-            "unit": "szt_",
-            "price_net": "750",
-            "vat": "23",
-            "net": "750",
-            "gross": "922.5"
-          }
-        ]
-      },
-      "raw_text": "Faktura VAT\nNr faktury: FVI1242\nData wstawienia: 2025-11-09\nData sprzedaży: 2025-11-08\nWaluta: PLN\nSPRZEDAWCA\nHotel Luxor\nul. Gdańska 101, 10-001 Olsztyn\nNIP: 5589570552\nREGON: 715462374\nKonto: PL35536658939616635817969717\nNABYCA\nSoftDev Solutions\nul. Warszawska 55, 35-001 Rzeszów\nNIP: 1521940509\nNumer zamówienia: ORD-432\nTermin płatności: 2025-11-30\nLp_\nPozycja\nllość\nJ.m.\nCena netto\nVAT\nNetto\nBrutto\nProjekt graficzny logo\n8\nprojekt\n1200\n23\n9600\n1808.0\n2\nTelefon Samsung Galaxy A52\n9\nszt\n1800\n23\n16200\n19926.0\n3\nMonitor LG 24\"\nszt_\n750\n23\n750\n922.5\nSuma netto 26550\nSuma VAT 6106.5\nSuma brutto 32656.5\nSposób zapłaty: Przelew\nUwagi: Dziękujemy za współpracę",
-      "words": null
-    },
-    "layout2_0.png": {
-      "engine": "easyocr",
-      "duration_ms": 24603,
-      "parsed": {
-        "invoice_number": "FV/9219",
-        "issue_date": "2025-11-09",
-        "sale_date": "2025-11-08",
-        "payment_due": "2025-11-30",
-        "seller_name": "FoodMarket Sp. z0.0.",
-        "buyer_name": "AgroMax",
-        "seller_nip": "9611681001",
-        "buyer_nip": "7835205707",
-        "regon": "922306274",
-        "order_number": "ORD-503",
-        "seller_account": "PL02782113495825066278566210",
-        "total_net": "3680",
-        "total_vat": "568.9",
-        "total_gross": "4248.9",
-        "items": [
-          {
-            "name": "Pakiet Office 365",
-            "qty": "3",
-            "unit": "licencja",
-            "price_net": null,
-            "vat": "23",
-            "net": "450 1350",
-            "gross": "1660.5"
-          },
-          {
-            "name": "Kawa ziarnista Ikg",
-            "qty": null,
-            "unit": "op",
-            "price_net": "80",
-            "vat": "23",
-            "net": "480",
-            "gross": "590.4"
-          },
-          {
-            "name": "Naprawa sprzętu AGD",
-            "qty": "5",
-            "unit": "usługa",
-            "price_net": null,
-            "vat": "8",
-            "net": "300 1500",
-            "gross": "1620.0"
-          },
-          {
-            "name": "Bilet lotniczy krajowy",
-            "qty": null,
-            "unit": "szt_",
-            "price_net": null,
-            "vat": "8",
-            "net": "350 350",
-            "gross": "378.0"
-          }
-        ]
-      },
-      "raw_text": "Faktura VAT\nNr: FV/9219\nWystawiono: 2025-11-09\nSprzedaż: 2025-11-08\nWaluta: PLN\nSPRZEDAWCA\nFoodMarket Sp. z0.0.\nul Mazowiecka 33, 00-067 Warszawa\nNIP: 9611681001\nREGON: 922306274\nIBAN: PL02782113495825066278566210\nNABYWCA\nAgroMax\nuL  Wrocławska 99, 30-017 Kraków\nNIP: 7835205707\nNumer zamówienia: ORD-503\nTermin płatności: 2025-11-30\nNazwa towarulusługi\nIlość\nJ.m\nnetto\nStawka VAT\nWartość netto\nWartość brutto\nPakiet Office 365\n3\nlicencja\n450\n23\n1350\n1660.5\n2\nKawa ziarnista\nop\n80\n23\n480\n590.4\n3\nNaprawa sprzętu AGD\n5\n300\n8\n1500\n1620.0\nBilet lotniczy krajowy\nszt_\n350\n8\n350\n378.0\nNetto\n3680\nVAT\n568.9\nBrutto\n4248.9\nForma zapłaty: Przelew\nUwagi: Dziękujemy za współpracę\nCena\nLp.\nIkg\nusługa",
-      "words": null
-    },
-    "layout3_0.png": {
-      "engine": "easyocr",
-      "duration_ms": 24701,
-      "parsed": {
-        "invoice_number": "FV/3636",
-        "issue_date": "2025-11-09",
-        "sale_date": "2025-11-08",
-        "payment_due": "2025-11-30",
-        "seller_name": "Sklep RTV AGD",
-        "buyer_name": "PrintMax Drukarnia",
-        "seller_nip": "5596374842",
-        "buyer_nip": "5275537375",
-        "regon": "175670865",
-        "order_number": "ORD-518",
-        "seller_account": "PL84752093199983352163757321",
-        "total_net": "28220",
-        "total_vat": "5767.6",
-        "total_gross": "33987.6",
-        "items": [
-          {
-            "name": "Materiały biurowe zestaw",
-            "qty": "10",
-            "unit": "zest_",
-            "price_net": "120",
-            "vat": "23",
-            "net": "1200",
-            "gross": "1476.0"
-          },
-          {
-            "name": "Usługa sprzątania biura",
-            "qty": "4",
-            "unit": "m2",
-            "price_net": "5",
-            "vat": "8",
-            "net": "20",
-            "gross": "21.6"
-          },
-          {
-            "name": "Projekt graficzny logo",
-            "qty": "6",
-            "unit": "projekt",
-            "price_net": "1200",
-            "vat": "23",
-            "net": "7200",
-            "gross": "8856.0"
-          },
-          {
-            "name": "Serwis samochodu przegląd",
-            "qty": "8",
-            "unit": "usługa",
-            "price_net": "600",
-            "vat": "8",
-            "net": "4800",
-            "gross": "5184.0"
-          },
-          {
-            "name": "Kampania reklamowa Google Ads",
-            "qty": "6",
-            "unit": "pakiet",
-            "price_net": "2500",
-            "vat": "23",
-            "net": "15000",
-            "gross": "18450.0"
-          }
-        ]
-      },
-      "raw_text": "Faktura nr: FV/3636\nWystawienie: 2025-11-09\nSprzedaż: 2025-11-08\nWaluta: PLN\nSprzedawca\nSklep RTV AGD\nul. Piotrkowska 123, 90-001 Łódź\nNIP: 5596374842\nREGON: 175670865\nKonto: PL84752093199983352163757321\nNabywca\nPrintMax Drukarnia\nul. Słoneczna 5, 40-001 Katowice\nNIP: 5275537375\nZamówienie: ORD-518\nTermin płatności: 2025-11-30\nPozycja\nIlość\nJm:\nCena netto\nVAT\nNetto\nBrutto\nMateriały biurowe\nzestaw\n10\nzest_\n120\n23\n1200\n1476.0\nUsługa sprzątania biura\n4\nm2\n5\n8\n20\n21.6\nProjekt graficzny\n6\nprojekt\n1200\n23\n7200\n8856.0\nSerwis samochodu\nprzegląd\n8\nusługa\n600\n8\n4800\n5184.0\nKampania reklamowa Google Ads\n6\npakiet\n2500\n23\n15000\n18450.0\nSuma netto\n28220\nSuma VAT\n5767.6\nSuma brutto\n33987.6\nSposób zapłaty: Przelew\nUwagi: Dziękujemy za współpracę\nlogo",
-      "words": null
-    },
-    "layout4_0.png": {
-      "engine": "easyocr",
-      "duration_ms": 25618,
-      "parsed": {
-        "invoice_number": "FVI7719",
-        "issue_date": "2025-11-09",
-        "sale_date": "2025-11-08",
-        "payment_due": "2025-11-30",
-        "seller_name": "AgroMax",
-        "buyer_name": null,
-        "seller_nip": "2266241887",
-        "buyer_nip": null,
-        "regon": "243961259",
-        "order_number": "ORD-967",
-        "seller_account": "PL27717971761487642661546566",
-        "total_net": null,
-        "total_vat": null,
-        "total_gross": "27200",
-        "items": [
-          {
-            "name": "Projekt graficzny logo",
-            "qty": null,
-            "unit": "projekt",
-            "price_net": "1200",
-            "vat": "23",
-            "net": "4800",
-            "gross": "5904.0"
-          },
-          {
-            "name": "Domena .pl roczna",
-            "qty": null,
-            "unit": "10 szt.",
-            "price_net": "50",
-            "vat": "23",
-            "net": "500",
-            "gross": "615.0"
-          },
-          {
-            "name": "Hosting WWW ~ roczny",
-            "qty": null,
-            "unit": "9 pakiet",
-            "price_net": "600",
-            "vat": "23",
-            "net": "5400",
-            "gross": "6642.0"
-          },
-          {
-            "name": "Usługa serwisowa",
-            "qty": null,
-            "unit": "godz.",
-            "price_net": "150",
-            "vat": "23",
-            "net": "600",
-            "gross": "738.0"
-          },
-          {
-            "name": "Kampania reklamowa Google Ads",
-            "qty": null,
-            "unit": "3 pakiet",
-            "price_net": "2500",
-            "vat": "23",
-            "net": "7500",
-            "gross": "9225.0"
-          },
-          {
-            "name": "Pakiet Office 365",
-            "qty": null,
-            "unit": "2 licencja",
-            "price_net": "450",
-            "vat": "23",
-            "net": "900",
-            "gross": "1107.0"
-          },
-          {
-            "name": "Kurs języka angielskiego",
-            "qty": null,
-            "unit": "5 osoba",
-            "price_net": "1500",
-            "vat": "23",
-            "net": "7500",
-            "gross": "9225.0"
-          }
-        ]
-      },
-      "raw_text": "Dane faktury\nNr: FVI7719\nData wystawienia: 2025-11-09\nData sprzedaży: 2025-11-08\nWaluta: PLN\nTermin płatności: 2025-11-30\nSposób zapłaty: Przelew\nSprzedawca\nAgroMax\nul. Świdnicka 22, 50-001 Wrocław\nNIP: 2266241887\nREGON: 243961259\nKonto: PL27717971761487642661546566\nNabwca\nFoodMarket Sp. z0.0\nul. Mazowiecka 33, 00-067 Warszawa\nNIP: 2097403787\nZamówienie: ORD-967\nLp.\nOpis pozycji\nllość\nJm\nCena netto\nVAT %\nWartość netto\nWartość brutto\nProjekt graficzny logo\nprojekt\n1200\n23\n4800\n5904.0\n2\nDomena .pl\nroczna\n10\nszt.\n50\n23\n500\n615.0\n3\nHosting WWW\n~\nroczny\n9\npakiet\n600\n23\n5400\n6642.0\nUsługa serwisowa\ngodz.\n150\n23\n600\n738.0\n5\nKampania reklamowa Google Ads\n3\npakiet\n2500\n23\n7500\n9225.0\nPakiet Office 365\n2\nlicencja\n450\n23\n900\n1107.0\nKurs języka angielskiego\n5\nosoba\n1500\n23\n7500\n9225.0\nNetto\nVAT\nBrutto\n27200\n6256.0\n33456.0\nUwagi: Dziękujemy za współpracę",
-      "words": null
-    },
-    "layout5_0.png": {
-      "engine": "easyocr",
-      "duration_ms": 45759,
-      "parsed": {
-        "invoice_number": "FV/1328",
-        "issue_date": "2025-11-09",
-        "sale_date": "2025-11-08",
-        "payment_due": "2025-11-30",
-        "seller_name": "Transport Express",
-        "buyer_name": "Budex SA",
-        "seller_nip": "6350647893",
-        "buyer_nip": "3414079133",
-        "regon": "981848213",
-        "order_number": "ORD-406",
-        "seller_account": "PL69667286631707721564509509",
-        "total_net": "11250",
-        "total_vat": "2227.5",
-        "total_gross": "13477.5",
+        "invoice_number": "FVI6O33",
+        "issue_date": "2026-01-03",
+        "sale_date": "2026-01-01",
+        "payment_due": "2026-01-13",
+        "currency": "PLN",
+        "seller_name": "EduFuture Akademia",
+        "seller_address": "ul. Nowa 20, 60-001 Poznań",
+        "seller_nip": "7217175368",
+        "seller_account": "PL87272214150510763007551309",
+        "seller_regon": "222817493",
+        "buyer_name": "Farmacia Zdrowie",
+        "buyer_address": "ul. Słoneczna 5, 40-001 Katowice",
+        "buyer_nip": "7949238490",
+        "order_number": "ORD-819",
+        "payment_method": "BLIK",
+        "notes": "Dziękujemy za współpracę",
+        "total_net": "12924.8",
+        "total_vat": "2612.704",
+        "total_gross": "15537.504",
         "items": [
           {
             "name": "Naprawa sprzętu AGD",
@@ -296,670 +34,930 @@
             "gross": "2592.0"
           },
           {
-            "name": "Hosting WWW roczny",
-            "qty": "8",
-            "unit": "pakiet",
-            "price_net": "600",
+            "name": "Paliwo ON",
+            "qty": "4",
+            "unit": "litr",
+            "price_net": "6.2",
             "vat": "23",
-            "net": "4800",
-            "gross": "5904.0"
+            "net": "24.8",
+            "gross": "30.504"
           },
           {
-            "name": "Projekt graficzny logo",
+            "name": "Kurs języka angielskiego",
+            "qty": "7",
+            "unit": "osoba",
+            "price_net": "1500",
+            "vat": "23",
+            "net": "10500",
+            "gross": "12915.0"
+          }
+        ]
+      },
+      "raw_text": "Faktura VAT\nNr faktury: FVI6O33\nData wystawienia: 2026-01-03\nData sprzedaży: 2026-01-01\nWaluta: PLN\nSPRZEDAWCA\nEduFuture Akademia\nul. Nowa 20, 60-001 Poznań\nNIP: 7217175368\nREGON: 222817493\nKonto: PL87272214150510763007551309\nNABYCA\nFarmacia Zdrowie\nul. Słoneczna 5, 40-001 Katowice\nNIP: 7949238490\nNumer zamówienia: ORD-819\nTermin płatności: 2026-01-13\nLp.\nPozycja\nIlość\nJm.\nCena netto\nVAT\nNetto\nBrutto\nNaprawa sprzętu AGD\n8\nusługa\n300\n8\n2400\n2592.0\n2\nPaliwo ON\nlitr\n6.2\n23\n24.8\n30.504\n3\nKurs języka angielskiego\nosoba\n1500\n23\n10500\n12915.0\nSuma netto 12924.8\nSuma VAT 2612.704\nSuma brutto 15537.504\nSposób zapłaty: BLIK\nUwagi: Dziękujemy za współpracę"
+    },
+    "layout2_0.png": {
+      "engine": "easyocr",
+      "duration_ms": 17691,
+      "parsed": {
+        "invoice_number": "FV/1298",
+        "issue_date": "2025-12-11",
+        "sale_date": "2025-12-10",
+        "payment_due": "2026-01-01",
+        "currency": "PLN",
+        "seller_name": "FoodMarket Sp. z0.0.",
+        "seller_address": "ul  Warszawska 55,35-001 Rzeszów",
+        "seller_nip": "6335404941",
+        "seller_account": "PL23814230945827828003396021",
+        "seller_regon": "406700847",
+        "buyer_name": "Sklep RTV AGD",
+        "buyer_address": "ul Kwiatowa 15, 85-001 Bydgoszcz",
+        "buyer_nip": "2625227022",
+        "order_number": "ORD-119",
+        "payment_method": "Przelew",
+        "notes": "Dziękujemy za współpracę",
+        "total_net": "3122.5",
+        "total_vat": "718.175",
+        "total_gross": "3840.675",
+        "items": [
+          {
+            "name": "Usługa doradcza biznesowa",
+            "qty": "1",
+            "unit": "godz",
+            "price_net": "300",
+            "vat": "23",
+            "net": "300",
+            "gross": "369.0"
+          },
+          {
+            "name": "Konsultacja prawna",
+            "qty": "7",
+            "unit": "godz",
+            "price_net": "400",
+            "vat": "23",
+            "net": "2800",
+            "gross": "3444.0"
+          },
+          {
+            "name": "Woda mineralna 1,51",
+            "qty": "9",
+            "unit": "szt",
+            "price_net": "2.5",
+            "vat": "23",
+            "net": "22.5",
+            "gross": "27.675"
+          }
+        ]
+      },
+      "raw_text": "Faktura VAT\nNr: FV/1298\nWystawiono: 2025-12-11\nSprzedaż: 2025-12-10\nWaluta: PLN\nSPRZEDAWCA\nFoodMarket Sp. z0.0.\nul  Warszawska 55,35-001 Rzeszów\nNIP: 6335404941\nREGON: 406700847\nIBAN: PL23814230945827828003396021\nNABYWCA\nSklep RTV AGD\nul Kwiatowa 15, 85-001 Bydgoszcz\nNIP: 2625227022\nNumer zamówienia: ORD-119\nTermin płatności: 2026-01-01\nNazwa towarulusługi\nIlość\nJm\nCena netto\nStawka VAT\nWartość netto\nWartość brutto\nUsługa doradcza biznesowa\n300\n23\n300\n369.0\n2\nKonsultacja prawna\n400\n23\n2800\n3444.0\n3\nWoda mineralna 1,51\nszt\n2.5\n23\n22.5\n27.675\nNetto\n3122.5\nVAT\n718.175\nBrutto\n3840.675\nForma zapłaty: Przelew\nUwagi: Dziękujemy za współpracę\nLp.\ngodz\ngodz"
+    },
+    "layout3_0.png": {
+      "engine": "easyocr",
+      "duration_ms": 20397,
+      "parsed": {
+        "invoice_number": "FV/6226",
+        "issue_date": "2025-11-28",
+        "sale_date": "2025-11-26",
+        "payment_due": "2025-12-08",
+        "currency": "PLN",
+        "seller_name": "GreenEnergy",
+        "seller_address": "ul. Warszawska 55, 35-001 Rzeszów",
+        "seller_nip": "7355141740",
+        "seller_account": "PL20088163182788946287882280",
+        "seller_regon": "192331745",
+        "buyer_name": "EventPro Organizacja Imprez",
+        "buyer_address": "ul Warszawska 55, 35-001 Rzeszów",
+        "buyer_nip": "5032894100",
+        "order_number": "ORD-557",
+        "payment_method": "Karta",
+        "notes": "Dziękujemy za współpracę",
+        "total_net": "15623.2",
+        "total_vat": "3492.086",
+        "total_gross": "19115.286",
+        "items": [
+          {
+            "name": "Kurs języka angielskiego",
+            "qty": "6",
+            "unit": "osoba",
+            "price_net": "1500",
+            "vat": "23",
+            "net": "9000",
+            "gross": "11070.0"
+          },
+          {
+            "name": "Usługa cateringowa",
+            "qty": "9",
+            "unit": "osoba",
+            "price_net": "75",
+            "vat": "8",
+            "net": "675",
+            "gross": "729.0"
+          },
+          {
+            "name": "Papier A4 ryza",
+            "qty": "9",
+            "unit": "ryza",
+            "price_net": "18",
+            "vat": "23",
+            "net": "162",
+            "gross": "199.26"
+          },
+          {
+            "name": "Kawa ziarnista 1kg",
+            "qty": "1",
+            "unit": "op.",
+            "price_net": "80",
+            "vat": "23",
+            "net": "80",
+            "gross": "98.4"
+          },
+          {
+            "name": "Konsultacja księgowa",
             "qty": "3",
-            "unit": "projekt",
-            "price_net": "1200",
+            "unit": "godz .",
+            "price_net": "200",
+            "vat": "23",
+            "net": "600",
+            "gross": "738.0"
+          },
+          {
+            "name": "Telefon Samsung Galaxy A52",
+            "qty": "2",
+            "unit": "szt",
+            "price_net": "1800",
             "vat": "23",
             "net": "3600",
             "gross": "4428.0"
           },
           {
-            "name": "Domena pl roczna",
-            "qty": "9",
-            "unit": "szt",
-            "price_net": "50",
+            "name": "Usługa doradcza biznesowa",
+            "qty": "5",
+            "unit": "godz .",
+            "price_net": "300",
             "vat": "23",
-            "net": "450",
-            "gross": "553.5"
+            "net": "1500",
+            "gross": "1845.0"
+          },
+          {
+            "name": "Paliwo ON",
+            "qty": "1",
+            "unit": "litr",
+            "price_net": "6.2",
+            "vat": "23",
+            "net": "6.2",
+            "gross": "7.626"
           }
         ]
       },
-      "raw_text": "FAKTURA\nNumer: FV/1328\nWystawiono: 2025-11-09\nSprzedaż: 2025-11-08\nWaluta:\nPLN\nTermin płatności: 2025-11-30\nSposób zapłaty: Przelew\nSPRZEDAWCA\nTransport Express\nul.\nMazowiecka 33, 00-067 Warszawa\nNIP: 6350647893\nREGON: 981848213\nKonto: PL69667286631707721564509509\nNABYWCA\nBudex SA\nul.\nKwiatowa 15, 85-001 Bydgoszcz\nNIP:\n3414079133\nZamówienie\nORD-406\nLp.\nNazwa\nIlość\nJm.\nCena netto\nVAT %\nNetto\nBrutto\n1\nNaprawa sprzętu AGD\n8\nusługa\n300\n8\n2400\n2592.0\n2\nHosting WWW\nroczny\n8\npakiet\n600\n23\n4800\n5904.0\n3\nProjekt graficzny logo\n3\nprojekt\n1200\n23\n3600\n4428.0\n4\nDomena\npl\nroczna\n9\nszt\n50\n23\n450\n553.5\nNetto: 11250\nVAT: 2227.5\nBrutto: 13477.5\nUwagi: Dziękujemy za współpracę",
-      "words": null
+      "raw_text": "Faktura nr: FV/6226\nWystawienie: 2025-11-28\nSprzedaż: 2025-11-26\nWaluta: PLN\nSprzedawca\nGreenEnergy\nul. Warszawska 55, 35-001 Rzeszów\nNIP: 7355141740\nREGON: 192331745\nKonto: PL20088163182788946287882280\nNabywca\nEventPro Organizacja Imprez\nul\nWarszawska 55, 35-001 Rzeszów\nNIP: 5032894100\nZamówienie: ORD-557\nTermin płatności: 2025-12-08\nPozycja\nIlość\nJm\nCena netto\nVAT\nNetto\nBrutto\nKurs języka angielskiego\n6\nosoba\n1500\n23\n9000\n11070.0\nUsługa cateringowa\n9\nosoba\n75\n8\n675\n729.0\nPapier A4\nryza\n9\nryza\n18\n23\n162\n199.26\nKawa ziarnista 1kg\n1\nop.\n80\n23\n80\n98.4\nKonsultacja księgowa\n3\n200\n23\n600\n738.0\nTelefon Samsung Galaxy A52\n2\nszt\n1800\n23\n3600\n4428.0\nUsługa doradcza biznesowa\n5\n300\n23\n1500\n1845.0\nPaliwo ON\n1\nlitr\n6.2\n23\n6.2\n7.626\nSuma netto\n15623.2\nSuma VAT\n3492.086\nSuma brutto\n19115.286\nSposób zapłaty: Karta\nUwagi: Dziękujemy za współpracę\ngodz .\ngodz ."
     },
-    "layout6_0.png": {
+    "layout4_0.png": {
       "engine": "easyocr",
-      "duration_ms": 41154,
+      "duration_ms": 18504,
       "parsed": {
-        "invoice_number": "FVI4165",
-        "issue_date": "2025-11-09",
-        "sale_date": "2025-11-08",
-        "payment_due": "2025-11-30",
-        "seller_name": "AutoSerwis Kowalski",
-        "buyer_name": "Budex SA",
-        "seller_nip": "7205864338",
-        "buyer_nip": "5897284090",
-        "regon": "226380331",
-        "order_number": "ORD-238",
-        "seller_account": "PL27430604671742496710440755",
-        "total_net": "41605.0",
-        "total_vat": "9568.4",
-        "total_gross": "51173.4",
+        "invoice_number": "FVI9114",
+        "issue_date": "2025-12-12",
+        "sale_date": "2025-12-10",
+        "payment_due": "2025-12-22",
+        "currency": "PLN",
+        "seller_name": "Budex SA",
+        "seller_address": "ul. Spacerowa 77, 70-001 Szczecin",
+        "seller_nip": "6652093384",
+        "seller_account": "PL18327497686570369905006806",
+        "seller_regon": "206989928",
+        "buyer_name": null,
+        "buyer_address": null,
+        "buyer_nip": null,
+        "order_number": "ORD-285",
+        "payment_method": "PayPal",
+        "notes": "Dziękujemy za współpracę",
+        "total_net": null,
+        "total_vat": null,
+        "total_gross": "16255.8",
         "items": [
           {
-            "name": "Kampania reklamowa Google Ads",
-            "qty": null,
-            "unit": "6 pakiet",
-            "price_net": "2500",
+            "name": "Paliwo ON",
+            "qty": "9",
+            "unit": "litr",
+            "price_net": "6.2",
             "vat": "23",
-            "net": "15000",
-            "gross": "18450.0"
+            "net": "55.800000000000004",
+            "gross": "68.634"
           },
           {
-            "name": "Laptop Dell Inspiron 15",
-            "qty": null,
-            "unit": "szt_",
-            "price_net": "3200",
+            "name": "Materiały biurowe  zestaw",
+            "qty": "5",
+            "unit": "zest",
+            "price_net": "120",
             "vat": "23",
-            "net": "3200",
-            "gross": "3936.0"
+            "net": "600",
+            "gross": "738.0"
           },
           {
-            "name": "Usługa transportowa",
-            "qty": null,
-            "unit": "2 km",
-            "price_net": "2.5",
-            "vat": "8",
-            "net": "5.0",
-            "gross": "5.4"
+            "name": "Drukarka HP LaserJet",
+            "qty": "8",
+            "unit": "szt.",
+            "price_net": "1200",
+            "vat": "23",
+            "net": "9600",
+            "gross": "11808.0"
+          },
+          {
+            "name": "Kurs języka angielskiego",
+            "qty": "4",
+            "unit": "osoba",
+            "price_net": "1500",
+            "vat": "23",
+            "net": "6000",
+            "gross": "7380.0"
+          }
+        ]
+      },
+      "raw_text": "Dane faktury\nNr: FVI9114\nData wystawienia: 2025-12-12\nData sprzedaży: 2025-12-10\nWaluta: PLN\nTermin płatności: 2025-12-22\nSposób zapłaty: PayPal\nSprzedawca\nBudex SA\nul. Spacerowa 77, 70-001 Szczecin\nNIP: 6652093384\nREGON: 206989928\nKonto: PL18327497686570369905006806\nNabwca\nSoftDev Solutions\nul. Wrocławska 99, 30-017 Kraków\nNIP: 5350333989\nZamówienie: ORD-285\nLp.\nOpis pozycji\nIlość\nJ.m\nCena netto\nVAT %\nWartość netto\nWartość brutto\nPaliwo ON\n9\nlitr\n6.2\n23\n55.800000000000004\n68.634\n2\nMateriały biurowe\n\nzestaw\n5\nzest\n120\n23\n600\n738.0\n3\nDrukarka HP LaserJet\n8\nszt.\n1200\n23\n9600\n11808.0\nKurs języka angielskiego\n4\nosoba\n1500\n23\n6000\n7380.0\nNetto\nVAT\nBrutto\n16255.8\n3738.834\n19994.634\nUwagi: Dziękujemy za współpracę"
+    },
+    "layout5_0.png": {
+      "engine": "easyocr",
+      "duration_ms": 17936,
+      "parsed": {
+        "invoice_number": "FV/2540",
+        "issue_date": "2025-12-28",
+        "sale_date": "2025-12-26",
+        "payment_due": "2026-01-12",
+        "currency": "PLN",
+        "seller_name": "ArchDesign Studio",
+        "seller_address": "ul. Krótka 3, 45-001 Opole",
+        "seller_nip": "9156671719",
+        "seller_account": "PL34130949895944768399353160",
+        "seller_regon": "129052474",
+        "buyer_name": "PrintMax Drukarnia",
+        "buyer_address": "ul. Kościuszki 10, 20-001 Lublin",
+        "buyer_nip": "7774733325",
+        "order_number": "ORD-402",
+        "payment_method": "BLIK",
+        "notes": "Dziękujemy za współpracę",
+        "total_net": "8850",
+        "total_vat": "2013.0",
+        "total_gross": "10863.0",
+        "items": [
+          {
+            "name": "Router TP-Link Archer",
+            "qty": "6",
+            "unit": "szt",
+            "price_net": "350",
+            "vat": "23",
+            "net": "2100",
+            "gross": "2583.0"
           },
           {
             "name": "Oprogramowanie CRM",
-            "qty": null,
-            "unit": "3 licencja",
+            "qty": "3",
+            "unit": "licencja",
             "price_net": "2200",
             "vat": "23",
             "net": "6600",
             "gross": "8118.0"
           },
           {
-            "name": "Drukarka HP LaserJet",
-            "qty": null,
-            "unit": "szt",
-            "price_net": "1200",
-            "vat": "23",
-            "net": "4800",
-            "gross": "5904.0"
-          },
-          {
-            "name": "Projekt graficzny logo",
-            "qty": null,
-            "unit": "10 projekt",
-            "price_net": "1200",
-            "vat": "23",
-            "net": "12000",
-            "gross": "14760.0"
+            "name": "Usługa cateringowa",
+            "qty": "2",
+            "unit": "osoba",
+            "price_net": "75",
+            "vat": "8",
+            "net": "150",
+            "gross": "162.0"
           }
         ]
       },
-      "raw_text": "Faktura VAT\nNr: FVI4165\nWystawiono: 2025-11-09\nSprzedaż: 2025-11-08\nWaluta: PLN\nSprzedawca\nAutoSerwis Kowalski\nul. Wrocławska 99, 30-017 Kraków\nNIP: 7205864338\nREGON: 226380331\nKonto: PL27430604671742496710440755\nNabywca\nBudex SA\nul. Lubelska 44, 15-001 Białystok\nNIP: 5897284090\nZamówienie: ORD-238\nTermin płatności: 2025-11-30\nLp.\nPozycja\nllość\nJ.m\nCena netto\nVAT\nNetto\nBrutto\nKampania reklamowa Google Ads\n6\npakiet\n2500\n23\n15000\n18450.0\n2\nLaptop Dell Inspiron 15\nszt_\n3200\n23\n3200\n3936.0\n3\nUsługa transportowa\n2\nkm\n2.5\n8\n5.0\n5.4\n4\nOprogramowanie CRM\n3\nlicencja\n2200\n23\n6600\n8118.0\n5\nDrukarka HP LaserJet\nszt\n1200\n23\n4800\n5904.0\n6\nProjekt graficzny logo\n10\nprojekt\n1200\n23\n12000\n14760.0\nNetto\n41605.0\nVAT\n9568.4\nBrutto\n51173.4\nSposób zapłaty: Przelew\nUwagi: Dziękujemy za współpracę",
-      "words": null
+      "raw_text": "FAKTURA\nNumer: FV/2540\nWystawiono: 2025-12-28\nSprzedaż: 2025-12-26\nWaluta:\nPLN\nTermin płatności: 2026-01-12\nSposób zapłaty: BLIK\nSPRZEDAWCA\nArchDesign Studio\nul.\nKrótka 3, 45-001 Opole\nNIP: 9156671719\nREGON:\n129052474\nKonto: PL34130949895944768399353160\nNABYWCA\nPrintMax Drukarnia\nul.\nKościuszki 10, 20-001 Lublin\nNIP:\n7774733325\nZamówienie\nORD-402\nLp.\nNazwa\nIlość\nJ.m.\nCena netto\nVAT %\nNetto\nBrutto\n1\nRouter TP-Link Archer\n6\nszt\n350\n23\n2100\n2583.0\n2\nOprogramowanie CRM\n3\nlicencja\n2200\n23\n6600\n8118.0\n3\nUsługa cateringowa\n2\nosoba\n75\n8\n150\n162.0\nNetto: 8850\nVAT: 2013.0\nBrutto: 10863.0\nUwagi: Dziękujemy za współpracę"
+    },
+    "layout6_0.png": {
+      "engine": "easyocr",
+      "duration_ms": 18646,
+      "parsed": {
+        "invoice_number": "FVI3346",
+        "issue_date": "2025-11-21",
+        "sale_date": "2025-11-19",
+        "payment_due": "2025-12-02",
+        "currency": "PLN",
+        "seller_name": "GreenEnergy",
+        "seller_address": "ul. Kwiatowa 15, 85-001 Bydgoszcz",
+        "seller_nip": "9648704185",
+        "seller_account": "PL22400395570450244983986931",
+        "seller_regon": "548553558",
+        "buyer_name": "ArchDesign Studio",
+        "buyer_address": "ul. Polna 88, 80-001 Gdańsk",
+        "buyer_nip": "3276405726",
+        "order_number": "ORD-599",
+        "payment_method": "Karta",
+        "notes": "Dziękujemy za współpracę",
+        "total_net": "15205.9",
+        "total_vat": "3497.357",
+        "total_gross": "18703.257",
+        "items": [
+          {
+            "name": "Woda mineralna 1,51",
+            "qty": "5",
+            "unit": "szt_",
+            "price_net": "2.5",
+            "vat": "23",
+            "net": "12.5",
+            "gross": "15.375"
+          },
+          {
+            "name": "Drukarka HP LaserJet",
+            "qty": "7",
+            "unit": "szt_",
+            "price_net": "1200",
+            "vat": "23",
+            "net": "8400",
+            "gross": "10332.0"
+          },
+          {
+            "name": "Pakiet Office 365",
+            "qty": "5",
+            "unit": "licencja",
+            "price_net": "450",
+            "vat": "23",
+            "net": "2250",
+            "gross": "2767.5"
+          },
+          {
+            "name": "Paliwo ON",
+            "qty": "7",
+            "unit": "litr",
+            "price_net": "6.2",
+            "vat": "23",
+            "net": "43.4",
+            "gross": "53.382"
+          },
+          {
+            "name": "Monitor LG 24'",
+            "qty": "6",
+            "unit": "szt_",
+            "price_net": "750",
+            "vat": "23",
+            "net": "4500",
+            "gross": "5535.0"
+          }
+        ]
+      },
+      "raw_text": "Faktura VAT\nNr: FVI3346\nWystawiono: 2025-11-21\nSprzedaż: 2025-11-19\nWaluta: PLN\nSprzedawca\nGreenEnergy\nul. Kwiatowa 15, 85-001 Bydgoszcz\nNIP: 9648704185\nREGON: 548553558\nKonto: PL22400395570450244983986931\nNabywca\nArchDesign Studio\nul. Polna 88, 80-001 Gdańsk\nNIP: 3276405726\nZamówienie: ORD-599\nTermin płatności: 2025-12-02\nLp.\nPozycja\nIlość\nJ.m\nCena netto\nVAT\nNetto\nBrutto\nWoda mineralna 1,51\n5\nszt_\n2.5\n23\n12.5\n15.375\n2\nDrukarka HP LaserJet\n7\nszt_\n1200\n23\n8400\n10332.0\n3\nPakiet Office 365\n5\nlicencja\n450\n23\n2250\n2767.5\n4\nPaliwo ON\n7\nlitr\n6.2\n23\n43.4\n53.382\n5\nMonitor LG 24'\n6\nszt_\n750\n23\n4500\n5535.0\nNetto\n15205.9\nVAT\n3497.357\nBrutto\n18703.257\nSposób zapłaty: Karta\nUwagi: Dziękujemy za współpracę"
     },
     "layout7_0.png": {
       "engine": "easyocr",
-      "duration_ms": 33797,
+      "duration_ms": 18868,
       "parsed": {
-        "invoice_number": "FV/1249",
-        "issue_date": "2025-11-09",
-        "sale_date": "2025-11-08",
-        "payment_due": "2025-11-30",
-        "seller_name": "AgroMax",
-        "buyer_name": "AgroMax",
-        "seller_nip": "0009158122",
-        "buyer_nip": "3036737939",
-        "regon": "377899198",
-        "order_number": "ORD-444",
-        "seller_account": null,
-        "total_net": "16293",
-        "total_vat": "3664.14",
-        "total_gross": "19957.14",
+        "invoice_number": "FV/8133",
+        "issue_date": "2025-11-17",
+        "sale_date": "2025-11-15",
+        "payment_due": "2025-12-07",
+        "currency": "PLN",
+        "seller_name": "EventPro Organizacja Imprez",
+        "seller_address": "ul Mazowiecka 33 , 00-067 Warszawa",
+        "seller_nip": "3237118756",
+        "seller_account": "P12529840215257588949753285",
+        "seller_regon": "570828826",
+        "buyer_name": "Księgowość",
+        "buyer_address": "Plus ul Mickiewicza 12 , 30-001 Kraków",
+        "buyer_nip": "1539285418",
+        "order_number": "ORD-965",
+        "payment_method": "Karta",
+        "notes": "Dziękujemy",
+        "total_net": "5492",
+        "total_vat": "1258",
+        "total_gross": "6750",
         "items": [
           {
-            "name": "Usługa sprzątania biura Pakiet Office 365 Kawa ziarnista 1kg Projekt graficzny logo Hosting Tn7intn roczny",
-            "qty": null,
-            "unit": "m2",
+            "name": "Paliwo ON Usługa sprzątania biura",
+            "qty": "10",
+            "unit": "litr",
             "price_net": null,
-            "vat": "8",
-            "net": "5 30",
-            "gross": "32 .4"
+            "vat": null,
+            "net": "6 .2 23 62 0",
+            "gross": "76.26"
           },
           {
-            "name": "Papier A4 ryza",
-            "qty": null,
-            "unit": "ryza",
-            "price_net": null,
-            "vat": "23",
-            "net": "18 108",
-            "gross": "132.84"
-          },
-          {
-            "name": "Usługa cateringowa",
+            "name": "Szkolenie online Python",
             "qty": null,
             "unit": "osoba",
             "price_net": null,
-            "vat": "8",
-            "net": "75 525",
-            "gross": "567.0"
+            "vat": null,
+            "net": "900 23 900",
+            "gross": "1107.0"
+          },
+          {
+            "name": "Kurs języka angielskiego",
+            "qty": null,
+            "unit": "osoba",
+            "price_net": null,
+            "vat": null,
+            "net": "1500 23 4500",
+            "gross": "5535.0"
           }
         ]
       },
-      "raw_text": "Faktura\nnr\nFV/1249 Wystawienie:\n2025-11-09\nSprzedaż\n2025-11-08\nWaluta:\nPLN\nSprzedawca\nAgroMax\nul\nŚwidnicka\n22 \n50-001\nWrocław\nNIP:\n0009158122\nREGON :\n377899198\nKonto:\nP190128206229584105232494163\nNabywca\nAgroMax\nul_\nDługa\n45 ,\n00-950\nWarszawa\nNIP:\n3036737939\nZamówienie:\nORD-444\nTermin płatności:\n2025-11-30\nPłatność:\nPrzelew\nNr\nPozycja\nIlość\nJ.m\nCena\nnetto\nVAT\nNetto\nBrutto\n1\nUsługa sprzątania\nbiura\nm2\n5\n8\n30\n32 .4\n2\nPakiet\nOffice\n365\nlicencja\n450\n23\n3150\n3874 . 5\nKawa\nziarnista 1kg\n80\n23\n480\n590 .4\nProjekt graficzny logo\nprojekt\n1200\n23\n9600\n11808 -\n0\n5\nHosting\nTn7intn\nroczny\npakiet\n600\n23\n2400\n2952 .0\nPapier\nA4\nryza\nryza\n18\n23\n108\n132.84\nUsługa cateringowa\nosoba\n75\n8\n525\n567.0\nSuma\nnetto\n16293\nSuma\nVAT\n3664.14\nSuma brutto\n19957.14\nUwagi\nDziękujemy\nZa\nwspółpracę",
-      "words": null
+      "raw_text": "Faktura\nnr\nFV/8133 Wystawienie\n2025-11-17\nSprzedaż\n2025-11-15\nWaluta\nPLN\nSprzedawca\nEventPro Organizacja Imprez\nul\nMazowiecka\n33 ,\n00-067\nWarszawa\nNIP:\n3237118756\nREGON :\n570828826\nKonto:\nP125298402152575889497532850\nNabywca\nKsięgowość\nPlus\nul\nMickiewicza\n12 ,\n30-001\nKraków\nNIP:\n1539285418\nZamówienie:\nORD-965\nTermin płatności:\n2025-12-07\nPłatność:\nKarta\nNr\nPozycja\nIlość\nJ.m\nCena\nnetto\nVAI\nNetto\nBrutto\n1\nPaliwo\nON\n10\nlitr\n6 .2\n23\n62\n0\n76.26\n2\nUsługa sprzątania\nbiura\nm2\n5\n30\n32 . 4\n3\nSzkolenie\nonline\nPython\nosoba\n900\n23\n900\n1107.0\nKurs języka angielskiego\nosoba\n1500\n23\n4500\n5535.0\nSuma\nnetto\n5492 _\n0\nSuma\nVAT\n1258_\n66\nSuma\nbrutto\n6750 _\n66\nUwagi:\nDziękujemy\nZa\nwspółpracę"
     },
     "layout8_0.png": {
       "engine": "easyocr",
-      "duration_ms": 31597,
+      "duration_ms": 16588,
       "parsed": {
-        "invoice_number": "FVI6967",
-        "issue_date": "2025-11-09",
-        "sale_date": "2025-11-08",
-        "payment_due": "2025-11-30",
-        "seller_name": "Budex SA",
-        "buyer_name": null,
-        "seller_nip": "3818814118",
-        "buyer_nip": null,
-        "regon": "614422757",
-        "order_number": "ORD-740",
-        "seller_account": "PL30322709338946484214666383",
-        "total_net": "23325",
-        "total_vat": "5358.0",
-        "total_gross": "28683.0",
+        "invoice_number": "FVI4355",
+        "issue_date": "2025-11-30",
+        "sale_date": "2025-11-29",
+        "payment_due": "2025-12-10",
+        "currency": "PLN",
+        "seller_name": "TechPol Sp. z 0.0.",
+        "seller_address": "ul. Długa 45, 00-950 Warszawa",
+        "seller_nip": "8006182377",
+        "seller_account": "PL26441252954774226480761305",
+        "seller_regon": "521179529",
+        "buyer_name": "Sklep RTV AGD",
+        "buyer_address": "ul. Piotrkowska 123, 90-001 Łódź",
+        "buyer_nip": "4120450917",
+        "order_number": "ORD-172",
+        "payment_method": "PayPal",
+        "notes": "Dziękujemy za współpracę",
+        "total_net": "1202.5",
+        "total_vat": "144.57500000000002",
+        "total_gross": "1347.075",
         "items": [
           {
-            "name": "Usługa sprzątania biura",
-            "qty": null,
-            "unit": "9 m2",
-            "price_net": "5",
-            "vat": "8",
-            "net": "45",
-            "gross": "48.6"
+            "name": "Woda mineralna 1,51",
+            "qty": "9",
+            "unit": "szt.",
+            "price_net": "2.5",
+            "vat": "23",
+            "net": "22.5",
+            "gross": "27.675"
           },
           {
-            "name": "Konsultacja księgowa",
-            "qty": null,
+            "name": "Usługa serwisowa IT",
+            "qty": "2",
             "unit": "godz.",
-            "price_net": "200",
+            "price_net": "150",
             "vat": "23",
-            "net": "800",
-            "gross": "984.0"
+            "net": "300",
+            "gross": "369.0"
           },
           {
-            "name": "Oprogramowanie CRM",
-            "qty": null,
-            "unit": "10 licencja",
-            "price_net": "2200",
-            "vat": "23",
-            "net": "22000",
-            "gross": "27060.0"
-          },
-          {
-            "name": "Materiały biurowe zestaw",
-            "qty": null,
-            "unit": "zest.",
-            "price_net": "120",
-            "vat": "23",
-            "net": "480",
-            "gross": "590.4"
+            "name": "Hotel ~ nocleg 1 os_",
+            "qty": "4",
+            "unit": "noc",
+            "price_net": "220",
+            "vat": "8",
+            "net": "880",
+            "gross": "950.4"
           }
         ]
       },
-      "raw_text": "Dane faktury\nNumer: FVI6967\nData wystawienia: 2025-11-09\nData sprzedaży: 2025-11-08\nWaluta: PLN\nTermin płatności: 2025-11-30\nSposób zapłaty: Przelew\nKontrahenci\nSprzedawca\nBudex SA\nul. Mazowiecka 33, 00-067 Warszawa\nNIP: 3818814118\nREGON: 614422757\nKonto: PL30322709338946484214666383\nNabwca\nMotoParts\nul. Szeroka 18, 31-001 Kraków\nNIP: 2011425572\nZamówienie: ORD-740\nLp.\nOpis\nllość\nJm\nCena netto\nVAT\nNetto\nBrutto\nUsługa sprzątania biura\n9\nm2\n5\n8\n45\n48.6\n2\nKonsultacja księgowa\ngodz.\n200\n23\n800\n984.0\n3\nOprogramowanie CRM\n10\nlicencja\n2200\n23\n22000\n27060.0\nMateriały biurowe\nzestaw\nzest.\n120\n23\n480\n590.4\nNetto\n23325\nVAT\n5358.0\nBrutto\n28683.0\nUwagi: Dziękujemy za współpracę",
-      "words": null
+      "raw_text": "Dane faktury\nNumer: FVI4355\nData wystawienia: 2025-11-30\nData sprzedaży: 2025-11-29\nWaluta: PLN\nTermin płatności: 2025-12-10\nSposób zapłaty: PayPal\nKontrahenci\nSprzedawca\nTechPol Sp. z 0.0.\nul.\nDługa 45, 00-950 Warszawa\nNIP: 8006182377\nREGON: 521179529\nKonto: PL26441252954774226480761305\nNabyca\nSklep RTV AGD\nul. Piotrkowska 123, 90-001 Łódź\nNIP: 4120450917\nZamówienie: ORD-172\nLp.\nOpis\nllość\nJm\nCena netto\nVAT\nNetto\nBrutto\nWoda mineralna 1,51\n9\nszt.\n2.5\n23\n22.5\n27.675\n2\nUsługa serwisowa IT\n2\ngodz.\n150\n23\n300\n369.0\n3\nHotel\n~\nnocleg 1 os_\n4\nnoc\n220\n8\n880\n950.4\nNetto\n1202.5\nVAT\n144.57500000000002\nBrutto\n1347.075\nUwagi: Dziękujemy za współpracę"
     }
   },
   "pytesseract": {
     "layout1_0.png": {
       "engine": "pytesseract",
-      "duration_ms": 5241,
+      "duration_ms": 1953,
       "parsed": {
-        "invoice_number": "FV/1242",
-        "issue_date": "2025-11-09",
-        "sale_date": "2025-11-08",
-        "payment_due": "2025-11-30",
-        "seller_name": "Hotel Luxor",
-        "buyer_name": "SoftDev Solutions",
-        "seller_nip": "5589570552",
-        "buyer_nip": "1521940509",
-        "regon": "715462374",
-        "order_number": "ORD-432",
-        "seller_account": "PL35536658939616635817969717",
-        "total_net": "26550",
-        "total_vat": "6106.5",
-        "total_gross": "32656.5",
+        "invoice_number": "FV/6033",
+        "issue_date": "2026-01-03",
+        "sale_date": "2026-01-01",
+        "payment_due": "2026-01-13",
+        "currency": "PLN",
+        "seller_name": "EduFuture Akademia",
+        "seller_address": "ul. Nowa 20, 60-001 Poznań",
+        "seller_nip": "7217175368",
+        "seller_account": "PL87272214150510763007551309",
+        "seller_regon": "222817493",
+        "buyer_name": "Farmacia Zdrowie",
+        "buyer_address": "ul. Słoneczna 5, 40-001 Katowice",
+        "buyer_nip": "7949238490",
+        "order_number": "ORD-819",
+        "payment_method": "BLIK",
+        "notes": "Dziękujemy za współpracę",
+        "total_net": "12924.8",
+        "total_vat": "2612.704",
+        "total_gross": "15537.504",
         "items": [
-          {
-            "name": "Projekt graficzny logo",
-            "qty": null,
-            "unit": "projekt",
-            "price_net": null,
-            "vat": "23",
-            "net": "1200 9600",
-            "gross": "11808.0"
-          },
-          {
-            "name": "Telefon Samsung Galaxy A52",
-            "qty": null,
-            "unit": "szt.",
-            "price_net": null,
-            "vat": "23",
-            "net": "1800 16200",
-            "gross": "19926.0"
-          },
-          {
-            "name": "Monitor LG 24\"",
-            "qty": null,
-            "unit": "szt.",
-            "price_net": "750",
-            "vat": "23",
-            "net": "750",
-            "gross": "922.5"
-          }
-        ]
-      },
-      "raw_text": "Faktura VAT\n\nNr faktury: FV/1242\n\nData wystawienia: 2025-11-09 Data sprzedaży: 2025-11-08 Waluta: PLN\n\nSPRZEDAWCA\n\nHotel Luxor\n\nul. Gdańska 101, 10-001 Olsztyn\n\nNIP: 5589570552\n\nREGON: 715462374\n\nKonto: PL35536658939616635817969717\n\nNABYWCA\n\nSoftDev Solutions\n\nul. Warszawska 55, 35-001 Rzeszów\nNIP: 1521940509\n\nNumer zamówienia: ORD-432\nTermin płatności: 2025-11-30\n\nLp. Pozycja\n1 Projekt graficzny logo\n2 Telefon Samsung Galaxy A52\n3 Monitor LG 24\"\n\nSposób zapłaty: Przelew\nUwagi: Dziękujemy za współpracę\n\nIlość\n\nJ.m. Cena netto VAT Netto\nprojekt 1200 23 9600\nszt. 1800 23 16200\nszt. 750 23 750\nSuma netto 26550\nSuma VAT 6106.5\nSuma brutto 32656.5\n\nBrutto\n\n11808.0\n\n19926.0\n\n922.5\n",
-      "words": null
-    },
-    "layout2_0.png": {
-      "engine": "pytesseract",
-      "duration_ms": 4822,
-      "parsed": {
-        "invoice_number": "FV/9219",
-        "issue_date": "2025-11-09",
-        "sale_date": "2025-11-08",
-        "payment_due": "2025-11-30",
-        "seller_name": "FoodMarket Sp. z 0.0.",
-        "buyer_name": "AgroMax",
-        "seller_nip": "9611681001",
-        "buyer_nip": "7835205707",
-        "regon": "922306274",
-        "order_number": "ORD-503",
-        "seller_account": "PL02782113495825066278566210",
-        "total_net": null,
-        "total_vat": null,
-        "total_gross": null,
-        "items": [
-          {
-            "name": "Pakiet Office 365",
-            "qty": null,
-            "unit": "licencja",
-            "price_net": null,
-            "vat": "23",
-            "net": "450 1350",
-            "gross": "1660.5"
-          },
-          {
-            "name": "Kawa ziarnista 1kg",
-            "qty": null,
-            "unit": null,
-            "price_net": null,
-            "vat": null,
-            "net": null,
-            "gross": "590.4"
-          },
           {
             "name": "Naprawa sprzętu AGD",
             "qty": null,
-            "unit": null,
-            "price_net": null,
-            "vat": null,
-            "net": null,
-            "gross": "1620.0"
-          },
-          {
-            "name": "Bilet lotniczy krajowy",
-            "qty": null,
-            "unit": "l szt.",
-            "price_net": null,
-            "vat": "8",
-            "net": "350 350",
-            "gross": "378.0"
-          },
-          {
-            "name": null,
-            "qty": null,
-            "unit": null,
-            "price_net": null,
-            "vat": null,
-            "net": null,
-            "gross": "3680"
-          },
-          {
-            "name": null,
-            "qty": null,
-            "unit": null,
-            "price_net": null,
-            "vat": null,
-            "net": null,
-            "gross": "568.9"
-          },
-          {
-            "name": null,
-            "qty": null,
-            "unit": null,
-            "price_net": null,
-            "vat": null,
-            "net": null,
-            "gross": "4248.9"
-          }
-        ]
-      },
-      "raw_text": "Faktura VAT\nNr: FV/9219 Wystawiono: 2025-11-09 Sprzedaż: 2025-11-08\n\nWaluta: PLN\n\nSPRZEDAWCA\n\nFoodMarket Sp. z 0.0.\n\nul. Mazowiecka 33, 00-067 Warszawa\nNIP: 9611681001\n\nREGON: 922306274\n\nIBAN: PL02782113495825066278566210\n\nNABYWCA\n\nAgroMax\n\nul. Wrocławska 99, 30-017 Kraków\nNIP: 7835205707\n\nNumer zamówienia: ORD-503\nTermin płatności: 2025-11-30\n\nForma zapłaty: Przelew\nUwagi: Dziękujemy za współpracę\n\nLp. Nazwa towaru/usługi J.m. Cena netto Stawka VAT Wartość netto Wartość brutto\n\nl Pakiet Office 365 licencja 450 23 1350 1660.5\n2 Kawa ziarnista 1kg 590.4\n3 Naprawa sprzętu AGD 1620.0\n4 Bilet lotniczy krajowy l szt. 350 8 350 378.0\n\n3680\n\n568.9\n\n4248.9\n\n",
-      "words": null
-    },
-    "layout3_0.png": {
-      "engine": "pytesseract",
-      "duration_ms": 5499,
-      "parsed": {
-        "invoice_number": "FV/3636",
-        "issue_date": "2025-11-09",
-        "sale_date": "2025-11-08",
-        "payment_due": "2025-11-30",
-        "seller_name": "Sklep RTV AGD",
-        "buyer_name": "PrintMax Drukarnia",
-        "seller_nip": "5596374842",
-        "buyer_nip": "5275537375",
-        "regon": "175670865",
-        "order_number": "ORD-518",
-        "seller_account": "PL84752093199983352163757321",
-        "total_net": null,
-        "total_vat": null,
-        "total_gross": null,
-        "items": [
-          {
-            "name": "Materiały biurowe — zestaw",
-            "qty": "10",
-            "unit": "zest.",
-            "price_net": null,
-            "vat": "23",
-            "net": "120 1200",
-            "gross": "1476.0"
-          },
-          {
-            "name": "Usługa sprzątania biura",
-            "qty": "4",
-            "unit": "m2",
-            "price_net": null,
-            "vat": "8",
-            "net": "5 20",
-            "gross": "21.6"
-          },
-          {
-            "name": "Projekt graficzny logo",
-            "qty": "6",
-            "unit": "projekt",
-            "price_net": null,
-            "vat": "23",
-            "net": "1200 7200",
-            "gross": "8856.0"
-          },
-          {
-            "name": "Serwis samochodu - przegląd",
-            "qty": "8",
             "unit": "usługa",
             "price_net": null,
             "vat": "8",
-            "net": "600 4800",
-            "gross": "5184.0"
-          },
-          {
-            "name": "Kampania reklamowa Google Ads",
-            "qty": "6",
-            "unit": "pakiet",
-            "price_net": null,
-            "vat": "23",
-            "net": "2500 15000",
-            "gross": "18450.0"
-          }
-        ]
-      },
-      "raw_text": "Faktura nr: FV/3636 Wystawienie: 2025-11-09 Sprzedaż: 2025-11-08 Waluta: PLN\n\nSprzedawca\n\nSklep RTV AGD\n\nul. Piotrkowska 123, 90-001 Łódź\n\nNIP: 5596374842\n\nREGON: 175670865\n\nKonto: PL84752093199983352163757321\n\nNabywca\n\nPrintMax Drukarnia\n\nul. Słoneczna 5, 40-001 Katowice\nNIP: 5275537375\n\nZamówienie: ORD-518\n\nTermin płatności: 2025-11-30\n\nPozycja Ilość J.m. Cena netto VAT Netto Brutto\n\nMateriały biurowe — zestaw 10 zest. 120 23 1200 1476.0\nUsługa sprzątania biura 4 m2 5 8 20 21.6\n\nProjekt graficzny logo 6 projekt 1200 23 7200 8856.0\n\nSerwis samochodu - przegląd 8 usługa 600 8 4800 5184.0\n\nKampania reklamowa Google Ads 6 pakiet 2500 23 15000 18450.0\n\nSposób zapłaty: Przelew Uwagi: Dziękujemy za współpracę\n\n",
-      "words": null
-    },
-    "layout4_0.png": {
-      "engine": "pytesseract",
-      "duration_ms": 5850,
-      "parsed": {
-        "invoice_number": "FWV7719",
-        "issue_date": "2025-11-09",
-        "sale_date": "2025-11-08",
-        "payment_due": "2025-11-30",
-        "seller_name": "AgroMax",
-        "buyer_name": "FoodMarket Sp. z o.o.",
-        "seller_nip": "2266241887",
-        "buyer_nip": "2097403787",
-        "regon": "243961259",
-        "order_number": "ORD-967",
-        "seller_account": "PL27717971761487642661546566",
-        "total_net": null,
-        "total_vat": null,
-        "total_gross": "33456.0",
-        "items": [
-          {
-            "name": null,
-            "qty": null,
-            "unit": null,
-            "price_net": null,
-            "vat": null,
-            "net": null,
-            "gross": "5904.0"
-          },
-          {
-            "name": null,
-            "qty": null,
-            "unit": null,
-            "price_net": null,
-            "vat": null,
-            "net": null,
-            "gross": "615.0"
-          },
-          {
-            "name": null,
-            "qty": "| [ee",
-            "unit": null,
-            "price_net": "e",
-            "vat": "[ae",
-            "net": null,
-            "gross": "6642.0"
-          },
-          {
-            "name": null,
-            "qty": "[eee [oe",
-            "unit": null,
-            "price_net": "e",
-            "vat": "|a|",
-            "net": "e",
-            "gross": "738.0"
-          },
-          {
-            "name": null,
-            "qty": null,
-            "unit": null,
-            "price_net": null,
-            "vat": null,
-            "net": null,
-            "gross": "9225.0"
-          },
-          {
-            "name": null,
-            "qty": "[eos | ee",
-            "unit": null,
-            "price_net": null,
-            "vat": "|a|",
-            "net": "6 e",
-            "gross": "1107.0"
-          },
-          {
-            "name": null,
-            "qty": null,
-            "unit": null,
-            "price_net": null,
-            "vat": null,
-            "net": null,
-            "gross": "9225.0"
-          }
-        ]
-      },
-      "raw_text": "Dane faktury\n\nNr: FWV7719\n\nData wystawienia: 2025-11-09\nData sprzedaży: 2025-11-08\nWaluta: PLN\n\nTermin płatności: 2025-11-30\nSposób zapłaty: Przelew\n\nSprzedawca\n\nAgroMax\n\nul. Świdnicka 22, 50-001 Wrocław\n\nNIP: 2266241887\n\nREGON: 243961259\n\nKonto: PL27717971761487642661546566\n\nNabywca\n\nFoodMarket Sp. z o.o.\n\nul. Mazowiecka 33, 00-067 Warszawa\nNIP: 2097403787\n\nZamówienie: ORD-967\n\nLp. Opis pozycji\n\nUwagi: Dziękujemy za współpracę\n\nIlość\n\nCena netto\n\nVAT %\n\nWartość netto\n\n[eee | [eee Jee |\n:\n[eee | [ee e [ae\n[eee [oe e |a| e\n;\n[eos | ee 6 |a| e\n;\n\nWartość brutto\n\n5904.0\n\n615.0\n\n6642.0\n\n738.0\n\n9225.0\n\n1107.0\n\n9225.0\n\nNetto\n\nVAT\n\nBrutto\n\n33456.0\n\n",
-      "words": null
-    },
-    "layout5_0.png": {
-      "engine": "pytesseract",
-      "duration_ms": 5278,
-      "parsed": {
-        "invoice_number": "FV/1328",
-        "issue_date": "2025-11-09",
-        "sale_date": "2025-11-08",
-        "payment_due": "2025-11-30",
-        "seller_name": "Transport Express",
-        "buyer_name": "Budex SA",
-        "seller_nip": "6350647893",
-        "buyer_nip": "3414079133",
-        "regon": "981848213",
-        "order_number": "ORD-406",
-        "seller_account": "PL69667286631707721564509509",
-        "total_net": "11250",
-        "total_vat": "2227.5",
-        "total_gross": "13477.5",
-        "items": [
-          {
-            "name": "Naprawa sprzętu AGD",
-            "qty": null,
-            "unit": null,
-            "price_net": null,
-            "vat": null,
-            "net": "300",
+            "net": "300 2400",
             "gross": "2592.0"
           },
           {
-            "name": "Hosting WWW - roczny",
+            "name": "Paliwo ON",
             "qty": null,
-            "unit": null,
+            "unit": "litr",
             "price_net": null,
-            "vat": null,
-            "net": null,
-            "gross": "5904.0"
+            "vat": "23",
+            "net": "6.2 24.8",
+            "gross": "30.504"
           },
           {
-            "name": "Projekt graficzny logo Domena .pl - roczna 9",
+            "name": "Kurs języka angielskiego",
             "qty": null,
-            "unit": null,
+            "unit": "osoba",
             "price_net": null,
-            "vat": null,
-            "net": null,
-            "gross": "4428.0"
+            "vat": "23",
+            "net": "1500 10500",
+            "gross": "12915.0"
           }
         ]
       },
-      "raw_text": "FAKTURA\n\nNumer: FV/1328\nWystawiono: 2025-11-09\nSprzedaż: 2025-11-08\nWaluta: PLN\n\nTermin płatności: 2025-11-30\nSposób zapłaty: Przelew\n\nSPRZEDAWCA\n\nTransport Express\n\nul. Mazowiecka 33, 00-067 Warszawa\nNIP: 6350647893\n\nREGON: 981848213\n\nKonto: PL69667286631707721564509509\n\nNABYWCA\n\nBudex SA\n\nul. Kwiatowa 15, 85-001 Bydgoszcz\nNIP: 3414079133\n\nZamówienie: ORD-406\n\nLp. Nazwa „m. Cena netto Brutto\n\n1 Naprawa sprzętu AGD 300 2592.0\n\n2 Hosting WWW - roczny 5904.0\n\n3 Projekt graficzny logo 4428.0\n\n4 Domena .pl - roczna 9 szt. 50 23 450 553.5\n\nNetto: 11250\nVAT: 2227.5\nBrutto: 13477.5\n\nUwagi: Dziękujemy za współpracę\n\n",
-      "words": null
+      "raw_text": "Faktura VAT\n\nNr faktury: FV/6033\n\nData wystawienia: 2026-01-03 Data sprzedaży: 2026-01-01\n\nSPRZEDAWCA\n\nEduFuture Akademia\n\nul. Nowa 20, 60-001 Poznań\n\nNIP: 7217175368\n\nREGON: 222817493\n\nKonto: PL87272214150510763007551309\n\nNABYWCA\n\nFarmacia Zdrowie\n\nul. Słoneczna 5, 40-001 Katowice\nNIP: 7949238490\n\nNumer zamówienia: ORD-819\nTermin płatności: 2026-01-13\n\nLp. Pozycja\n1 Naprawa sprzętu AGD\n2 Paliwo ON\n3 Kurs języka angielskiego\n\nSposób zapłaty: BLIK\nUwagi: Dziękujemy za współpracę\n\nIlość\n\nWaluta: PLN\nJ.m. Cena netto VAT\nusługa 300 8\nlitr 6.2 23\nosoba 1500 23\nSuma netto 12924.8\nSuma VAT 2612.704\nSuma brutto 15537.504\n\nNetto\n\n2400\n\n24.8\n\n10500\n\nBrutto\n\n2592.0\n\n30.504\n\n12915.0\n"
     },
-    "layout6_0.png": {
+    "layout2_0.png": {
       "engine": "pytesseract",
-      "duration_ms": 4998,
+      "duration_ms": 1787,
       "parsed": {
-        "invoice_number": "FV/4165",
-        "issue_date": "2025-11-09",
-        "sale_date": "2025-11-08",
-        "payment_due": "2025-11-30",
-        "seller_name": "AutoSerwis Kowalski",
-        "buyer_name": "Budex SA",
-        "seller_nip": "7205864338",
-        "buyer_nip": "5897284090",
-        "regon": "226380331",
-        "order_number": "ORD-238",
-        "seller_account": "PL27430604671742496710440755",
-        "total_net": "41605.0",
-        "total_vat": "9568.4",
-        "total_gross": "51173.4",
+        "invoice_number": "FV/1298",
+        "issue_date": "2025-12-11",
+        "sale_date": "2025-12-10",
+        "payment_due": "2026-01-01",
+        "currency": "PLN",
+        "seller_name": "FoodMarket Sp. z 0.0.",
+        "seller_address": "ul. Warszawska 55, 35-001 Rzeszów",
+        "seller_nip": "6335404941",
+        "seller_account": "PL23814230945827828003396021",
+        "seller_regon": "406700847",
+        "buyer_name": "Sklep RTV AGD",
+        "buyer_address": "ul. Kwiatowa 15, 85-001 Bydgoszcz",
+        "buyer_nip": "2625227022",
+        "order_number": "ORD-119",
+        "payment_method": "Przelew",
+        "notes": "Dziękujemy za współpracę",
+        "total_net": "3122.5",
+        "total_vat": "718.175",
+        "total_gross": "3840.675",
         "items": [
           {
-            "name": "Kampania reklamowa Google Ads",
-            "qty": "6",
-            "unit": "pakiet",
-            "price_net": null,
-            "vat": "23",
-            "net": "2500 15000",
-            "gross": "18450.0"
+            "name": "Usługa doradcza biznesowa",
+            "qty": null,
+            "unit": null,
+            "price_net": ".",
+            "vat": null,
+            "net": "300 300",
+            "gross": "369.0"
           },
           {
-            "name": "Laptop Dell Inspiron 15",
+            "name": "Konsultacja prawna",
+            "qty": null,
+            "unit": null,
+            "price_net": ".",
+            "vat": null,
+            "net": "2800",
+            "gross": "3444.0"
+          },
+          {
+            "name": "Woda mineralna 1,51",
+            "qty": null,
+            "unit": null,
+            "price_net": ". .",
+            "vat": null,
+            "net": "22.5",
+            "gross": "27.675"
+          }
+        ]
+      },
+      "raw_text": "Faktura VAT\nNr: FV/1298 Wystawiono: 2025-12-11 Sprzedaż: 2025-12-10 Waluta: PLN\n\nSPRZEDAWCA\n\nFoodMarket Sp. z 0.0.\n\nul. Warszawska 55, 35-001 Rzeszów\nNIP: 6335404941\n\nREGON: 406700847\n\nIBAN: PL23814230945827828003396021\n\nNABYWCA\n\nSklep RTV AGD\n\nul. Kwiatowa 15, 85-001 Bydgoszcz\nNIP: 2625227022\n\nNumer zamówienia: ORD-119\nTermin płatności: 2026-01-01\n\nLp. Nazwa towaru/usługi „m. Cena netto Stawka VAT Wartość netto Wartość brutto\n\n1 Usługa doradcza biznesowa . 300 300 369.0\n\n2 Konsultacja prawna . 2800 3444.0\n\n3 Woda mineralna 1,51 . . 22.5 27.675\n\nNetto 3122.5\nVAT 718.175\nBrutto 3840.675\n\nForma zapłaty: Przelew\nUwagi: Dziękujemy za współpracę\n"
+    },
+    "layout3_0.png": {
+      "engine": "pytesseract",
+      "duration_ms": 3283,
+      "parsed": {
+        "invoice_number": "FV/6226",
+        "issue_date": "2025-11-28",
+        "sale_date": "2025-11-26",
+        "payment_due": "2025-12-08",
+        "currency": "PLN",
+        "seller_name": "GreenEnergy",
+        "seller_address": "ul. Warszawska 55, 35-001 Rzeszów",
+        "seller_nip": "7355141740",
+        "seller_account": "PL20088163182788946287882280",
+        "seller_regon": "192331745",
+        "buyer_name": "EventPro Organizacja Imprez",
+        "buyer_address": "ul. Warszawska 55, 35-001 Rzeszów",
+        "buyer_nip": "5032894100",
+        "order_number": "ORD-557",
+        "payment_method": "Karta Uwagi",
+        "notes": "Dziękujemy za współpracę",
+        "total_net": null,
+        "total_vat": null,
+        "total_gross": null,
+        "items": [
+          {
+            "name": "Kurs języka angielskiego",
+            "qty": "6",
+            "unit": "osoba",
+            "price_net": null,
+            "vat": "23",
+            "net": "1500 9000",
+            "gross": "11070.0"
+          },
+          {
+            "name": "Usługa cateringowa",
+            "qty": "9",
+            "unit": "osoba",
+            "price_net": null,
+            "vat": "8",
+            "net": "75 675",
+            "gross": "729.0"
+          },
+          {
+            "name": "Papier A4 — ryza",
+            "qty": "9",
+            "unit": "ryza",
+            "price_net": null,
+            "vat": "23",
+            "net": "18 162",
+            "gross": "199.26"
+          },
+          {
+            "name": "Kawa ziarnista 1kg",
             "qty": "1",
+            "unit": "op.",
+            "price_net": null,
+            "vat": "23",
+            "net": "80 80",
+            "gross": "98.4"
+          },
+          {
+            "name": "Konsultacja księgowa",
+            "qty": "3",
+            "unit": "godz.",
+            "price_net": null,
+            "vat": "23",
+            "net": "200 600",
+            "gross": "738.0"
+          },
+          {
+            "name": "Telefon Samsung Galaxy A52",
+            "qty": "2",
             "unit": "szt.",
             "price_net": null,
             "vat": "23",
-            "net": "3200 3200",
-            "gross": "3936.0"
+            "net": "1800 3600",
+            "gross": "4428.0"
           },
           {
-            "name": "Usługa transportowa",
-            "qty": "2",
-            "unit": "km",
-            "price_net": null,
-            "vat": "8",
-            "net": "2.5 5.0",
-            "gross": "5.4"
-          },
-          {
-            "name": "Oprogramowanie CRM",
-            "qty": "3",
-            "unit": "licencja",
+            "name": "Usługa doradcza biznesowa",
+            "qty": "5",
+            "unit": "godz.",
             "price_net": null,
             "vat": "23",
-            "net": "2200 6600",
-            "gross": "8118.0"
+            "net": "300 1500",
+            "gross": "1845.0"
+          },
+          {
+            "name": "Paliwo ON",
+            "qty": "1",
+            "unit": "litr",
+            "price_net": null,
+            "vat": "23",
+            "net": "6.2 6.2",
+            "gross": "7.626"
+          }
+        ]
+      },
+      "raw_text": "Faktura nr: FV/6226 Wystawienie: 2025-11-28 Sprzedaż: 2025-11-26 Waluta: PLN\n\nSprzedawca\n\nGreenEnergy\n\nul. Warszawska 55, 35-001 Rzeszów\n\nNIP: 7355141740\n\nREGON: 192331745\n\nKonto: PL20088163182788946287882280\n\nNabywca\n\nEventPro Organizacja Imprez\n\nul. Warszawska 55, 35-001 Rzeszów\nNIP: 5032894100\n\nZamówienie: ORD-557\n\nTermin płatności: 2025-12-08\n\nSposób zapłaty: Karta Uwagi: Dziękujemy za współpracę\n\nPozycja Ilość J.m. Cena netto VAT Netto Brutto\nKurs języka angielskiego 6 osoba 1500 23 9000 11070.0\nUsługa cateringowa 9 osoba 75 8 675 729.0\nPapier A4 — ryza 9 ryza 18 23 162 199.26\nKawa ziarnista 1kg 1 op. 80 23 80 98.4\nKonsultacja księgowa 3 godz. 200 23 600 738.0\nTelefon Samsung Galaxy A52 2 szt. 1800 23 3600 4428.0\nUsługa doradcza biznesowa 5 godz. 300 23 1500 1845.0\nPaliwo ON 1 litr 6.2 23 6.2 7.626\n\n"
+    },
+    "layout4_0.png": {
+      "engine": "pytesseract",
+      "duration_ms": 1916,
+      "parsed": {
+        "invoice_number": "FV9114",
+        "issue_date": "2025-12-12",
+        "sale_date": "2025-12-10",
+        "payment_due": "2025-12-22",
+        "currency": "PLN",
+        "seller_name": "Budex SA",
+        "seller_address": "ul. Spacerowa 77, 70-001 Szczecin",
+        "seller_nip": "6652093384",
+        "seller_account": "PL18327497686570369905006806",
+        "seller_regon": "206989928",
+        "buyer_name": "SoftDev Solutions",
+        "buyer_address": "ul. Wrocławska 99, 30-017 Kraków",
+        "buyer_nip": "5350333989",
+        "order_number": "ORD-285",
+        "payment_method": "PayPal",
+        "notes": "Dziękujemy za współpracę",
+        "total_net": null,
+        "total_vat": null,
+        "total_gross": null,
+        "items": [
+          {
+            "name": "Paliwo ON Materiały biurowe —",
+            "qty": "9",
+            "unit": null,
+            "price_net": null,
+            "vat": null,
+            "net": null,
+            "gross": null
           },
           {
             "name": "Drukarka HP LaserJet",
-            "qty": "4",
-            "unit": "szt.",
+            "qty": "8",
+            "unit": null,
             "price_net": null,
-            "vat": "23",
-            "net": "1200 4800",
-            "gross": "5904.0"
+            "vat": null,
+            "net": null,
+            "gross": null
           },
           {
-            "name": "Projekt graficzny logo",
-            "qty": "10",
-            "unit": "projekt",
+            "name": "Kurs języka angielskiego",
+            "qty": "4",
+            "unit": null,
             "price_net": null,
-            "vat": "23",
-            "net": "1200 12000",
-            "gross": "14760.0"
+            "vat": null,
+            "net": null,
+            "gross": null
           }
         ]
       },
-      "raw_text": "Faktura VAT\nNr: FV/4165\nWystawiono: 2025-11-09\nSprzedaż: 2025-11-08\n\nWaluta: PLN\nSprzedawca\nAutoSerwis Kowalski\nul. Wrocławska 99, 30-017 Kraków\nNIP: 7205864338\nREGON: 226380331\nKonto: PL27430604671742496710440755\nNabywca\nBudex SA\nul. Lubelska 44, 15-001 Białystok\nNIP: 5897284090\nZamówienie: ORD-238\nTermin płatności: 2025-11-30\nLp. Pozycja Ilość J.m. Cena netto VAT Netto Brutto\n1 Kampania reklamowa Google Ads 6 pakiet 2500 23 15000 18450.0\n2 Laptop Dell Inspiron 15 1 szt. 3200 23 3200 3936.0\n3 Usługa transportowa 2 km 2.5 8 5.0 5.4\n4 Oprogramowanie CRM 3 licencja 2200 23 6600 8118.0\n5 Drukarka HP LaserJet 4 szt. 1200 23 4800 5904.0\n6 Projekt graficzny logo 10 projekt 1200 23 12000 14760.0\nNetto 41605.0\nVAT 9568.4\nBrutto 51173.4\n\nSposób zapłaty: Przelew\nUwagi: Dziękujemy za współpracę\n",
-      "words": null
+      "raw_text": "Dane faktury\n\nNr: FV9114\n\nData wystawienia: 2025-12-12\nData sprzedaży: 2025-12-10\nWaluta: PLN\n\nTermin płatności: 2025-12-22\nSposób zapłaty: PayPal\n\nSprzedawca\n\nBudex SA\n\nul. Spacerowa 77, 70-001 Szczecin\n\nNIP: 6652093384\n\nREGON: 206989928\n\nKonto: PL18327497686570369905006806\n\nNabywca\n\nSoftDev Solutions\n\nul. Wrocławska 99, 30-017 Kraków\nNIP: 5350333989\n\nZamówienie: ORD-285\n\nLp. Opis pozycji Ilość\n1 Paliwo ON 9\n2 Materiały biurowe — zestaw 5\n3 Drukarka HP LaserJet 8\n4 Kurs języka angielskiego 4\n\nUwagi: Dziękujemy za współpracę\n\nJ.m Cena netto | VAT % Wartość netto Wartość brutto\nNetto VAT Brutto\n\n"
+    },
+    "layout5_0.png": {
+      "engine": "pytesseract",
+      "duration_ms": 1846,
+      "parsed": {
+        "invoice_number": "FV/2540",
+        "issue_date": "2025-12-28",
+        "sale_date": "2025-12-26",
+        "payment_due": "2026-01-12",
+        "currency": "PLN",
+        "seller_name": "ArchDesign Studio",
+        "seller_address": "ul. Krótka 3, 45-001 Opole",
+        "seller_nip": "9156671719",
+        "seller_account": "PL34130949895944768399353160",
+        "seller_regon": "129052474",
+        "buyer_name": "PrintMax Drukarnia",
+        "buyer_address": "ul. Kościuszki 10, 20-001 Lublin",
+        "buyer_nip": "7774733325",
+        "order_number": "ORD-402",
+        "payment_method": "BLIK",
+        "notes": "Dziękujemy za współpracę",
+        "total_net": "8850",
+        "total_vat": "2013.0",
+        "total_gross": "10863.0",
+        "items": [
+          {
+            "name": "Router TP-Link Archer",
+            "qty": null,
+            "unit": null,
+            "price_net": null,
+            "vat": null,
+            "net": "350",
+            "gross": "2583.0"
+          },
+          {
+            "name": "Oprogramowanie CRM",
+            "qty": null,
+            "unit": null,
+            "price_net": "licencja",
+            "vat": null,
+            "net": null,
+            "gross": "8118.0"
+          },
+          {
+            "name": "Usługa cateringowa",
+            "qty": null,
+            "unit": null,
+            "price_net": "osoba",
+            "vat": null,
+            "net": null,
+            "gross": "162.0"
+          }
+        ]
+      },
+      "raw_text": "FAKTURA\n\nNumer: FV/2540\nWystawiono: 2025-12-28\nSprzedaż: 2025-12-26\nWaluta: PLN\n\nTermin płatności: 2026-01-12\nSposób zapłaty: BLIK\n\nSPRZEDAWCA\n\nArchDesign Studio\n\nul. Krótka 3, 45-001 Opole\n\nNIP: 9156671719\n\nREGON: 129052474\n\nKonto: PL34130949895944768399353160\n\nNABYWCA\n\nPrintMax Drukarnia\n\nul. Kościuszki 10, 20-001 Lublin\nNIP: 7774733325\n\nZamówienie: ORD-402\n\nLp. Nazwa Cena netto Brutto\n1 Router TP-Link Archer 350 2583.0\n2 Oprogramowanie CRM licencja 8118.0\n3 Usługa cateringowa osoba 162.0\n\nNetto: 8850\nVAT: 2013.0\nBrutto: 10863.0\n\nUwagi: Dziękujemy za współpracę\n\n"
+    },
+    "layout6_0.png": {
+      "engine": "pytesseract",
+      "duration_ms": 1990,
+      "parsed": {
+        "invoice_number": "FV/3346",
+        "issue_date": "2025-11-21",
+        "sale_date": "2025-11-19",
+        "payment_due": "2025-12-02",
+        "currency": "PLN",
+        "seller_name": "GreenEnergy",
+        "seller_address": "ul. Kwiatowa 15, 85-001 Bydgoszcz",
+        "seller_nip": "9648704185",
+        "seller_account": "PL22400395570450244983986931",
+        "seller_regon": "548553558",
+        "buyer_name": "ArchDesign Studio",
+        "buyer_address": "ul. Polna 88, 80-001 Gdańsk",
+        "buyer_nip": "3276405726",
+        "order_number": "ORD-599",
+        "payment_method": "Karta",
+        "notes": "Dziękujemy za współpracę",
+        "total_net": null,
+        "total_vat": null,
+        "total_gross": "18703.257",
+        "items": [
+          {
+            "name": "Woda mineralna 1,51",
+            "qty": "5",
+            "unit": "szt.",
+            "price_net": null,
+            "vat": "23",
+            "net": "2.5 12.5",
+            "gross": "15.375"
+          },
+          {
+            "name": "Drukarka HP LaserJet",
+            "qty": "7",
+            "unit": "szt.",
+            "price_net": null,
+            "vat": "23",
+            "net": "1200 8400",
+            "gross": "10332.0"
+          },
+          {
+            "name": "Pakiet Office 365",
+            "qty": "5",
+            "unit": "licencja",
+            "price_net": "450",
+            "vat": "23",
+            "net": "2250",
+            "gross": "2767.5"
+          },
+          {
+            "name": "Paliwo ON",
+            "qty": "7",
+            "unit": "litr",
+            "price_net": null,
+            "vat": "23",
+            "net": "6.2 43.4",
+            "gross": "53.382"
+          },
+          {
+            "name": "Monitor LG 24\"",
+            "qty": "6",
+            "unit": "szt.",
+            "price_net": null,
+            "vat": "23",
+            "net": "750 4500",
+            "gross": "5535.0"
+          },
+          {
+            "name": null,
+            "qty": null,
+            "unit": null,
+            "price_net": null,
+            "vat": null,
+            "net": null,
+            "gross": "15205.9"
+          },
+          {
+            "name": null,
+            "qty": null,
+            "unit": null,
+            "price_net": null,
+            "vat": null,
+            "net": null,
+            "gross": "3497.357"
+          }
+        ]
+      },
+      "raw_text": "Faktura VAT\n\nNr: FV/3346\n\nWystawiono: 2025-11-21\n\nSprzedaż: 2025-11-19\n\nWaluta: PLN\nSprzedawca\nGreenEnergy\nul. Kwiatowa 15, 85-001 Bydgoszcz\nNIP: 9648704185\nREGON: 548553558\nKonto: PL22400395570450244983986931\nNabywca\nArchDesign Studio\nul. Polna 88, 80-001 Gdańsk\nNIP: 3276405726\nZamówienie: ORD-599\nTermin płatności: 2025-12-02\nLp. Pozycja Ilość J.m. Cena netto VAT Netto Brutto\n1 Woda mineralna 1,51 5 szt. 2.5 23 12.5 15.375\n2 Drukarka HP LaserJet 7 szt. 1200 23 8400 10332.0\n3 Pakiet Office 365 5 licencja 450 23 2250 2767.5\n4 Paliwo ON 7 litr 6.2 23 43.4 53.382\n5 Monitor LG 24\" 6 szt. 750 23 4500 5535.0\n15205.9\n3497.357\nBrutto 18703.257\n\nSposób zapłaty: Karta\nUwagi: Dziękujemy za współpracę\n"
     },
     "layout7_0.png": {
       "engine": "pytesseract",
-      "duration_ms": 6053,
+      "duration_ms": 2180,
       "parsed": {
-        "invoice_number": "FV/1249",
-        "issue_date": "2025-11-09",
-        "sale_date": "2025-11-08",
-        "payment_due": "2025-11-30",
-        "seller_name": "AgroMax",
-        "buyer_name": "AgroMax",
-        "seller_nip": "0009158122",
-        "buyer_nip": "3036737939",
-        "regon": "377899198",
-        "order_number": "ORD-444",
-        "seller_account": "PL90128206229584105232494163",
+        "invoice_number": "FV/8133",
+        "issue_date": "2025-11-17",
+        "sale_date": "2025-11-15",
+        "payment_due": "2025-12-07",
+        "currency": "PLN",
+        "seller_name": "EventPro Organizacja Imprez",
+        "seller_address": "ul. Mazowiecka 33, 00-067 Warszawa IP: 3237118756 | REGON: 570828826 Konto: PL25298402152575889497532850 Nabywca Księgowość Plus ul. Mickiewicza 12, 30-001 Kraków",
+        "seller_nip": "1539285418",
+        "seller_account": "PL25298402152575889497532850",
+        "seller_regon": "570828826",
+        "buyer_name": "Księgowość Plus",
+        "buyer_address": "ul. Mickiewicza 12, 30-001 Kraków",
+        "buyer_nip": "1539285418",
+        "order_number": "ORD-965",
+        "payment_method": "Karta",
+        "notes": "Dziękujemy za współpracę",
         "total_net": null,
-        "total_vat": null,
-        "total_gross": "1",
+        "total_vat": "1258.66",
+        "total_gross": "6750.66",
         "items": [
+          {
+            "name": "Paliwo ON",
+            "qty": "10",
+            "unit": "litr",
+            "price_net": null,
+            "vat": "23",
+            "net": "6.2 62.0",
+            "gross": "76.26"
+          },
           {
             "name": "Usługa sprzątania biura",
             "qty": "6",
@@ -970,150 +968,72 @@
             "gross": "32.4"
           },
           {
-            "name": "Pakiet Office 365",
-            "qty": "7",
-            "unit": "licencja",
-            "price_net": null,
-            "vat": null,
-            "net": "3150",
-            "gross": "3874.5"
-          },
-          {
-            "name": "Kawa ziarnista lkg",
-            "qty": "6",
-            "unit": "op.",
-            "price_net": null,
-            "vat": null,
-            "net": "480",
-            "gross": "590.4"
-          },
-          {
-            "name": "Projekt graficzny logo",
-            "qty": "8",
-            "unit": "projekt",
-            "price_net": null,
-            "vat": null,
-            "net": "9600",
-            "gross": "11808.0"
-          },
-          {
-            "name": "Hosting WW - roczny",
-            "qty": "4",
-            "unit": "pakiet",
-            "price_net": null,
-            "vat": null,
-            "net": "2400",
-            "gross": "2952.0"
-          },
-          {
-            "name": "Papier M - ryza",
-            "qty": "6",
-            "unit": "ryza",
-            "price_net": null,
-            "vat": null,
-            "net": "108",
-            "gross": "132.84"
-          },
-          {
-            "name": "Usługa cateringowa",
-            "qty": "7",
+            "name": "Szkolenie online Python",
+            "qty": "1",
             "unit": "osoba",
             "price_net": null,
-            "vat": null,
-            "net": "525",
-            "gross": "567.0"
+            "vat": "23",
+            "net": "900 900",
+            "gross": "1107.0"
+          },
+          {
+            "name": "Kurs języka angielskiego",
+            "qty": "3",
+            "unit": "osoba",
+            "price_net": null,
+            "vat": "23",
+            "net": "1500 4500",
+            "gross": "5535.0"
           }
         ]
       },
-      "raw_text": "Faktura nr: FV/1249 Wystawienie: 2025-11-09 Sprzedaż:\n\n2025-11-08 Waluta: PLN\n\nSprzedawca\n\nAgroMax\n\nul. Świdnicka 22, 50-001 Wrocław\nNIP: 0009158122 | REGON: 377899198\nKonto: PL90128206229584105232494163\n\nNabywca\nAgroMax\nul. Długa 45, 00-950 Warszawa\n\nUwagi: Dziękujemy za współpracę\n\nNIP: 3036737939 | Zamówienie: ORD-444\n\nTermin płatności: 2025-11-30 | Płatność: Przelew\n\nNr Pozycja Ilość J.m Cena netto VAT Netto Brutto\n1 Usługa sprzątania biura 6 m2 5 8 30 32.4\n2 Pakiet Office 365 7 licencja 3150 3874.5\n3 Kawa ziarnista lkg 6 op. 480 590.4\n4 Projekt graficzny logo 8 projekt 9600 11808.0\n5 Hosting WW - roczny 4 pakiet 2400 2952.0\n6 Papier M - ryza 6 ryza 108 132.84\n7 Usługa cateringowa 7 osoba 525 567.0\n\n",
-      "words": null
+      "raw_text": "Faktura nr: FV/8133 Wystawienie: 2025-11-17 Sprzedaż: 2025-11-15 Waluta: PLN\n\nSprzedawca\n\nEventPro Organizacja Imprez\n\nul. Mazowiecka 33, 00-067 Warszawa\nIP: 3237118756 | REGON: 570828826\nKonto: PL25298402152575889497532850\n\nNabywca\n\nKsięgowość Plus\n\nul. Mickiewicza 12, 30-001 Kraków\nNIP: 1539285418 | Zamówienie: ORD-965\n\nTermin płatności: 2025-12-07 | Płatność: Karta\n\nNr Pozycja Ilość J.m. Cena netto VAT Netto Brutto\n1 Paliwo ON 10 litr 6.2 23 62.0 76.26\n2 Usługa sprzątania biura 6 m2 5 8 30 32.4\n3 Szkolenie online Python 1 osoba 900 23 900 1107.0\n4 Kurs języka angielskiego 3 osoba 1500 23 4500 5535.0\nSuma VAT 1258.66\nSuma brutto 6750.66\nUwagi: Dziękujemy za współpracę\n\n"
     },
     "layout8_0.png": {
       "engine": "pytesseract",
-      "duration_ms": 4978,
+      "duration_ms": 1877,
       "parsed": {
-        "invoice_number": "FV/6967",
-        "issue_date": "2025-11-09",
-        "sale_date": "2025-11-08",
-        "payment_due": "2025-11-30",
-        "seller_name": "Budex SA",
-        "buyer_name": "MotoParts",
-        "seller_nip": "3818814118",
-        "buyer_nip": "2011425572",
-        "regon": "614422757",
-        "order_number": "ORD-740",
-        "seller_account": "PL30322709338946484214666383",
-        "total_net": null,
-        "total_vat": null,
-        "total_gross": "48.6",
+        "invoice_number": "FV/4355",
+        "issue_date": "2025-11-30",
+        "sale_date": "2025-11-29",
+        "payment_due": "2025-12-10",
+        "currency": "PLN",
+        "seller_name": "TechPol Sp. z o.o.",
+        "seller_address": "ul. Długa 45, 00-950 Warszawa",
+        "seller_nip": "8006182377",
+        "seller_account": "PL26441252954774226480761305",
+        "seller_regon": "521179529",
+        "buyer_name": "Sklep RTV AGD",
+        "buyer_address": "ul. Piotrkowska 123, 90-001 Łódź",
+        "buyer_nip": "4120450917",
+        "order_number": "ORD-172",
+        "payment_method": "PayPal",
+        "notes": "Dziękujemy za współpracę",
+        "total_net": "1202.5",
+        "total_vat": "144.57500000000002",
+        "total_gross": "1347.075",
         "items": [
           {
-            "name": "Usługa sprzątania biura",
-            "qty": "9",
-            "unit": null,
-            "price_net": null,
-            "vat": null,
-            "net": null,
-            "gross": "48.6"
-          },
-          {
-            "name": "Konsultacja księgowa",
-            "qty": "4",
-            "unit": null,
-            "price_net": null,
-            "vat": null,
-            "net": null,
-            "gross": "984.0"
-          },
-          {
-            "name": null,
+            "name": "Usługa serwisowa IT",
             "qty": null,
             "unit": null,
             "price_net": null,
-            "vat": null,
-            "net": null,
-            "gross": "27060.0"
+            "vat": "23",
+            "net": "150",
+            "gross": "369.0"
           },
           {
-            "name": "Materiały biurowe — zestaw",
-            "qty": "4",
-            "unit": null,
-            "price_net": null,
-            "vat": null,
-            "net": null,
-            "gross": "590.4"
-          },
-          {
-            "name": null,
+            "name": "Hotel — nocleg 1 os.",
             "qty": null,
-            "unit": null,
-            "price_net": null,
+            "unit": "noc",
+            "price_net": "220",
             "vat": null,
             "net": null,
-            "gross": "23325"
-          },
-          {
-            "name": null,
-            "qty": null,
-            "unit": null,
-            "price_net": null,
-            "vat": null,
-            "net": null,
-            "gross": "5358.0"
-          },
-          {
-            "name": null,
-            "qty": null,
-            "unit": null,
-            "price_net": null,
-            "vat": null,
-            "net": null,
-            "gross": "28683.0"
+            "gross": "950.4"
           }
         ]
       },
-      "raw_text": "Dane faktury\n\nNumer: FV/6967\n\nData wystawienia: 2025-11-09\nData sprzedaży: 2025-11-08\nWaluta: PLN\n\nTermin płatności: 2025-11-30\nSposób zapłaty: Przelew\n\nKontrahenci\n\nSprzedawca\n\nBudex SA\n\nul. Mazowiecka 33, 00-067 Warszawa\nNIP: 3818814118 | REGON: 614422757\nKonto: PL30322709338946484214666383\n\nNabywca\n\nMotoParts\n\nul. Szeroka 18, 31-001 Kraków\nNIP: 2011425572\n\nZamówienie: ORD-740\n\nLp. Opis\n\n1 Usługa sprzątania biura 9\n2 Konsultacja księgowa 4\n\n4 Materiały biurowe — zestaw 4\n\nIlość\n\nBrutto\n\n48.6\n\n984.0\n\n27060.0\n\n590.4\n\n23325\n\n5358.0\n\nUwagi: Dziękujemy za współpracę\n\n28683.0\n\n",
-      "words": null
+      "raw_text": "Dane faktury\n\nNumer: FV/4355\n\nData wystawienia: 2025-11-30\nData sprzedaży: 2025-11-29\nWaluta: PLN\n\nTermin płatności: 2025-12-10\nSposób zapłaty: PayPal\n\nKontrahenci\n\nSprzedawca\n\nTechPol Sp. z o.o.\n\nul. Długa 45, 00-950 Warszawa\n\nNIP: 8006182377 | REGON: 521179529\nKonto: PL26441252954774226480761305\n\nNabywca\n\nSklep RTV AGD\n\nul. Piotrkowska 123, 90-001 Łódź\nNIP: 4120450917\n\nZamówienie: ORD-172\n\nLp. Opis Ilość J.m Cena netto VAT Netto Brutto\n2 Usługa serwisowa IT 150 23 369.0\n3 Hotel — nocleg 1 os. noc 220 950.4\n\nNetto 1202.5\n\nVAT 144.57500000000002\n\nBrutto 1347.075\n\nUwagi: Dziękujemy za współpracę\n\n"
     }
   }
 }

@@ -2,6 +2,16 @@ import os
 import json
 import requests
 
+# ---------------------------------------
+# DB – OCR
+# ---------------------------------------
+from app.db.init_db import init_db
+from app.db.crud_ocr import save_ocr_results, clear_ocr
+
+# ---------------------------------------
+# KONFIGURACJA
+# ---------------------------------------
+
 API_URL = "http://localhost:8000/ocr"
 PNG_DIR = "out/png"
 RESULTS_FILE = "out/results/all_results.json"
@@ -9,7 +19,15 @@ RESULTS_FILE = "out/results/all_results.json"
 ENGINES = ["easyocr", "pytesseract"]
 
 
+# ============================================
+# BATCH TEST
+# ============================================
+
 def run_batch():
+    # Inicjalizacja bazy + czyszczenie OCR
+    init_db()
+    clear_ocr()
+
     print("DEBUG: working dir =", os.getcwd())
     print("DEBUG: PNG_DIR =", PNG_DIR)
     print("DEBUG: PNG_DIR exists:", os.path.exists(PNG_DIR))
@@ -40,8 +58,16 @@ def run_batch():
             except Exception:
                 result = {"error": "Invalid JSON response", "raw": response.text}
 
-            all_results[engine][filename] = result
+            # Zapis OCR do bazy
+            if "parsed" in result:
+                save_ocr_results(
+                    parsed=result["parsed"],
+                    engine=engine,
+                    raw_text=result.get("raw_text", ""),
+                    duration_ms=result.get("duration_ms", 0)
+                )
 
+            all_results[engine][filename] = result
             print(f"      Processed: {filename}")
 
     os.makedirs(os.path.dirname(RESULTS_FILE), exist_ok=True)
