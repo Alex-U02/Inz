@@ -27,10 +27,10 @@ INZ/
 │       └── init_db.py           # automatyczne tworzenie tabel
 │
 ├── scripts/              # dodatkowe skrypty
-│   ├── client_submit.py  # wysyłanie obrazów do API
+│   ├── client_submit.py  # pojedyńczy test OCR
 │   ├── batch_test.py     # testy wsadowe
+│   ├── generator.py      # generowanie faktur i danych GT
 │   └── benchmark.py      # analiza wyników OCR
 │
-├── generator.py          # generator faktur (PDF + PNG)
 ├── requirements.txt      # zależności projektu
 └── invoices.db           # baza danych SQLite

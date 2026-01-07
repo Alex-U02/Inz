@@ -18,6 +18,9 @@ RESULTS_FILE = "out/results/all_results.json"
 
 ENGINES = ["easyocr", "pytesseract"]
 
+def extract_layout_from_filename(filename: str) -> str:
+    base = os.path.splitext(filename)[0]
+    return base.split("_")[0]  # "layout1_0" → "layout1"
 
 # ============================================
 # BATCH TEST
@@ -44,28 +47,19 @@ def run_batch():
                 continue
 
             img_path = os.path.join(PNG_DIR, filename)
-            print(f"  → Processing: {filename}")
+            layout = extract_layout_from_filename(filename)
 
             with open(img_path, "rb") as f:
                 response = requests.post(
                     API_URL,
                     files={"file": (filename, f, "image/png")},
-                    data={"engine": engine}
+                    data={"engine": engine, "layout": layout}
                 )
 
             try:
                 result = response.json()
             except Exception:
                 result = {"error": "Invalid JSON response", "raw": response.text}
-
-            # Zapis OCR do bazy
-            if "parsed" in result:
-                save_ocr_results(
-                    parsed=result["parsed"],
-                    engine=engine,
-                    raw_text=result.get("raw_text", ""),
-                    duration_ms=result.get("duration_ms", 0)
-                )
 
             all_results[engine][filename] = result
             print(f"      Processed: {filename}")

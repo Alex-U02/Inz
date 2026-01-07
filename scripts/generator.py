@@ -154,7 +154,8 @@ if __name__ == "__main__":
     clear_ground_truth()
 
     for template in templates_dir.glob("*.html"):
-        for i in range(1):  # zmień na 13
+        layout = pathlib.Path(template.name).stem
+        for i in range(2):  # zmień na 13
             payload = generate_payload(template.name)
-            save_ground_truth(payload)
+            save_ground_truth(payload, layout)
             render_invoice(template.name, payload, i)

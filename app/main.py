@@ -44,6 +44,8 @@ ENGINE_MAP_TEXT = {
 async def ocr_endpoint(
     file: UploadFile = File(...),
     engine: str = Form(...),
+    layout: str = Form(None),
+    test_mode: bool = Form(False),  
 ):
     assert engine in ENGINE_MAP_WORDS, "Unsupported engine"
 
@@ -59,13 +61,14 @@ async def ocr_endpoint(
     # Parsowanie
     parsed = parse_invoice(raw_text, words, debug=False)
 
-    # Zapis OCR do bazy
-    save_ocr_results(
-        parsed=parsed,
-        engine=engine,
-        raw_text=raw_text,
-        duration_ms=duration_ms
-    )
+    if not test_mode:
+        save_ocr_results(
+            parsed=parsed,
+            engine=engine,
+            raw_text=raw_text,
+            duration_ms=duration_ms,
+            layout=layout
+        )
 
     return {
         "engine": engine,

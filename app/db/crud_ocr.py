@@ -1,6 +1,7 @@
 from sqlalchemy.orm import Session
 from .database import SessionLocal
 from .models import OCRInvoice, OCRItem, OCRRun
+from sqlalchemy import text
 
 def _to_float(value):
     """Konwertuje wartość na float lub zwraca None, jeśli się nie da."""
@@ -15,7 +16,7 @@ def _to_float(value):
         return None
 
 
-def save_ocr_results(parsed: dict, engine: str, raw_text: str, duration_ms: int):
+def save_ocr_results(parsed: dict, engine: str, raw_text: str, duration_ms: int, layout: str):
     db: Session = SessionLocal()
 
     # Zapis OCRRun
@@ -23,7 +24,8 @@ def save_ocr_results(parsed: dict, engine: str, raw_text: str, duration_ms: int)
         invoice_number=parsed.get("invoice_number"),
         engine=engine,
         duration_ms=duration_ms,
-        raw_text=raw_text
+        raw_text=raw_text,
+        layout=layout
     )
     db.add(run)
     db.commit()
@@ -32,6 +34,7 @@ def save_ocr_results(parsed: dict, engine: str, raw_text: str, duration_ms: int)
     invoice = OCRInvoice(
         invoice_number=parsed.get("invoice_number"),
         engine=engine,
+        layout=layout,
         issue_date=parsed.get("issue_date"),
         sale_date=parsed.get("sale_date"),
         payment_due=parsed.get("payment_due"),
@@ -75,10 +78,15 @@ def save_ocr_results(parsed: dict, engine: str, raw_text: str, duration_ms: int)
 
 
 def clear_ocr():
-    """Czyści wszystkie dane OCR z bazy."""
     db = SessionLocal()
     db.query(OCRItem).delete()
     db.query(OCRInvoice).delete()
     db.query(OCRRun).delete()
+    try:
+        db.execute(text("DELETE FROM sqlite_sequence WHERE name='ocr_items'"))
+        db.execute(text("DELETE FROM sqlite_sequence WHERE name='ocr_invoices'"))
+        db.execute(text("DELETE FROM sqlite_sequence WHERE name='ocr_runs'"))
+    except:
+        pass
     db.commit()
     db.close()

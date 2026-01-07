@@ -6,7 +6,8 @@ class GroundTruthInvoice(Base):
     __tablename__ = "ground_truth_invoices"
 
     id = Column(Integer, primary_key=True, index=True)
-    invoice_number = Column(String, unique=True, index=True)
+    invoice_number = Column(String, index=True)
+    layout = Column(String, index=True)
     issue_date = Column(String)
     sale_date = Column(String)
     payment_due = Column(String)
@@ -56,7 +57,7 @@ class OCRInvoice(Base):
     id = Column(Integer, primary_key=True, index=True)
     invoice_number = Column(String, index=True)
     engine = Column(String)
-
+    layout = Column(String, index=True)
     issue_date = Column(String)
     sale_date = Column(String)
     payment_due = Column(String)
@@ -106,5 +107,6 @@ class OCRRun(Base):
     id = Column(Integer, primary_key=True, index=True)
     invoice_number = Column(String)
     engine = Column(String)
+    layout = Column(String, index=True)
     duration_ms = Column(Integer)
     raw_text = Column(Text)

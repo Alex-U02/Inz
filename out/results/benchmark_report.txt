@@ -1,0 +1,54 @@
+=== RAPORT BENCHMARKU OCR ===
+
+
+--- DOKŁADNOŚĆ PÓL FAKTURY ---
+
+easyocr: dokładność=0.857, brakujące=1
+
+pytesseract: dokładność=0.915, brakujące=14
+
+--- DOKŁADNOŚĆ POZYCJI TOWAROWYCH ---
+
+easyocr: czułość=0.750, precyzja=0.323, F1=0.452
+
+pytesseract: czułość=0.788, precyzja=0.631, F1=0.701
+
+--- DOKŁADNOŚĆ WARTOŚCI LICZBOWYCH ---
+
+easyocr: MAE=0.000, MRE=0.000
+
+pytesseract: MAE=1228.944, MRE=4.168
+
+--- CZAS DZIAŁANIA OCR ---
+
+easyocr: średnia=16761.4 ms, min=14493 ms, max=19069 ms, próby=16
+
+pytesseract: średnia=1776.3 ms, min=1590 ms, max=2034 ms, próby=15
+
+--- ANALIZA PER LAYOUT ---
+
+### Silnik: easyocr
+
+  Layout layout2: pola=0.895, F1=0.800, MAE=0.0
+
+  Layout layout3: pola=0.947, F1=0.875, MAE=0.0
+
+  Layout layout5: pola=0.974, F1=0.857, MAE=0.0
+
+  Layout layout7: pola=0.632, F1=0.571, MAE=0.0
+
+### Silnik: pytesseract
+
+  Layout layout1: pola=1.000, F1=1.000, MAE=0.0
+
+  Layout layout2: pola=0.895, F1=0.778, MAE=140.0
+
+  Layout layout3: pola=0.789, F1=0.889, MAE=0.0
+
+  Layout layout5: pola=0.974, F1=0.857, MAE=858.3
+
+  Layout layout6: pola=0.921, F1=0.714, MAE=0.0
+
+  Layout layout7: pola=0.895, F1=0.750, MAE=1142.9
+
+  Layout layout8: pola=0.974, F1=0.640, MAE=3084.7

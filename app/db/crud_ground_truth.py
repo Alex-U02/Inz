@@ -1,20 +1,27 @@
 from sqlalchemy.orm import Session
 from .database import SessionLocal
 from .models import GroundTruthInvoice, GroundTruthItem
+from sqlalchemy import text
 
 def clear_ground_truth():
     db = SessionLocal()
     db.query(GroundTruthItem).delete()
     db.query(GroundTruthInvoice).delete()
+    try:
+        db.execute(text("DELETE FROM sqlite_sequence WHERE name='ground_truth_items'"))
+        db.execute(text("DELETE FROM sqlite_sequence WHERE name='ground_truth_invoices'"))
+    except:
+        pass
     db.commit()
     db.close()
 
 
-def save_ground_truth(payload: dict):
+def save_ground_truth(payload: dict, layout: str):
     db: Session = SessionLocal()
 
     invoice = GroundTruthInvoice(
         invoice_number=payload["invoice_number"],
+        layout=layout,
         issue_date=payload["issue_date"],
         sale_date=payload["sale_date"],
         payment_due=payload["payment_due"],
