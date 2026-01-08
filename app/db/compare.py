@@ -2,11 +2,11 @@ from sqlalchemy.orm import Session
 from .database import SessionLocal
 from .models import GroundTruthInvoice, OCRInvoice
 
-def compare_invoice(invoice_number: str):
+def compare_invoice(layout: str):
     db: Session = SessionLocal()
 
-    gt = db.query(GroundTruthInvoice).filter_by(invoice_number=invoice_number).first()
-    ocr = db.query(OCRInvoice).filter_by(invoice_number=invoice_number).first()
+    gt = db.query(GroundTruthInvoice).filter_by(layout=layout).first()
+    ocr = db.query(OCRInvoice).filter_by(layout=layout).first()
 
     if not gt or not ocr:
         return None

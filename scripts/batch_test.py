@@ -18,9 +18,6 @@ RESULTS_FILE = "out/results/all_results.json"
 
 ENGINES = ["easyocr", "pytesseract"]
 
-def extract_layout_from_filename(filename: str) -> str:
-    base = os.path.splitext(filename)[0]
-    return base.split("_")[0]  # "layout1_0" → "layout1"
 
 # ============================================
 # BATCH TEST
@@ -47,7 +44,7 @@ def run_batch():
                 continue
 
             img_path = os.path.join(PNG_DIR, filename)
-            layout = extract_layout_from_filename(filename)
+            layout = os.path.splitext(filename)[0]
 
             with open(img_path, "rb") as f:
                 response = requests.post(

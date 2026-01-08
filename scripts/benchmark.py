@@ -26,37 +26,37 @@ def load_data():
     conn.row_factory = sqlite3.Row
     cur = conn.cursor()
 
-    # Ground truth invoices
+    # Ground truth invoices — klucz: layout
     cur.execute("SELECT * FROM ground_truth_invoices")
-    gt_invoices = {row["invoice_number"]: dict(row) for row in cur.fetchall()}
+    gt_invoices = {row["layout"]: dict(row) for row in cur.fetchall()}
 
-    # Ground truth items
+    # Ground truth items — klucz: layout
     cur.execute("""
-        SELECT gti.*, gti2.invoice_number
+        SELECT gti.*, gti2.layout
         FROM ground_truth_items gti
         JOIN ground_truth_invoices gti2
         ON gti.invoice_id = gti2.id
     """)
     gt_items = defaultdict(list)
     for row in cur.fetchall():
-        gt_items[row["invoice_number"]].append(dict(row))
+        gt_items[row["layout"]].append(dict(row))
 
-    # OCR invoices
+    # OCR invoices — klucz: layout
     cur.execute("SELECT * FROM ocr_invoices")
     ocr_invoices = defaultdict(dict)
     for row in cur.fetchall():
-        ocr_invoices[row["engine"]][row["invoice_number"]] = dict(row)
+        ocr_invoices[row["engine"]][row["layout"]] = dict(row)
 
-    # OCR items
+    # OCR items — klucz: layout
     cur.execute("""
-        SELECT oi.*, oi2.engine, oi2.invoice_number
+        SELECT oi.*, oi2.engine, oi2.layout
         FROM ocr_items oi
         JOIN ocr_invoices oi2
         ON oi.ocr_invoice_id = oi2.id
     """)
     ocr_items = defaultdict(lambda: defaultdict(list))
     for row in cur.fetchall():
-        ocr_items[row["engine"]][row["invoice_number"]].append(dict(row))
+        ocr_items[row["engine"]][row["layout"]].append(dict(row))
 
     # OCR runs
     cur.execute("SELECT * FROM ocr_runs")
@@ -84,8 +84,8 @@ def compare_fields(gt_invoices, ocr_invoices):
     results = defaultdict(lambda: defaultdict(int))
 
     for engine, invoices in ocr_invoices.items():
-        for inv_num, ocr in invoices.items():
-            gt = gt_invoices.get(inv_num)
+        for layout, ocr in invoices.items():
+            gt = gt_invoices.get(layout)
             if not gt:
                 continue
 
@@ -112,8 +112,8 @@ def compare_items(gt_items, ocr_items):
     results = defaultdict(lambda: {"tp": 0, "fp": 0, "fn": 0})
 
     for engine, invoices in ocr_items.items():
-        for inv_num, ocr_list in invoices.items():
-            gt_list = gt_items.get(inv_num, [])
+        for layout, ocr_list in invoices.items():
+            gt_list = gt_items.get(layout, [])
 
             gt_names = [i["name"] for i in gt_list]
             ocr_names = [i["name"] for i in ocr_list]
@@ -141,8 +141,8 @@ def compare_numeric(gt_items, ocr_items):
     results = defaultdict(lambda: {"mae": [], "mre": []})
 
     for engine, invoices in ocr_items.items():
-        for inv_num, ocr_list in invoices.items():
-            gt_list = gt_items.get(inv_num, [])
+        for layout, ocr_list in invoices.items():
+            gt_list = gt_items.get(layout, [])
 
             for gt, ocr in zip(gt_list, ocr_list):
                 for field in NUMERIC_FIELDS:
@@ -196,14 +196,18 @@ def analyze_per_layout(gt_invoices, gt_items, ocr_invoices, ocr_items):
         "mre": []
     }))
 
+    # ============================
     # Pola faktury
+    # ============================
     for engine, invoices in ocr_invoices.items():
-        for inv_num, ocr in invoices.items():
-            gt = gt_invoices.get(inv_num)
+        for raw_layout, ocr in invoices.items():
+
+            # sprowadzamy layout1_0 → layout1
+            layout = raw_layout.split("_")[0]
+
+            gt = gt_invoices.get(raw_layout)
             if not gt:
                 continue
-
-            layout = ocr.get("layout") or gt.get("layout") or "UNKNOWN"
 
             for field in FIELDS:
                 gt_val = str(gt.get(field))
@@ -214,15 +218,16 @@ def analyze_per_layout(gt_invoices, gt_items, ocr_invoices, ocr_items):
 
                 layout_stats[engine][layout]["fields_total"] += 1
 
+    # ============================
     # Pozycje + liczby
+    # ============================
     for engine, invoices in ocr_items.items():
-        for inv_num, ocr_list in invoices.items():
-            gt_list = gt_items.get(inv_num, [])
-            gt = gt_invoices.get(inv_num)
+        for raw_layout, ocr_list in invoices.items():
+            layout = raw_layout.split("_")[0]
+            gt_list = gt_items.get(raw_layout, [])
+            gt = gt_invoices.get(raw_layout)
             if not gt:
                 continue
-
-            layout = gt.get("layout") or "UNKNOWN"
 
             gt_names = [i["name"] for i in gt_list]
             ocr_names = [i["name"] for i in ocr_list]
