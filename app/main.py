@@ -6,7 +6,7 @@ import time
 # ---------------------------------------
 from app.ocr.easyocr_adapter import easyocr_extract_words, easyocr_extract_text
 from app.ocr.pytesseract_adapter import pytesseract_extract_words, pytesseract_extract_text
-from app.ocr.azure_adapter import azure_extract_words, azure_extract_text
+from app.ocr.azure_adapter import run_azure_ocr
 
 # ---------------------------------------
 # Parsers
@@ -30,13 +30,11 @@ init_db()
 ENGINE_MAP_WORDS = {
     "easyocr": easyocr_extract_words,
     "pytesseract": pytesseract_extract_words,
-    "azure": azure_extract_words
 }
 
 ENGINE_MAP_TEXT = {
     "easyocr": easyocr_extract_text,
     "pytesseract": pytesseract_extract_text,
-    "azure": azure_extract_text
 }
 
 
@@ -47,19 +45,23 @@ async def ocr_endpoint(
     layout: str = Form(None),
     test_mode: bool = Form(False),  
 ):
-    assert engine in ENGINE_MAP_WORDS, "Unsupported engine"
+    assert engine in ["easyocr", "pytesseract", "azure"], "Unsupported engine"
 
     # Wczytanie pliku
     content = await file.read()
 
-    # OCR
-    start = time.time()
-    words = ENGINE_MAP_WORDS[engine](content)
-    raw_text = ENGINE_MAP_TEXT[engine](content)
-    duration_ms = int((time.time() - start) * 1000)
+    if engine == "azure":
+        start = time.time()
+        parsed = run_azure_ocr(content)   
+        duration_ms = int((time.time() - start) * 1000)
+        raw_text = None                   
+    else:
+        start = time.time()
+        words = ENGINE_MAP_WORDS[engine](content)
+        raw_text = ENGINE_MAP_TEXT[engine](content)
+        duration_ms = int((time.time() - start) * 1000)
 
-    # Parsowanie
-    parsed = parse_invoice(raw_text, words, debug=False)
+        parsed = parse_invoice(raw_text, words, debug=False)
 
     if not test_mode:
         save_ocr_results(
