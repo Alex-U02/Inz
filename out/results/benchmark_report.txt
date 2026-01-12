@@ -3,62 +3,88 @@
 
 --- DOKŁADNOŚĆ PÓL FAKTURY ---
 
-easyocr: dokładność=0.891, brakujące=0
+easyocr: dokładność=0.891, brakujące=4
 
-pytesseract: dokładność=0.924, brakujące=18
+pytesseract: dokładność=0.897, brakujące=73
+
+azure: dokładność=0.634, brakujące=334
 
 --- DOKŁADNOŚĆ POZYCJI TOWAROWYCH ---
 
-easyocr: czułość=0.687, precyzja=0.687, F1=0.687
+easyocr: czułość=0.752, precyzja=0.752, F1=0.752
 
-pytesseract: czułość=0.672, precyzja=0.692, F1=0.682
+pytesseract: czułość=0.630, precyzja=0.619, F1=0.624
+
+azure: czułość=0.786, precyzja=0.786, F1=0.786
 
 --- DOKŁADNOŚĆ WARTOŚCI LICZBOWYCH ---
 
-easyocr: MAE=0.000, MRE=0.000
+easyocr: MAE=11.919, MRE=0.001
 
-pytesseract: MAE=61.983, MRE=0.007
+pytesseract: MAE=65.537, MRE=0.359
+
+azure: MAE=454.991, MRE=0.066
 
 --- CZAS DZIAŁANIA OCR ---
 
-easyocr: średnia=18240.1 ms, min=15430 ms, max=21854 ms, próby=16
+easyocr: średnia=17072.1 ms, min=13341 ms, max=20891 ms, próby=48
 
-pytesseract: średnia=1761.5 ms, min=1530 ms, max=2124 ms, próby=16
+pytesseract: średnia=1716.0 ms, min=1425 ms, max=2172 ms, próby=48
+
+azure: średnia=7048.2 ms, min=3419 ms, max=17493 ms, próby=48
 
 --- ANALIZA PER LAYOUT ---
 
 ### Silnik: easyocr
 
-  Layout layout1: pola=0.895, F1=0.714, MAE=0.0
+  Layout layout1: pola=0.912, F1=0.879, MAE=75.8
 
-  Layout layout2: pola=0.868, F1=0.625, MAE=0.0
+  Layout layout2: pola=0.833, F1=0.759, MAE=0.0
 
-  Layout layout3: pola=0.974, F1=0.700, MAE=0.0
+  Layout layout3: pola=0.956, F1=0.781, MAE=0.0
 
-  Layout layout4: pola=0.868, F1=0.700, MAE=0.0
+  Layout layout4: pola=0.930, F1=0.682, MAE=0.0
 
-  Layout layout5: pola=1.000, F1=0.833, MAE=0.0
+  Layout layout5: pola=0.947, F1=0.778, MAE=0.0
 
-  Layout layout6: pola=0.947, F1=0.667, MAE=0.0
+  Layout layout6: pola=0.912, F1=0.758, MAE=0.0
 
-  Layout layout7: pola=0.684, F1=0.600, MAE=0.0
+  Layout layout7: pola=0.702, F1=0.704, MAE=0.0
 
-  Layout layout8: pola=0.895, F1=0.714, MAE=0.0
+  Layout layout8: pola=0.939, F1=0.645, MAE=0.0
 
 ### Silnik: pytesseract
 
-  Layout layout1: pola=1.000, F1=0.714, MAE=0.0
+  Layout layout1: pola=0.982, F1=0.939, MAE=0.0
 
-  Layout layout2: pola=1.000, F1=0.750, MAE=0.0
+  Layout layout2: pola=0.860, F1=0.493, MAE=0.0
 
-  Layout layout3: pola=0.842, F1=0.700, MAE=0.0
+  Layout layout3: pola=0.851, F1=0.765, MAE=0.0
 
-  Layout layout4: pola=0.789, F1=0.533, MAE=0.0
+  Layout layout4: pola=0.789, F1=0.483, MAE=193.1
 
-  Layout layout5: pola=1.000, F1=0.833, MAE=937.5
+  Layout layout5: pola=0.991, F1=0.741, MAE=123.0
 
-  Layout layout6: pola=1.000, F1=0.889, MAE=0.0
+  Layout layout6: pola=0.956, F1=0.735, MAE=0.0
 
-  Layout layout7: pola=0.868, F1=0.700, MAE=0.0
+  Layout layout7: pola=0.789, F1=0.429, MAE=13.3
 
-  Layout layout8: pola=0.895, F1=0.353, MAE=0.0
+  Layout layout8: pola=0.956, F1=0.241, MAE=228.6
+
+### Silnik: azure
+
+  Layout layout1: pola=0.632, F1=0.939, MAE=520.8
+
+  Layout layout2: pola=0.632, F1=0.759, MAE=514.9
+
+  Layout layout3: pola=0.632, F1=0.812, MAE=353.9
+
+  Layout layout4: pola=0.632, F1=0.727, MAE=291.4
+
+  Layout layout5: pola=0.632, F1=0.778, MAE=668.4
+
+  Layout layout6: pola=0.632, F1=0.788, MAE=439.1
+
+  Layout layout7: pola=0.649, F1=0.815, MAE=556.4
+
+  Layout layout8: pola=0.632, F1=0.645, MAE=292.0

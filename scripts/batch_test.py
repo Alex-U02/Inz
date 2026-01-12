@@ -16,7 +16,7 @@ API_URL = "http://localhost:8000/ocr"
 PNG_DIR = "out/png"
 RESULTS_FILE = "out/results/all_results.json"
 
-ENGINES = ["easyocr", "pytesseract"]
+ENGINES = ["easyocr", "pytesseract", "azure"]
 
 
 # ============================================

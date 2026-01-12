@@ -154,10 +154,10 @@ if __name__ == "__main__":
     clear_ground_truth()
 
     for template in templates_dir.glob("*.html"):
-        base_layout = pathlib.Path(template.name).stem  # layout1
-        for i in range(2):
+        base_layout = pathlib.Path(template.name).stem 
+        for i in range(6):
             payload = generate_payload(template.name)
-            full_layout = f"{base_layout}_{i}"          # layout1_0
+            full_layout = f"{base_layout}_{i}"         
             save_ground_truth(payload, full_layout)
             render_invoice(template.name, payload, i)
 
