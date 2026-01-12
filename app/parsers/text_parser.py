@@ -26,7 +26,7 @@ def _extract_last(patterns, text: str) -> Optional[str]:
     if isinstance(patterns, str):
         patterns = [patterns]
 
-    for pat in patterns:
+    for pat in patterns: 
         matches = re.findall(pat, text, flags=re.IGNORECASE | re.DOTALL)
         if matches:
             last = matches[-1]
@@ -50,64 +50,55 @@ def _extract_name_and_address(raw_text: str, header_patterns):
         raw_text,
         flags=re.IGNORECASE | re.DOTALL,
     )
-    if not m:
-        return None, None
+    if m:
+        block = m.group(1)
+        lines = [ln.strip() for ln in block.splitlines() if ln.strip()]
+        if lines:
+            name = lines[0]
+            address = " ".join(lines[1:]) if len(lines) > 1 else None
+            return name, address
 
-    block = m.group(1)
-    lines = [ln.strip() for ln in block.splitlines() if ln.strip()]
-    if not lines:
-        return None, None
-
-    name = lines[0]
-    address = " ".join(lines[1:]) if len(lines) > 1 else None
-    return name, address
+    return None, None
 
 
 def _extract_buyer_nip(raw_text: str):
-    """
-    Poprawione wyciąganie NIP nabywcy:
-    - najpierw wyciągamy blok NABYWCA → NIP
-    - dopiero z tego bloku wyciągamy NIP
-    """
     m = re.search(
-        r"(NABYWCA|Nabywca|Nabyca|NABYCA)(.*?)(NIP[:\s]*([0-9]{10}))",
+        r"(NABYWCA|Nabywca|NABYCA|Nabyca)(.*?)(NIP[:\s]*([0-9]{10}))",
         raw_text,
         flags=re.IGNORECASE | re.DOTALL,
     )
-    if not m:
-        return None
-    return m.group(4)
+    if m:
+        return m.group(4)
+    
+    all_nips = re.findall(r"NIP[:\s]*([0-9]{10})", raw_text, re.IGNORECASE)
+    if len(all_nips) >= 2:
+        return all_nips[1]
+    
+    return None
 
 
 def _extract_notes(raw_text: str):
-    """
-    Uwagi kończą się na:
-    - nowy nagłówek tabeli
-    - słowo Suma
-    - koniec dokumentu
-    """
     m = re.search(
         r"Uwagi[:\s]*(.*?)(?:\n\S|$)",
         raw_text,
-        flags=re.IGNORECASE | re.DOTALL,
+        flags=re. IGNORECASE | re.DOTALL,
     )
     if not m:
         return None
 
     notes = m.group(1).strip()
 
-    # usuń śmieci z tabeli
     bad = ["Lp", "Ilość", "Jm", "Cena", "Netto", "Brutto", "VAT"]
     clean = []
     for ln in notes.splitlines():
         if not any(b.lower() in ln.lower() for b in bad):
-            clean.append(ln.strip())
+            clean.append(ln)
 
-    return " ".join(clean).strip()
+    result = " ".join(clean).strip()
+    return result if result else None
 
 
 def parse_text_fields(raw_text: str) -> Dict[str, Optional[str]]:
-
     invoice_number = _extract(
         [
             r"(FV\/[0-9]{3,6})",
@@ -159,7 +150,7 @@ def parse_text_fields(raw_text: str) -> Dict[str, Optional[str]]:
 
     buyer_name, buyer_address = _extract_name_and_address(
         raw_text,
-        ["NABYWCA", "Nabywca", "Nabyca", "NABYCA"],
+        ["NABYWCA", "Nabywca", "NABYCA", "Nabyca", "Nabwca", "NABWCA"],
     )
 
     seller_nip = _extract(
@@ -172,7 +163,14 @@ def parse_text_fields(raw_text: str) -> Dict[str, Optional[str]]:
 
     buyer_nip = _extract_buyer_nip(raw_text)
 
-    seller_regon = _extract(r"REGON[:\s]*([0-9]{9})", raw_text)
+    seller_regon = _extract(
+        [
+            r"SPRZEDAWCA.*?REGON[:\s]*([0-9]{9})",
+            r"Sprzedawca.*?REGON[:\s]*([0-9]{9})",
+            r"REGON[:\s]*([0-9]{9})",
+        ],
+        raw_text,
+    )
 
     order_number = _extract(
         [
@@ -185,7 +183,7 @@ def parse_text_fields(raw_text: str) -> Dict[str, Optional[str]]:
     seller_account = _extract(
         [
             r"(PL[0-9]{26})",
-            r"(P[0-9]{26})",  # fallback gdy OCR zgubi L
+            r"(P[0-9]{26})",
             r"IBAN[:\s]*([A-Z0-9]{10,})",
         ],
         raw_text,
@@ -193,49 +191,67 @@ def parse_text_fields(raw_text: str) -> Dict[str, Optional[str]]:
 
     payment_method = _extract(
         [
-            r"(Sposób\s+zapłaty|Forma\s+zapłaty|Płatność)[:\s]*([\w ]+)",
+            r"(?:Sposób\s+zapłaty|Forma\s+zapłaty|Płatność)[:\s]*([\wąćęłńóśźżĄĆĘŁŃÓŚŹŻ]+)",
         ],
         raw_text,
     )
 
     notes = _extract_notes(raw_text)
 
-    total_net = _extract_last(
-        [
-            rf"Suma\s+netto[:\s]*({NUMBER})",
-            rf"Netto[:\s]*({NUMBER})",
-        ],
+    vertical_sums = re.search(
+        r"(?:^|\n)Netto\s*\n\s*VAT\s*\n\s*Brutto\s*\n\s*"
+        r"([0-9.,]+)\s*\n\s*([0-9.,]+)\s*\n\s*([0-9.,]+)",
         raw_text,
+        re.IGNORECASE
     )
+    
+    if vertical_sums:
+        total_net = vertical_sums. group(1)
+        total_vat = vertical_sums. group(2)
+        total_gross = vertical_sums.group(3)
+    else:
+        total_net = _extract_last(
+            [
+                r"Suma\s+netto[:\s]*([0-9.,]+)",
+                r"Razem\s+netto[:\s]*([0-9.,]+)",
+                r"(?:^|\n)Netto[:\s]+([0-9.,]+)",
+                r"Wartość\s+netto[:\s]*([0-9.,]+)",
+                r"Ogółem\s+netto[:\s]*([0-9.,]+)",
+            ],
+            raw_text,
+        )
 
-    total_vat = _extract_last(
-        [
-            rf"Suma\s+VAT[:\s]*({NUMBER})",
-            rf"Suma\s+VAI[:\s]*({NUMBER})",
-            rf"VAT[:\s]*({NUMBER})",
-            rf"VAI[:\s]*({NUMBER})",
-        ],
-        raw_text,
-    )
+        total_vat = _extract_last(
+            [
+                r"Suma\s+VAT[:\s]*([0-9.,]+)",
+                r"(?:^|\n)VAT[:\s]+([0-9.,]+)",
+                r"Podatek\s+VAT[:\s]*([0-9.,]+)",
+                r"Podatek[:\s]*([0-9.,]+)",
+            ],
+            raw_text,
+        )
 
-    total_gross = _extract_last(
-        [
-            rf"Suma\s+brutto[:\s]*({NUMBER})",
-            rf"Brutto[:\s]*({NUMBER})",
-            rf"Brutto\s*\n\s*({NUMBER})",
-        ],
-        raw_text,
-    )
+        total_gross = _extract_last(
+            [
+                r"Suma\s+brutto[:\s]*([0-9.,]+)",
+                r"Razem\s+brutto[:\s]*([0-9.,]+)",
+                r"(?:^|\n)Brutto[:\s]+([0-9.,]+)",
+                r"Do\s+zapłaty[:\s]*([0-9.,]+)",
+                r"Wartość\s+brutto[:\s]*([0-9.,]+)",
+                r"Ogółem\s+brutto[:\s]*([0-9.,]+)",
+            ],
+            raw_text,
+        )
 
     return {
         "invoice_number": invoice_number,
         "issue_date": issue_date,
         "sale_date": sale_date,
         "payment_due": payment_due,
-        "currency": currency,
+        "currency":  currency,
         "seller_name": seller_name,
         "seller_address": seller_address,
-        "seller_nip": seller_nip,
+        "seller_nip":  seller_nip,
         "seller_account": seller_account,
         "seller_regon": seller_regon,
         "buyer_name": buyer_name,
@@ -244,7 +260,7 @@ def parse_text_fields(raw_text: str) -> Dict[str, Optional[str]]:
         "order_number": order_number,
         "payment_method": payment_method,
         "notes": notes,
-        "total_net": _clean_num(total_net),
-        "total_vat": _clean_num(total_vat),
-        "total_gross": _clean_num(total_gross),
+        "total_net": total_net,
+        "total_vat": total_vat,
+        "total_gross": total_gross,
     }

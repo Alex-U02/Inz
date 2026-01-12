@@ -4,7 +4,6 @@ from .models import OCRInvoice, OCRItem, OCRRun
 from sqlalchemy import text
 
 def _to_float(value):
-    """Konwertuje wartość na float lub zwraca None, jeśli się nie da."""
     try:
         if value is None:
             return None

@@ -47,14 +47,14 @@ async def ocr_endpoint(
 ):
     assert engine in ["easyocr", "pytesseract", "azure"], "Unsupported engine"
 
-    # Wczytanie pliku
     content = await file.read()
 
     if engine == "azure":
         start = time.time()
         parsed = run_azure_ocr(content)   
         duration_ms = int((time.time() - start) * 1000)
-        raw_text = None                   
+        raw_text = None
+        words = None
     else:
         start = time.time()
         words = ENGINE_MAP_WORDS[engine](content)
@@ -73,8 +73,9 @@ async def ocr_endpoint(
         )
 
     return {
-        "engine": engine,
+        "engine":  engine,
         "duration_ms": duration_ms,
         "parsed": parsed,
-        "raw_text": raw_text
+        "raw_text": raw_text,
+        "words": words 
     }

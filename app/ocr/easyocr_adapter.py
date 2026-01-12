@@ -8,7 +8,6 @@ def easyocr_extract_words(image_bytes: bytes):
     nparr = np.frombuffer(image_bytes, np.uint8)
     img = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
 
-    # detail=1 → zwraca bboxy
     result = reader.readtext(img, detail=1, paragraph=False)
 
     words = []
@@ -23,7 +22,8 @@ def easyocr_extract_words(image_bytes: bytes):
             "x": float(x),
             "y": float(y),
             "w": float(w),
-            "h": float(h)
+            "h": float(h),
+            "confidence": float(conf)
         })
 
     return words

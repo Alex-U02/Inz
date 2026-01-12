@@ -1,14 +1,11 @@
 import requests
 
 # Wstaw swoje dane z Azure Foundry
-AZURE_ENDPOINT = "https://<region>.api.cognitive.microsoft.com/documentintelligence/documentModels/prebuilt-invoice:analyze?api-version=2024-02-29-preview"
-AZURE_KEY = "<YOUR_KEY>"
+AZURE_ENDPOINT = "https://benchmark-dev-seu-di-alex.cognitiveservices.azure.com/"
+AZURE_KEY = "BVyBvuQd6mPMxcyG4nMMgzXcMEUBFRGowO5D4UE44cqeaJAmpgMUJQQJ99CAACfhMk5XJ3w3AAALACOGWh7K"
 
 
 def run_azure_ocr(image_bytes: bytes):
-    """
-    Wysyła obraz do Azure Document Intelligence i zwraca znormalizowany wynik.
-    """
     headers = {
         "Ocp-Apim-Subscription-Key": AZURE_KEY,
         "Content-Type": "application/octet-stream"
@@ -27,9 +24,6 @@ def run_azure_ocr(image_bytes: bytes):
 
 
 def parse_azure_invoice(data: dict):
-    """
-    Normalizuje JSON z Azure Document Intelligence do formatu używanego w Twoim systemie.
-    """
     doc = data.get("documents", [{}])[0]
     fields = doc.get("fields", {})
 

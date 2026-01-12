@@ -25,7 +25,8 @@ def pytesseract_extract_words(image_bytes: bytes):
             "x": float(data["left"][i]),
             "y": float(data["top"][i]),
             "w": float(data["width"][i]),
-            "h": float(data["height"][i])
+            "h": float(data["height"][i]),
+            "confidence": float(data["conf"][i]) / 100.0 
         })
 
     return words

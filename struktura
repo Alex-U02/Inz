@@ -23,7 +23,6 @@ INZ/
 │       ├── models.py            # WSZYSTKIE modele (GT + OCR)
 │       ├── crud_ground_truth.py # CRUD dla generatora
 │       ├── crud_ocr.py          # CRUD dla OCR
-│       ├── compare.py           # porównania OCR vs GT
 │       └── init_db.py           # automatyczne tworzenie tabel
 │
 ├── scripts/              # dodatkowe skrypty

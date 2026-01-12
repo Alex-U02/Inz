@@ -1,26 +1,26 @@
 {
   "fields": {
     "easyocr": {
-      "wrong": 41,
-      "correct": 263,
-      "missing": 7
+      "wrong": 33,
+      "correct": 271,
+      "missing": 0
     },
     "pytesseract": {
-      "correct": 279,
-      "wrong": 25,
-      "missing": 17
+      "correct": 281,
+      "wrong": 23,
+      "missing": 18
     }
   },
   "items": {
     "easyocr": {
-      "tp": 43,
+      "tp": 46,
       "fp": 21,
-      "fn": 24
+      "fn": 21
     },
     "pytesseract": {
-      "tp": 44,
+      "tp": 45,
       "fp": 20,
-      "fn": 23
+      "fn": 22
     }
   },
   "numeric": {
@@ -228,7 +228,7 @@
         0.0,
         0.0,
         0.0,
-        9198.0,
+        0.0,
         0.0,
         0.0,
         0.0,
@@ -462,7 +462,7 @@
         0.0,
         0.0,
         0.0,
-        0.9970731707317073,
+        0.0,
         0.0,
         0.0,
         0.0,
@@ -745,15 +745,15 @@
   },
   "times": {
     "easyocr": {
-      "avg": 16345.1875,
-      "min": 13966,
-      "max": 19919,
+      "avg": 18240.0625,
+      "min": 15430,
+      "max": 21854,
       "count": 16
     },
     "pytesseract": {
-      "avg": 2144.0,
-      "min": 1785,
-      "max": 2821,
+      "avg": 1761.5,
+      "min": 1530,
+      "max": 2124,
       "count": 16
     }
   },
@@ -993,7 +993,7 @@
         ]
       },
       "layout4": {
-        "fields_correct": 25,
+        "fields_correct": 33,
         "fields_total": 38,
         "tp": 7,
         "fp": 3,
@@ -1228,19 +1228,19 @@
       "layout7": {
         "fields_correct": 26,
         "fields_total": 38,
-        "tp": 3,
+        "tp": 6,
         "fp": 4,
-        "fn": 7,
+        "fn": 4,
         "mae": [
           0.0,
           0.0,
-          9198.0,
+          0.0,
           0.0
         ],
         "mre": [
           0.0,
           0.0,
-          0.9970731707317073,
+          0.0,
           0.0
         ]
       },
@@ -1412,7 +1412,7 @@
         ]
       },
       "layout3": {
-        "fields_correct": 30,
+        "fields_correct": 32,
         "fields_total": 38,
         "tp": 7,
         "fp": 3,
@@ -1510,9 +1510,9 @@
       "layout5": {
         "fields_correct": 38,
         "fields_total": 38,
-        "tp": 4,
+        "tp": 5,
         "fp": 1,
-        "fn": 2,
+        "fn": 1,
         "mae": [
           7500.0,
           0.0,

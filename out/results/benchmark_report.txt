@@ -3,27 +3,27 @@
 
 --- DOKŁADNOŚĆ PÓL FAKTURY ---
 
-easyocr: dokładność=0.865, brakujące=7
+easyocr: dokładność=0.891, brakujące=0
 
-pytesseract: dokładność=0.918, brakujące=17
+pytesseract: dokładność=0.924, brakujące=18
 
 --- DOKŁADNOŚĆ POZYCJI TOWAROWYCH ---
 
-easyocr: czułość=0.642, precyzja=0.672, F1=0.656
+easyocr: czułość=0.687, precyzja=0.687, F1=0.687
 
-pytesseract: czułość=0.657, precyzja=0.688, F1=0.672
+pytesseract: czułość=0.672, precyzja=0.692, F1=0.682
 
 --- DOKŁADNOŚĆ WARTOŚCI LICZBOWYCH ---
 
-easyocr: MAE=39.647, MRE=0.004
+easyocr: MAE=0.000, MRE=0.000
 
 pytesseract: MAE=61.983, MRE=0.007
 
 --- CZAS DZIAŁANIA OCR ---
 
-easyocr: średnia=16345.2 ms, min=13966 ms, max=19919 ms, próby=16
+easyocr: średnia=18240.1 ms, min=15430 ms, max=21854 ms, próby=16
 
-pytesseract: średnia=2144.0 ms, min=1785 ms, max=2821 ms, próby=16
+pytesseract: średnia=1761.5 ms, min=1530 ms, max=2124 ms, próby=16
 
 --- ANALIZA PER LAYOUT ---
 
@@ -35,13 +35,13 @@ pytesseract: średnia=2144.0 ms, min=1785 ms, max=2821 ms, próby=16
 
   Layout layout3: pola=0.974, F1=0.700, MAE=0.0
 
-  Layout layout4: pola=0.658, F1=0.700, MAE=0.0
+  Layout layout4: pola=0.868, F1=0.700, MAE=0.0
 
   Layout layout5: pola=1.000, F1=0.833, MAE=0.0
 
   Layout layout6: pola=0.947, F1=0.667, MAE=0.0
 
-  Layout layout7: pola=0.684, F1=0.353, MAE=2299.5
+  Layout layout7: pola=0.684, F1=0.600, MAE=0.0
 
   Layout layout8: pola=0.895, F1=0.714, MAE=0.0
 
@@ -51,11 +51,11 @@ pytesseract: średnia=2144.0 ms, min=1785 ms, max=2821 ms, próby=16
 
   Layout layout2: pola=1.000, F1=0.750, MAE=0.0
 
-  Layout layout3: pola=0.789, F1=0.700, MAE=0.0
+  Layout layout3: pola=0.842, F1=0.700, MAE=0.0
 
   Layout layout4: pola=0.789, F1=0.533, MAE=0.0
 
-  Layout layout5: pola=1.000, F1=0.727, MAE=937.5
+  Layout layout5: pola=1.000, F1=0.833, MAE=937.5
 
   Layout layout6: pola=1.000, F1=0.889, MAE=0.0
 
