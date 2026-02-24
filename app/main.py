@@ -43,9 +43,11 @@ async def ocr_endpoint(
     file: UploadFile = File(...),
     engine: str = Form(...),
     layout: str = Form(None),
+    input_type: str = Form("clean"),
     test_mode: bool = Form(False),  
 ):
     assert engine in ["easyocr", "pytesseract", "azure"], "Unsupported engine"
+    assert input_type in ["clean", "photo", "scan"], "Unsupported input_type"
 
     content = await file.read()
 
@@ -69,7 +71,8 @@ async def ocr_endpoint(
             engine=engine,
             raw_text=raw_text,
             duration_ms=duration_ms,
-            layout=layout
+            layout=layout,
+            input_type=input_type
         )
 
     return {

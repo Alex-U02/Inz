@@ -15,7 +15,7 @@ def _to_float(value):
         return None
 
 
-def save_ocr_results(parsed: dict, engine: str, raw_text: str, duration_ms: int, layout: str):
+def save_ocr_results(parsed: dict, engine: str, raw_text: str, duration_ms: int, layout: str, input_type: str):
     db: Session = SessionLocal()
 
     # Zapis OCRRun
@@ -24,7 +24,8 @@ def save_ocr_results(parsed: dict, engine: str, raw_text: str, duration_ms: int,
         engine=engine,
         duration_ms=duration_ms,
         raw_text=raw_text,
-        layout=layout
+        layout=layout,
+        input_type=input_type
     )
     db.add(run)
     db.commit()
@@ -34,6 +35,7 @@ def save_ocr_results(parsed: dict, engine: str, raw_text: str, duration_ms: int,
         invoice_number=parsed.get("invoice_number"),
         engine=engine,
         layout=layout,
+        input_type=input_type,
         issue_date=parsed.get("issue_date"),
         sale_date=parsed.get("sale_date"),
         payment_due=parsed.get("payment_due"),

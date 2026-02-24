@@ -49,6 +49,10 @@ def run_azure_ocr(image_bytes: bytes):
 
         if response.status_code != 202:
             print(f"[Azure] Błąd: {response.status_code}")
+            try:
+                print("[Azure] Body:", response.text)
+            except Exception:
+                print("[Azure] Body: <nie udało się odczytać response.text>")
             return create_empty_invoice()
 
         operation_location = response.headers.get("Operation-Location")

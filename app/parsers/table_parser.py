@@ -386,15 +386,32 @@ def parse_table_fields(words: List[Dict], debug: bool = False) -> Tuple[List[Dic
 
         # PRZYPADEK 1: Kontynuacja nazwy (nazwa bez liczb)
         if name and not has_numbers and current_item: 
-            current_item["name"] = (current_item["name"] + " " + name).strip()
+            current_item["name"] = ((current_item.get("name") or "") + " " + (name or "")).strip()
             if debug:
                 print(f"[DEBUG]   -> Kontynuacja nazwy: '{current_item['name']}'")
+            continue
+        
+        # PRZYPADEK 1b: Wiersz z liczbami bez nazwy - traktuj jako uzupełnienie poprzedniej pozycji
+        if (not name) and has_numbers and current_item:
+            # uzupełnij tylko te pola, które są dostępne
+            current_item["qty"] = current_item.get("qty") or (qty or None)
+            current_item["unit"] = current_item.get("unit") or (unit or None)
+            if price:
+                current_item["price_net"] = norm_num(price)
+            current_item["vat"] = current_item.get("vat") or (vat or None)
+            if net:
+                current_item["net"] = norm_num(net)
+            if gross:
+                current_item["gross"] = norm_num(gross)
+
+            if debug:
+                print(f"[DEBUG]   -> Uzupełnienie liczb dla poprzedniej pozycji: {current_item}")
             continue
 
         # PRZYPADEK 2: Nowa pozycja (nazwa lub liczby)
         if name or has_numbers:
             item = {
-                "name": name or None,
+                "name": (name or "").strip(),
                 "qty": qty or None,
                 "unit": unit or None,
                 "price_net": norm_num(price) if price else None,

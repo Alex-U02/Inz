@@ -30,10 +30,14 @@ items = json.load(open("data/items.json", encoding="utf-8"))
 templates_dir = pathlib.Path("layouts")
 out_dir = pathlib.Path("out")
 pdf_dir = out_dir / "pdf"
-png_dir = out_dir / "png"
+png_clean_dir = out_dir / "png_clean"
+jpg_photo_dir = out_dir / "jpg_photo"
+png_scan_dir = out_dir / "png_scan"
 
 pdf_dir.mkdir(parents=True, exist_ok=True)
-png_dir.mkdir(parents=True, exist_ok=True)
+png_clean_dir.mkdir(parents=True, exist_ok=True)
+jpg_photo_dir.mkdir(parents=True, exist_ok=True)
+png_scan_dir.mkdir(parents=True, exist_ok=True)
 
 env = Environment(loader=FileSystemLoader("layouts"))
 
@@ -125,6 +129,13 @@ def generate_payload(template_name: str):
 # ---------------------------------------
 # RENDEROWANIE PDF + PNG
 # ---------------------------------------
+def get_input_type_and_dir(idx: int):
+    # 0-4 clean, 5-9 photo, 10-14 scan
+    if 0 <= idx <= 4:
+        return "clean", png_clean_dir
+    if 5 <= idx <= 9:
+        return "photo", jpg_photo_dir
+    return "scan", png_scan_dir
 
 def render_invoice(template_name, payload, idx):
     tpl = env.get_template(template_name)
@@ -140,10 +151,12 @@ def render_invoice(template_name, payload, idx):
         poppler_path=r"C:\Program Files\poppler-25.07.0\Library\bin"
     )
 
+    input_type, out_png_dir = get_input_type_and_dir(idx)
+
     for page_num, img in enumerate(images, start=1):
-        png_path = png_dir / f"{pdf_path.stem}.png"
+        png_path = out_png_dir / f"{pdf_path.stem}.png"
         img.save(png_path, "PNG")
-        print("Wygenerowano PNG:", png_path)
+        print(f"Wygenerowano PNG ({input_type}):", png_path)
 
 # ---------------------------------------
 # GŁÓWNA PĘTLA GENEROWANIA
@@ -155,9 +168,10 @@ if __name__ == "__main__":
 
     for template in templates_dir.glob("*.html"):
         base_layout = pathlib.Path(template.name).stem 
-        for i in range(6):
+        for i in range(15):
             payload = generate_payload(template.name)
             full_layout = f"{base_layout}_{i}"         
-            save_ground_truth(payload, full_layout)
+            input_type, _ = get_input_type_and_dir(i)
+            save_ground_truth(payload, full_layout, input_type)
             render_invoice(template.name, payload, i)
 

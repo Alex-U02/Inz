@@ -16,12 +16,13 @@ def clear_ground_truth():
     db.close()
 
 
-def save_ground_truth(payload: dict, layout: str):
+def save_ground_truth(payload: dict, layout: str, input_type: str):
     db: Session = SessionLocal()
 
     invoice = GroundTruthInvoice(
         invoice_number=payload["invoice_number"],
         layout=layout,
+        input_type=input_type,
         issue_date=payload["issue_date"],
         sale_date=payload["sale_date"],
         payment_due=payload["payment_due"],

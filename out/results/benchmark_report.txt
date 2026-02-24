@@ -1,90 +1,246 @@
-=== RAPORT BENCHMARKU OCR ===
+=== RAPORT BENCHMARKU OCR (ENGINE x INPUT_TYPE) ===
 
 
 --- DOKŁADNOŚĆ PÓL FAKTURY ---
 
-easyocr: dokładność=0.891, brakujące=4
+easyocr/clean: dokładność=0.887, correct=674, wrong=86, missing=7
 
-pytesseract: dokładność=0.897, brakujące=73
+easyocr/photo: dokładność=0.558, correct=424, wrong=336, missing=213
 
-azure: dokładność=0.634, brakujące=334
+easyocr/scan: dokładność=0.730, correct=555, wrong=205, missing=98
+
+pytesseract/clean: dokładność=0.921, correct=700, wrong=60, missing=41
+
+pytesseract/photo: dokładność=0.796, correct=605, wrong=155, missing=111
+
+pytesseract/scan: dokładność=0.795, correct=604, wrong=156, missing=94
+
+azure/clean: dokładność=0.634, correct=482, wrong=278, missing=278
+
+azure/photo: dokładność=0.626, correct=476, wrong=284, missing=281
+
+azure/scan: dokładność=0.629, correct=478, wrong=282, missing=282
 
 --- DOKŁADNOŚĆ POZYCJI TOWAROWYCH ---
 
-easyocr: czułość=0.752, precyzja=0.752, F1=0.752
+easyocr/clean: precyzja=0.705, czułość=0.705, F1=0.705 (tp=117, fp=49, fn=49)
 
-pytesseract: czułość=0.630, precyzja=0.619, F1=0.624
+easyocr/photo: precyzja=0.350, czułość=0.291, F1=0.318 (tp=62, fp=115, fn=151)
 
-azure: czułość=0.786, precyzja=0.786, F1=0.786
+easyocr/scan: precyzja=0.572, czułość=0.572, F1=0.572 (tp=103, fp=77, fn=77)
+
+pytesseract/clean: precyzja=0.664, czułość=0.616, F1=0.639 (tp=101, fp=51, fn=63)
+
+pytesseract/photo: precyzja=0.700, czułość=0.636, F1=0.667 (tp=14, fp=6, fn=8)
+
+pytesseract/scan: precyzja=0.655, czułość=0.600, F1=0.626 (tp=108, fp=57, fn=72)
+
+azure/clean: precyzja=0.741, czułość=0.741, F1=0.741 (tp=123, fp=43, fn=43)
+
+azure/photo: precyzja=0.742, czułość=0.742, F1=0.742 (tp=158, fp=55, fn=55)
+
+azure/scan: precyzja=0.783, czułość=0.783, F1=0.783 (tp=141, fp=39, fn=39)
 
 --- DOKŁADNOŚĆ WARTOŚCI LICZBOWYCH ---
 
-easyocr: MAE=11.919, MRE=0.001
+easyocr/clean: MAE=0.000, MRE=0.000 (n=594)
 
-pytesseract: MAE=65.537, MRE=0.359
+easyocr/photo: MAE=323.642, MRE=5.268 (n=510)
 
-azure: MAE=454.991, MRE=0.066
+easyocr/scan: MAE=3.403, MRE=0.017 (n=592)
+
+pytesseract/clean: MAE=427.692, MRE=0.384 (n=295)
+
+pytesseract/photo: MAE=113.331, MRE=0.214 (n=39)
+
+pytesseract/scan: MAE=67.071, MRE=2.246 (n=449)
+
+azure/clean: MAE=257.793, MRE=0.064 (n=498)
+
+azure/photo: MAE=310.983, MRE=0.064 (n=639)
+
+azure/scan: MAE=308.705, MRE=0.066 (n=540)
 
 --- CZAS DZIAŁANIA OCR ---
 
-easyocr: średnia=17072.1 ms, min=13341 ms, max=20891 ms, próby=48
+easyocr/clean: średnia=14761.1 ms, min=13075 ms, max=17184 ms, próby=40
 
-pytesseract: średnia=1716.0 ms, min=1425 ms, max=2172 ms, próby=48
+easyocr/photo: średnia=15235.8 ms, min=13431 ms, max=17423 ms, próby=40
 
-azure: średnia=7048.2 ms, min=3419 ms, max=17493 ms, próby=48
+easyocr/scan: średnia=13031.1 ms, min=11893 ms, max=15118 ms, próby=40
 
---- ANALIZA PER LAYOUT ---
+pytesseract/clean: średnia=1683.6 ms, min=1443 ms, max=2051 ms, próby=40
 
-### Silnik: easyocr
+pytesseract/photo: średnia=1826.5 ms, min=1252 ms, max=2553 ms, próby=40
 
-  Layout layout1: pola=0.912, F1=0.879, MAE=75.8
+pytesseract/scan: średnia=1596.9 ms, min=1072 ms, max=2105 ms, próby=40
 
-  Layout layout2: pola=0.833, F1=0.759, MAE=0.0
+azure/clean: średnia=5406.7 ms, min=3407 ms, max=11695 ms, próby=40
 
-  Layout layout3: pola=0.956, F1=0.781, MAE=0.0
+azure/photo: średnia=7119.7 ms, min=3716 ms, max=13255 ms, próby=40
 
-  Layout layout4: pola=0.930, F1=0.682, MAE=0.0
+azure/scan: średnia=5843.8 ms, min=3613 ms, max=12360 ms, próby=40
 
-  Layout layout5: pola=0.947, F1=0.778, MAE=0.0
+--- ANALIZA PER LAYOUT (ENGINE x INPUT_TYPE) ---
 
-  Layout layout6: pola=0.912, F1=0.758, MAE=0.0
+### Silnik: easyocr / Typ: clean
 
-  Layout layout7: pola=0.702, F1=0.704, MAE=0.0
+  Layout layout1: pola=0.926, F1=0.792, MAE=0.0 (fields_total=95)
 
-  Layout layout8: pola=0.939, F1=0.645, MAE=0.0
+  Layout layout2: pola=0.832, F1=0.783, MAE=0.0 (fields_total=95)
 
-### Silnik: pytesseract
+  Layout layout3: pola=0.968, F1=0.731, MAE=0.0 (fields_total=95)
 
-  Layout layout1: pola=0.982, F1=0.939, MAE=0.0
+  Layout layout4: pola=0.947, F1=0.556, MAE=0.0 (fields_total=95)
 
-  Layout layout2: pola=0.860, F1=0.493, MAE=0.0
+  Layout layout5: pola=0.947, F1=0.789, MAE=0.0 (fields_total=95)
 
-  Layout layout3: pola=0.851, F1=0.765, MAE=0.0
+  Layout layout6: pola=0.884, F1=0.706, MAE=0.0 (fields_total=95)
 
-  Layout layout4: pola=0.789, F1=0.483, MAE=193.1
+  Layout layout7: pola=0.663, F1=0.700, MAE=0.0 (fields_total=95)
 
-  Layout layout5: pola=0.991, F1=0.741, MAE=123.0
+  Layout layout8: pola=0.926, F1=0.526, MAE=0.0 (fields_total=95)
 
-  Layout layout6: pola=0.956, F1=0.735, MAE=0.0
+### Silnik: easyocr / Typ: photo
 
-  Layout layout7: pola=0.789, F1=0.429, MAE=13.3
+  Layout layout1: pola=0.632, F1=0.383, MAE=2.1 (fields_total=95)
 
-  Layout layout8: pola=0.956, F1=0.241, MAE=228.6
+  Layout layout2: pola=0.516, F1=0.194, MAE=0.0 (fields_total=95)
 
-### Silnik: azure
+  Layout layout3: pola=0.600, F1=0.724, MAE=0.0 (fields_total=95)
 
-  Layout layout1: pola=0.632, F1=0.939, MAE=520.8
+  Layout layout4: pola=0.674, F1=0.244, MAE=767.1 (fields_total=95)
 
-  Layout layout2: pola=0.632, F1=0.759, MAE=514.9
+  Layout layout5: pola=0.726, F1=0.476, MAE=0.0 (fields_total=95)
 
-  Layout layout3: pola=0.632, F1=0.812, MAE=353.9
+  Layout layout6: pola=0.453, F1=0.167, MAE=1469.0 (fields_total=95)
 
-  Layout layout4: pola=0.632, F1=0.727, MAE=291.4
+  Layout layout7: pola=0.326, F1=0.156, MAE=0.0 (fields_total=95)
 
-  Layout layout5: pola=0.632, F1=0.778, MAE=668.4
+  Layout layout8: pola=0.537, F1=0.125, MAE=405.7 (fields_total=95)
 
-  Layout layout6: pola=0.632, F1=0.788, MAE=439.1
+### Silnik: easyocr / Typ: scan
 
-  Layout layout7: pola=0.649, F1=0.815, MAE=556.4
+  Layout layout1: pola=0.695, F1=0.500, MAE=0.0 (fields_total=95)
 
-  Layout layout8: pola=0.632, F1=0.645, MAE=292.0
+  Layout layout2: pola=0.611, F1=0.412, MAE=0.0 (fields_total=95)
+
+  Layout layout3: pola=0.905, F1=0.654, MAE=0.0 (fields_total=95)
+
+  Layout layout4: pola=0.811, F1=0.765, MAE=0.2 (fields_total=95)
+
+  Layout layout5: pola=0.853, F1=0.733, MAE=0.0 (fields_total=95)
+
+  Layout layout6: pola=0.821, F1=0.739, MAE=0.0 (fields_total=95)
+
+  Layout layout7: pola=0.274, F1=0.040, MAE=76.6 (fields_total=95)
+
+  Layout layout8: pola=0.874, F1=0.667, MAE=0.0 (fields_total=95)
+
+### Silnik: pytesseract / Typ: clean
+
+  Layout layout1: pola=0.979, F1=0.792, MAE=0.0 (fields_total=95)
+
+  Layout layout2: pola=0.926, F1=0.739, MAE=1658.4 (fields_total=95)
+
+  Layout layout3: pola=0.863, F1=0.692, MAE=97.9 (fields_total=95)
+
+  Layout layout4: pola=0.789, F1=0.294, MAE=0.0 (fields_total=95)
+
+  Layout layout5: pola=0.958, F1=0.789, MAE=221.5 (fields_total=95)
+
+  Layout layout6: pola=1.000, F1=0.706, MAE=17.2 (fields_total=95)
+
+  Layout layout7: pola=0.863, F1=0.667, MAE=1747.7 (fields_total=95)
+
+  Layout layout8: pola=0.989, F1=0.214, MAE=204.6 (fields_total=95)
+
+### Silnik: pytesseract / Typ: photo
+
+  Layout layout1: pola=0.926, F1=0.718, MAE=72.6 (fields_total=95)
+
+  Layout layout2: pola=0.726, F1=0.000, MAE=0.0 (fields_total=95)
+
+  Layout layout3: pola=0.779, F1=0.000, MAE=0.0 (fields_total=95)
+
+  Layout layout4: pola=0.789, F1=0.000, MAE=1660.5 (fields_total=95)
+
+  Layout layout5: pola=0.905, F1=0.000, MAE=0.0 (fields_total=95)
+
+  Layout layout6: pola=0.779, F1=0.000, MAE=0.0 (fields_total=95)
+
+  Layout layout7: pola=0.747, F1=0.000, MAE=0.0 (fields_total=95)
+
+  Layout layout8: pola=0.716, F1=0.000, MAE=0.0 (fields_total=95)
+
+### Silnik: pytesseract / Typ: scan
+
+  Layout layout1: pola=0.968, F1=0.500, MAE=0.0 (fields_total=95)
+
+  Layout layout2: pola=0.884, F1=0.471, MAE=0.0 (fields_total=95)
+
+  Layout layout3: pola=0.979, F1=0.654, MAE=0.0 (fields_total=95)
+
+  Layout layout4: pola=0.779, F1=0.735, MAE=110.6 (fields_total=95)
+
+  Layout layout5: pola=0.979, F1=0.667, MAE=135.6 (fields_total=95)
+
+  Layout layout6: pola=0.779, F1=0.783, MAE=0.0 (fields_total=95)
+
+  Layout layout7: pola=0.253, F1=0.286, MAE=540.6 (fields_total=95)
+
+  Layout layout8: pola=0.737, F1=0.708, MAE=1.5 (fields_total=95)
+
+### Silnik: azure / Typ: clean
+
+  Layout layout1: pola=0.632, F1=0.833, MAE=353.2 (fields_total=95)
+
+  Layout layout2: pola=0.632, F1=0.826, MAE=340.6 (fields_total=95)
+
+  Layout layout3: pola=0.642, F1=0.731, MAE=347.2 (fields_total=95)
+
+  Layout layout4: pola=0.632, F1=0.556, MAE=175.1 (fields_total=95)
+
+  Layout layout5: pola=0.632, F1=0.789, MAE=188.5 (fields_total=95)
+
+  Layout layout6: pola=0.632, F1=0.765, MAE=213.8 (fields_total=95)
+
+  Layout layout7: pola=0.642, F1=0.750, MAE=223.8 (fields_total=95)
+
+  Layout layout8: pola=0.632, F1=0.632, MAE=137.3 (fields_total=95)
+
+### Silnik: azure / Typ: photo
+
+  Layout layout1: pola=0.621, F1=0.720, MAE=281.4 (fields_total=95)
+
+  Layout layout2: pola=0.632, F1=0.613, MAE=124.9 (fields_total=95)
+
+  Layout layout3: pola=0.632, F1=0.862, MAE=325.8 (fields_total=95)
+
+  Layout layout4: pola=0.632, F1=0.826, MAE=343.7 (fields_total=95)
+
+  Layout layout5: pola=0.621, F1=0.714, MAE=160.2 (fields_total=95)
+
+  Layout layout6: pola=0.632, F1=0.706, MAE=438.7 (fields_total=95)
+
+  Layout layout7: pola=0.632, F1=0.778, MAE=364.9 (fields_total=95)
+
+  Layout layout8: pola=0.611, F1=0.714, MAE=468.6 (fields_total=95)
+
+### Silnik: azure / Typ: scan
+
+  Layout layout1: pola=0.611, F1=0.688, MAE=439.6 (fields_total=95)
+
+  Layout layout2: pola=0.632, F1=0.765, MAE=657.1 (fields_total=95)
+
+  Layout layout3: pola=0.632, F1=0.731, MAE=180.8 (fields_total=95)
+
+  Layout layout4: pola=0.632, F1=0.824, MAE=185.7 (fields_total=95)
+
+  Layout layout5: pola=0.632, F1=0.800, MAE=190.8 (fields_total=95)
+
+  Layout layout6: pola=0.632, F1=0.870, MAE=200.7 (fields_total=95)
+
+  Layout layout7: pola=0.632, F1=0.800, MAE=353.8 (fields_total=95)
+
+  Layout layout8: pola=0.632, F1=0.750, MAE=417.6 (fields_total=95)

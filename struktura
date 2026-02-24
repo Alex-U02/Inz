@@ -5,7 +5,9 @@ INZ/
 ├── layouts/              # szablony HTML faktur
 ├── out/
 │   ├── pdf/              # wygenerowane faktury PDF
-│   ├── png/              # wygenerowane obrazy faktur  
+│   ├── png_clean/        # wygenerowane obrazy faktur  
+|   ├── jpg_photo/        # zdjęcia faktur
+|   ├── png_scan/         # skany faktur
 │   └── results/          # wyniki testów OCR
 │
 ├── app/                  # główny kod mikroserwisu OCR
